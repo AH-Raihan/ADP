@@ -1,7 +1,7 @@
 <?php 
 
 $request=$_SERVER['REQUEST_URI'];
-$router=str_replace( 'adp/','',$request);
+$router=str_replace( '/','',$request);
 
 if ($router=='/'){
   include("home.php");
