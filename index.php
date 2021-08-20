@@ -1,7 +1,8 @@
 <?php 
 
-$request=$_SERVER['REQUEST_URI'];
-$router=str_replace( '/','',$request);
+//$request
+  $router=$_SERVER['REQUEST_URI'];
+//$router=str_replace( '/','',$request);
 
 if ($router=='/'){
   include("home.php");
