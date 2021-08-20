@@ -1,0 +1,63 @@
+*{
+margin:0;
+padding:0;
+}
+.e-commerce-container{
+background: orange;
+width:100%;
+display:grid;
+grid-template-columns:auto auto;
+}
+.e-commerce-items{
+width:95%;
+margin:3px auto;
+background:white;
+box-shadow:0 0 5px ;
+transition:0.3s;
+}
+.e-commerce-items:hover{
+background:#f1f1f1;
+transform:scale(1.02);
+}
+.image-container{
+width:95%;
+margin:2px auto;
+}
+.image-container img{
+width:100%;
+}
+.book-title-discription{
+
+}
+.book-title{
+color:darkblue;
+text-align:center;
+}
+.book-writer{
+text-align:center;
+color:#fred;
+}
+.book-price{
+font-size:20px;
+color:green;
+display:block;
+margin-left:3px;
+text-align:center;
+}
+.book-price span{
+color:yellowgreen;
+}
+.add-to-cart-button{
+background:tomato;
+color:white;
+text-decoration:none;
+padding:3px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:3px;
+float:right;
+margin:1px;
+}
+.add-to-cart-button span{
+font-size:18px;
+}

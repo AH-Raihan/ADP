@@ -1,0 +1,138 @@
+.product-details-container {}
+
+.productDetailsContainer {}
+
+.products-details {
+
+    margin: 15px auto;
+
+    background: white;
+
+    padding: 10px;
+
+    position: relative;
+}
+
+.product-details-thumbnail-img-container {
+    display: inline-block;
+    width: 29%;
+    position: relative;
+    border: 1px solid #dfdfdf;
+}
+
+.product-details-thumbnail-img {
+
+    background: #ddd;
+
+    width: 93%;
+
+    margin: 10px;
+}
+
+.product-details-thumbnail-img img {
+
+    width: 100%;
+}
+
+.products-details-sale {
+
+    position: absolute;
+
+    left: -11px;
+
+    top: -24px;
+
+    width: 78px;
+}
+
+.products-details-sale img {
+    width: 100%;
+}
+
+.products-details-book-details {
+
+    display: inline-block;
+
+    width: 50%;
+
+    padding: 10px;
+
+    float: right;
+}
+
+.products-details-book-title {
+
+    font-size: 33px;
+}
+
+.products-details-book-writer {
+    margin: 15px 0;
+    font-size: 19px;
+}
+
+.products-details-description {}
+
+.products-details-book-previous-price {
+
+    display: block;
+    margin: 15px 0;
+    font-size: 20px;
+
+    color: #767676;
+}
+
+.products-details-book-present-price {
+
+    display: block;
+    font-size: 19px;
+}
+
+.products-details-open-book {
+
+    padding: 10px 34px;
+
+    font-size: 20px;
+
+    background: #00b88e;
+
+    color: white;
+
+    border-radius: 4px;
+
+    text-transform: uppercase;
+
+    margin: 17px 0;
+
+    margin-right: 38px;
+
+    display: inline-block;
+}
+
+.products-details-open-book:hover {
+    color: #000 !important;
+}
+
+.products-details-add-to-wishlist {
+    display: inline-block;
+    color: #7f7b75;
+}
+
+.products-details-add-to-cart {
+    margin: 15px 0;
+    padding: 10px;
+
+    font-size: 20px;
+
+    background: #19659b;
+
+    color: white;
+
+    border-radius: 4px;
+
+    text-transform: uppercase;
+
+    margin-right: 84px;
+    outline: none;
+    border: none;
+    display: inline-block;
+}

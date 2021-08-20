@@ -1,0 +1,274 @@
+/* jssor slider loading skin spin css */
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*jssor slider bullet skin 132 css*/
+.jssorb132 {
+    position: absolute;
+}
+
+.jssorb132 .i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssorb132 .i .b {
+    fill: #fff;
+    fill-opacity: 0.8;
+    stroke: #000;
+    stroke-width: 1600;
+    stroke-miterlimit: 10;
+    stroke-opacity: 0.7;
+}
+
+.jssorb132 .i:hover .b {
+    fill: #000;
+    fill-opacity: .7;
+    stroke: #fff;
+    stroke-width: 2000;
+    stroke-opacity: 0.8;
+}
+
+.jssorb132 .iav .b {
+    fill: #000;
+    stroke: #fff;
+    stroke-width: 2400;
+    fill-opacity: 0.8;
+    stroke-opacity: 1;
+}
+
+.jssorb132 .i.idn {
+    opacity: 0.3;
+}
+
+.jssora051 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssora051 .a {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 360;
+    stroke-miterlimit: 10;
+}
+
+.jssora051:hover {
+    opacity: .8;
+}
+
+.jssora051.jssora051dn {
+    opacity: .5;
+}
+
+.jssora051.jssora051ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.navigationDrop {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.navigationDrop ul {
+    margin: 0;
+    padding: 0;
+    float: none;
+    width: auto;
+    list-style: none;
+    display: inline-block;
+}
+
+.navigationDrop ul li {
+    float: left;
+    width: auto;
+    margin-right: 28px;
+    position: relative;
+}
+
+.navigationDrop ul li:last-child {
+    margin: 0;
+}
+
+.navigationDrop ul li a {
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 13px;
+    line-height: normal;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 600;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    text-transform: capitalize;
+}
+
+.navigationDrop .children {
+    position: absolute;
+    top: 100%;
+    z-index: 11111;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    min-width: 240px;
+    background-color: #fff;
+    border: solid 1px #dbdbdb;
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+
+.navigationDrop ul li .children {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(-75deg);
+    transform: rotateX(-75deg);
+    visibility: hidden;
+}
+
+.navigationDrop ul li:hover > .children {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navigationDrop ul li .children .children {
+    left: 100%;
+    top: 0;
+}
+
+.navigationDrop ul li.last .children {
+    right: 0;
+    left: auto;
+}
+
+.navigationDrop ul li.last .children .children {
+    right: 100%;
+    left: auto;
+}
+
+.navigationDrop ul li .children li {
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+
+.customercare {
+    min-width: auto !important;
+}
+
+.customercare li {}
+
+.navigationDrop ul li .children a {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    line-height: 1.5em;
+    padding: 10px 26px;
+    letter-spacing: normal;
+    border-bottom: 1px solid #dbdbdb;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.navigationDrop ul li .children a:hover {
+    color: #fff;
+    background-color: #f1f1f1;
+}
+
+.navigationDrop ul li a:hover {
+    color: #54BFB9;
+}
+/* The container */
+.gifwrapcontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    color: #44ada7;
+    margin: 20px auto;
+}
+
+/* Hide the browser's default checkbox */
+.gifwrapcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+    border-radius: 2px;
+  background-color: #54BFB9;
+}
+
+/* When the checkbox is checked, add a blue background */
+.gifwrapcontainer input:checked ~ .checkmark {
+  background-color: #44ada7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.gifwrapcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.gifwrapcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

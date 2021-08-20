@@ -1,0 +1,352 @@
+@media only screen and (max-width: 1300px) {
+    .safeArea {
+        max-width: 96% !important;
+    }
+}
+
+/* For desktop: */
+.cola-1 {
+    width: 8.33%;
+}
+
+.cola-2 {
+    width: 16.66%;
+}
+
+.cola-3 {
+    width: 24%;
+}
+
+.cola-4 {
+    width: 33.33%;
+}
+
+.cola-5 {
+    width: 41.66%;
+}
+
+.cola-6 {
+    width: 50%;
+}
+
+.cola-7 {
+    width: 58.33%;
+}
+
+.cola-8 {
+    width: 66.66%;
+}
+
+.cola-9 {
+    width: 75%;
+}
+
+.cola-10 {
+    width: 83.33%;
+}
+
+.cola-11 {
+    width: 91.66%;
+}
+
+.cola-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="cola-"] {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* For mobile phones: */
+    [class*="cola-"] {
+        width: 40%;
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    /* CSS */
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .topaddress {
+        display: none;
+    }
+
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .topaddress {
+        display: none;
+    }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .topaddress {
+        display: none;
+    }
+
+    .catalog-menu {
+        display: none;
+    }
+
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .topaddress {
+        display: none !important;
+    }
+
+    .catalog-menu {
+        display: none;
+    }
+
+    .logo-area {
+        /* padding: 10px 0; */
+        margin: 5px auto;
+        display: block;
+        /* width: 383px; */
+        float: none;
+    }
+
+    .header-right {
+        float: none;
+        margin: 5px auto;
+        display: block;
+        text-align: center;
+    }
+
+    .mainNav ul li a {
+        font-size: 16px;
+    }
+
+    .signupcontainer {
+        width: 95%;
+    }
+
+    .headsignupcontainer {
+        text-align: center;
+    }
+
+    .filterTaka input {
+        display: block;
+        width: 100%;
+    }
+
+    .alredyaccount {
+        padding: 0;
+        margin: 15px 0;
+        float: none !important;
+    }
+
+    .createaccount {
+        padding: 0;
+        float: none !important;
+        display: block;
+    }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .topaddress {
+        display: none;
+    }
+
+    .catalog-menu {
+        display: none;
+    }
+
+    .headsignupcontainer {
+        text-align: center;
+    }
+
+    .alredyaccount {
+        padding: 0;
+        margin: 15px 0;
+        float: none !important;
+    }
+
+    .createaccount {
+        padding: 0;
+        float: none !important;
+        display: block;
+    }
+
+    .logo-area {
+        /* padding: 10px 0; */
+        display: block;
+        width: 229px;
+        display: block;
+        float: none;
+        margin: auto;
+    }
+
+    .header-right {
+        float: none;
+        margin: 5px auto;
+        display: block;
+        text-align: center;
+    }
+
+    .search-product button {
+        padding: 11px 6px;
+    }
+
+    .search-product input {
+        padding: 9px 3px;
+        width: 162px;
+    }
+
+    .mainNav ul li {
+        padding: 7px;
+    }
+
+    .mainNav ul li a {
+        font-size: 12px;
+    }
+
+    .signupcontainer {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 633px) {
+    .rightSide {
+        float: none;
+    }
+
+    .headsignupcontainer {
+        text-align: center;
+    }
+
+    .alredyaccount {
+        padding: 0;
+        margin: 15px 0;
+        float: none !important;
+    }
+
+    .createaccount {
+        padding: 0;
+        float: none !important;
+        display: block;
+    }
+
+    .filterTaka input {
+        display: block;
+        width: 100%;
+    }
+
+    .cartTable {
+        margin: 0px;
+    }
+
+    .cartTable tr th {
+        padding: 9px 1px;
+    }
+
+    .cartTable tr td {
+        padding: 9px 1px;
+    }
+
+    .logo-area img {
+        max-width: 94%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .topaddress {
+        display: none;
+    }
+
+    .navigation ul li a {
+        font-family: none !important;
+    }
+
+    .search-product input {
+        padding: 9px 4px;
+        border: 2px solid #1dc1b1;
+        border-radius: 5px 0 0 5px;
+        width: 155px;
+    }
+
+    .search-product button {
+        padding: 11px 6px;
+    }
+
+    .navigationDrop ul li {
+        margin-right: 16px !important;
+    }
+
+    .navigationDrop ul li a {
+        font-size: 10px !important;
+        font-family: Arial,  sans-serif !important;
+    }
+
+    .mainNav ul li {
+        padding: 7px 3px;
+    }
+
+    .mainNav ul li a {
+        font-size: 12px;
+    }
+
+    .copyright {
+        text-align: center;
+        float: none;
+        display: block;
+    }
+
+    .developer {
+        text-align: center;
+        float: none;
+        display: block;
+    }
+
+    .signupcontainer {
+        width: 100%;
+    }
+}
+
+

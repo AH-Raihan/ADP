@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bkash payment</title>
+<meta type="viewport" content="width=device-width,initial-scale=1" >
+<style type="text/css">
+
+.paymentcontainer {
+background:url("bg-bkash.jpg");
+color:white;
+padding:10px;
+border-radius: 4px;
+width:320px;
+margin:10px auto;
+box-shadow:0 0 3px #000;
+}
+.bkash-logo {
+
+}
+.bkash-logo img{
+width:100%;
+}
+.bkash-logo h1{
+text-align:center;
+}
+.paymenthelp {
+border-top:1px solid white;
+border-radius:3px;
+padding:5px;
+font-size:17px;
+}
+.trxidinp {
+width:93.5%;
+margin: 12px auto;
+padding:10px;
+border-radius:2px;
+border:none;
+outline:none;
+font-size:18px;
+}
+.submitbtn {
+width:100%;
+margin: 9px auto;
+padding:6px 10px;
+border-radius:2px;
+border:none;
+background:white;
+font-size:18px;
+letter-spacing:3px;
+outline:none;
+color:rgb(200,40,120);
+}
+</style>
+</head>
+<body>
+
+<div class="paymentcontainer" >
+<div class="bkash-logo" >
+<img src="logo-bkash.jpg" >
+<h1>bkash payment</h1>
+</div>
+<div class="paymenthelp" >
+<p>1.Send money to " <em><b style="color: yellow;" >01849-805381</b></em> "</p>
+<p>2.Write the Refer code "<em><b style="color: yellow;" >805381</b></em> " </p>
+<p>3.Submit the <b>TrxID</b>. </p>
+</div>
+
+<form action="paymentbkash.php" method="post" >
+<input class="trxidinp"  type="text" placeholder="TrxID type here"  >
+<input class="submitbtn" type="submit" value="SABMIT"  >
+</form>
+</div>
+
+</body>
+</html>
