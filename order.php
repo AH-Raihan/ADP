@@ -44,16 +44,12 @@ while ($carts = mysqli_fetch_array($selectCartQuery)) {
     $orderQuery = mysqli_query($conn, $order);
     if ($orderQuery == true) {
         header("location:/");
+        $deleteCart = "DELETE FROM cart WHERE cart_id='$cart_id'";
+        $deleteCartQuery = mysqli_query($conn, $deleteCart);
     } else {
         header("location:/?error");
     }
 
-    if ($orderQuery == true) {
-        $deleteCart = "DELETE FROM cart WHERE cart_id='$cart_id'";
-        $deleteCartQuery = mysqli_query($conn, $deleteCart);
-    } else {
-        header("location:/adp");
-    }
 }} else {
-    header("location:/adp");
+    header("location:/?");
 }
