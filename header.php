@@ -196,7 +196,7 @@ if (isset($_COOKIE["PHPLGADP"])) {
         <div class="mainNav">
             <div class="safeArea">
                 <ul>
-                    <li><a href="/adp"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
                     <li><a href="books">Books</a></li>
                     <li><a href="news">News</a></li>
                     <li><a href="cart">Cart</a></li>
