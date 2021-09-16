@@ -143,6 +143,11 @@
         display: block;
         /* width: 383px; */
         float: none;
+        height: 54px;
+    }
+    .sitebranding {
+      height: auto !important;
+      padding: 10px 0 !important;
     }
 
     .header-right {
@@ -180,6 +185,9 @@
         float: none !important;
         display: block;
     }
+    .logo-area.dnone {
+    display: none;
+}
 
 }
 
@@ -206,7 +214,10 @@
         margin: 15px 0;
         float: none !important;
     }
-
+.sitebranding {
+      height: auto !important;
+      padding: 5px !important;
+    }
     .createaccount {
         padding: 0;
         float: none !important;
@@ -220,7 +231,11 @@
         display: block;
         float: none;
         margin: auto;
+        height: auto;
     }
+    .logo-area.dnone {
+    display: none;
+}
 
     .header-right {
         float: none;
@@ -299,9 +314,20 @@
     .topaddress {
         display: none;
     }
+    .logo-area.dnone {
+    display: none;
+}
 
     .navigation ul li a {
         font-family: none !important;
+    }
+    .sitebranding {
+      height: auto!important;
+      padding: 6px 5px !important;
+    }
+    .logo-area{
+      height: 51px;
+      margin: 6px auto;
     }
 
     .search-product input {
