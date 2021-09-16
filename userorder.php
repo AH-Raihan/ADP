@@ -55,7 +55,7 @@
 
                             <div class="border p-3 m-3 col-sm-3">
                                 <p>Order Id : <span class="text-danger"><?php echo $orders["order_id"]; ?></span> </p>
-                                <a href="/adp/product-details.php?book_name=<?php echo $orders["book_name"]; ?>">
+                                <a href="/product-details.php?book_name=<?php echo $orders["book_name"]; ?>">
                                     <div class="product-thumbnail-img"><img class="productImage" src="images/<?php echo $books['book_img']; ?>" alt=""></div>
                                     <div class="book-details">
                                         <h3 class="book-title productTitle"><?php echo $orders["book_name"]; ?></h3>
