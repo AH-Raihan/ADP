@@ -11,6 +11,9 @@ if ($router=='/'){
 }elseif ($router=='/cart'){
     include("cart.php");
 }
+elseif ($router=='/home'){
+    include("home.php");
+}
 elseif ($router=='/news'){
     include("news.php");
 }
