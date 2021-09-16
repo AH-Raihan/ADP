@@ -113,7 +113,7 @@ if (isset($_COOKIE["PHPLGADP"])) {
                 <div class="logo-area">
                     <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
                     <p style="display:none;">Alor Dishari Publications</p>
-                    <a href="/adp"><img src="images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
+                    <a href="/home"><img src="images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
                 </div>
 
 
