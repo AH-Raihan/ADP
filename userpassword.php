@@ -30,4 +30,4 @@ if ($query==true) {
     //$upadte="UPDATE users SET usr_pwd='$newPass' ";
     
 
-}else{header("location:/adp");}?>
+}else{header("location:/");}?>
