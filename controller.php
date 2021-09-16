@@ -39,7 +39,7 @@ if(isset($code)) {
             setcookie("PHPLGADP",$authToken,time()+86400*360);
             header("location:index.php");
         } else {
-            header("location:signin.php");
+            header("location:signin.php?".$authToken.$emailaddr.$fullname);
         }
     }else{
         setcookie("PHPLGADP",$authToken,time()+86400*360);
