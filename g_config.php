@@ -4,7 +4,7 @@ $gClient = new Google_Client();
 $gClient->setClientId("370160254615-3rlctd9r9314jb55oehl2i1l3lp6k4l6.apps.googleusercontent.com");
 $gClient->setClientSecret("jjxJzUMODApQ3mZT6YNRSwZY");
 $gClient->setApplicationName("Alor Dishari Publications");
-$gClient->setRedirectUri("http://alordishari.herokuapp.com/controller.php");
+$gClient->setRedirectUri("http://alordishari.herokuapp.com/core/controller.php");
 $gClient->addScope("https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/plus.me");
 
 // login URL
