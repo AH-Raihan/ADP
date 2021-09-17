@@ -25,7 +25,7 @@ if(isset($code)) {
         
         $emailaddr=$pay_load["email"];
         $fullname=$pay_load["name"];
-        $authToken=md5(sha1($emailaddr.$fullname));
+        $authToken=md5(sha1($emailaddr.'raihan123'));
         
         $mathQuery="SELECT * FROM users WHERE email_addr='$emailaddr'";
         $runSelectQuery=mysqli_query($conn,$mathQuery);
@@ -39,7 +39,7 @@ if(isset($code)) {
             setcookie("PHPLGADP",$authToken,time()+86400*360);
             header("location:index.php");
         } else {
-            header("location:signin.php");
+            header("location:signin");
         }
     }else{
         setcookie("PHPLGADP",$authToken,time()+86400*360);
