@@ -1,4 +1,12 @@
-<?php require_once("header.php"); ?>
+<?php require_once("header.php");
+require_once("config.php");
+$authToken = $_COOKIE["PHPLGADP"];
+$selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
+$runselectUsr = mysqli_query($conn, $selectUsr);
+while ($data = mysqli_fetch_array($runselectUsr)) {
+    $user_id = $data["user_id"];
+}
+?>
 <div class="w-100 bg-light">
     <div class="safeArea">
         <div class="row">
@@ -6,7 +14,12 @@
             <div class="col-sm-3 my-3">
                 <div style="width: 98%;margin:auto;">
                     <div class="border shadow p-3 mb-5 bg-white list-group">
-                        <p class="lead" style="text-align: center;">Hello <b>Raihan</b></p>
+                        <p class="lead" style="text-align: center;">Hello <b><?php $findname = "SELECT * FROM users WHERE user_id='$user_id'";
+                                                                                $findQuery = mysqli_query($conn, $findname);
+
+                                                                                while ($name = mysqli_fetch_array($findQuery)) {
+                                                                                    echo $name['full_name'];
+                                                                                } ?></b></p>
                     </div>
 
                     <div class="border shadow bg-white list-group">
@@ -34,13 +47,7 @@
                 </div>
                 <div style="width: 98%;margin:auto;" class="border row shadow mb-5 bg-white p-3 clearfix">
 
-                    <?php require_once("config.php");
-                    $authToken = $_COOKIE["PHPLGADP"];
-                    $selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
-                    $runselectUsr = mysqli_query($conn, $selectUsr);
-                    while ($data = mysqli_fetch_array($runselectUsr)) {
-                        $user_id = $data["user_id"];
-                    }
+                    <?php
                     $ordersQ = "SELECT * FROM orders WHERE user_id='$user_id' ORDER BY Cdate DESC";
                     $orderQuery = mysqli_query($conn, $ordersQ);
                     while ($orders = mysqli_fetch_array($orderQuery)) { ?>
