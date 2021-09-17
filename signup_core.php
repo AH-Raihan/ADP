@@ -24,7 +24,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"]) && isset($_REQUEST[
 
       $message = '<html><body>';
       $message .= '<h1 style="color: white;
-              background: #18cab2;
+              background: linear-gradient(-45deg, #8CC63F 0%, #8CC63F 33%, #0B9444 100%);
               padding: 30px 15px;
               font-size: 34px;
               text-align: center;
@@ -32,7 +32,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"]) && isset($_REQUEST[
               width: 60%;
               border-bottom: 5px dashed #f0f0f0;
               border-radius: 4px 4px 0 0;;">Alor Dishari Publications</h1>';
-      $message .= '<p style="background: #f0f0f0;font-size: 14px;padding: 50px 15px;margin: 0 auto!important;width: 60%;border-radius: 0 0 4px 4px;">Hi ,<br> In order to protect your account security, we need to verify your identity. Please enter below mentioned 6 digit code into the Email Verification page. <span style="background: #fff;padding: 10px 30px;font-weight: 700;font-size: 27px;letter-spacing: 2px;border-radius: 5px;color: #11ae98;display: block;width: 15%;text-align: center;margin: 19px auto;">' . $otp . '</span><br>Thank you and have a nice day,<br>
+      $message .= '<p style="background: #f0f0f0;font-size: 14px;padding: 50px 15px;margin: 0 auto!important;width: 60%;border-radius: 0 0 4px 4px;">Hi ,<br> In order to protect your account security, we need to verify your identity. Please enter below mentioned 6 digit code into the Email Verification page. <span style="background: #fff;padding: 10px 30px;font-weight: 700;font-size: 27px;letter-spacing: 2px;border-radius: 5px;color: #8CC63F;display: block;width: 15%;text-align: center;margin: 19px auto;">' . $otp . '</span><br>Thank you and have a nice day,<br>
           Team Alor Dishari Publications</p>';
       $message .= '</body></html>';
 
