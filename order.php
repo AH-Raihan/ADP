@@ -1,6 +1,6 @@
 <?php
 if (!isset($_COOKIE["PHPLGADP"])) {
-    header("location:/adp");
+    header("location:/");
 }
 require_once("config.php");
 
@@ -43,17 +43,13 @@ while ($carts = mysqli_fetch_array($selectCartQuery)) {
     $order = "INSERT INTO orders(order_id,user_id,book_id,transport,quantity,book_name,total_price,patableTotal,paymentMethod,bkashNumber,trx) VAlUES('$orderid','$user_id','$book_id','$transport','$quantity','$book_name','$total_taka','$patableTotal','$paymentMethod','$bkashNumber','$trx')";
     $orderQuery = mysqli_query($conn, $order);
     if ($orderQuery == true) {
-        header("location:/adp");
-    } else {
-        header("location:/adp");
-    }
-
-    if ($orderQuery == true) {
+        header("location:/");
         $deleteCart = "DELETE FROM cart WHERE cart_id='$cart_id'";
         $deleteCartQuery = mysqli_query($conn, $deleteCart);
     } else {
-        header("location:/adp");
+        header("location:/?error");
     }
+
 }} else {
-    header("location:/adp");
+    header("location:/?");
 }

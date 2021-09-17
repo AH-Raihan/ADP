@@ -26,7 +26,7 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="../../../adp/images/logo.png" alt="Logo" />
+                    <img src="../../../images/logo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
 					<h1>Alor Dishari Publications</h1>
@@ -54,7 +54,7 @@
                 <li class="ic-form-style"><a href=""><span>User Profile</span></a></li>
 				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
 				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
-                <li class="ic-charts"><a href="/adp"><span>Visit Website</span></a></li>
+                <li class="ic-charts"><a href="/"><span>Visit Website</span></a></li>
             </ul>
         </div>
         <div class="clear">

@@ -1,7 +1,8 @@
 <?php 
 
-$request=$_SERVER['REQUEST_URI'];
-$router=str_replace( 'adp/','',$request);
+//$request
+  $router=$_SERVER['REQUEST_URI'];
+//$router=str_replace( '/','',$request);
 
 if ($router=='/'){
   include("home.php");
@@ -9,6 +10,9 @@ if ($router=='/'){
     include("home.php");
 }elseif ($router=='/cart'){
     include("cart.php");
+}
+elseif ($router=='/home'){
+    include("home.php");
 }
 elseif ($router=='/news'){
     include("news.php");

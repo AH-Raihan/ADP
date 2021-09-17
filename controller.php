@@ -32,7 +32,7 @@ if(isset($code)) {
         $checkCount=mysqli_num_rows($runSelectQuery);
     
     if ($checkCount===0) {
-        $insert="INSERT INTO users (usrauthToken,email_addr,full_name) VALUES('$authToken','$emailaddr','$fullname')";
+        $insert="INSERT INTO users(usrauthToken,email_addr,full_name) VALUES('$authToken','$emailaddr','$fullname')";
         $insertQuery=mysqli_query($conn,$insert);
 
         if ($insertQuery==true) {

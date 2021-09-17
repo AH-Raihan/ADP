@@ -13,7 +13,7 @@ $query=mysqli_query($conn,$insertQuery);
 if($query==true){
     header("location: product-details.php?$nextUrl");
 }else{
-    header("location:/adp");
+    header("location:/");
 }
 
 }
