@@ -37,13 +37,13 @@ if(isset($code)) {
 
         if ($insertQuery==true) {
             setcookie("PHPLGADP",$authToken,time()+86400*360);
-            header("location:index.php");
+            header("location:/");
         } else {
             header("location:signin");
         }
     }else{
         setcookie("PHPLGADP",$authToken,time()+86400*360);
-        header("location:index.php");
+        header("location:/");
     }
 
 
