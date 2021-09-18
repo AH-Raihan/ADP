@@ -10,7 +10,7 @@
         "description": "Alor Dishari Publications Official Website",
         "lang": "en-US",
         "display": "standalone",
-        "orientation": "portrait"
+        "orientation": "portrait",
         "icons": [
             {
                 "src": "images/icon-192x192.png",
