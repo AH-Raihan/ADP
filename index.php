@@ -43,6 +43,8 @@ elseif ($router=='/myaccount'){
 }
 elseif ($router=='/myorders'){
     include("userorder.php");
+}else{
+include("home.php");
 }
 
 ?>
