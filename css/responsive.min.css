@@ -2,6 +2,49 @@
     .safeArea {
         max-width: 96% !important;
     }
+    .sitebranding {
+      overflow:inherit;
+    }
+    #cart{
+      bottom:0;
+      top:auto;
+      right: 36%;
+      border-radius: 65px 65px 0 0;
+    }
+    .mainNav ul{
+        position: absolute;
+        top: 100%;
+        z-index: 11111;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+        right: 0;
+        min-width: 240px;
+        background-color: #fff;
+        border: solid 1px #dbdbdb;
+        opacity: 0;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+        transition: opacity 0.3s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+        box-shadow: 0px 8px 15px 0px #3333335e;
+    }
+    .mainNav ul li{
+     display:block;
+     z-index:1111111111; 
+    }
+   
+    .navIcon{
+      display:inline-block;
+      top: 20px;
+      right: 15px;
+      cursor: pointer;
+      transition: .4s;
+      transform: translateY(-50%) rotateZ(90deg);
+    }
+    
 }
 
 /* For desktop: */
@@ -140,7 +183,7 @@
     .logo-area {
         /* padding: 10px 0; */
         margin: 5px auto;
-        display: block;
+        display: inline-block;
         /* width: 383px; */
         float: none;
         height: 54px;
@@ -151,10 +194,9 @@
     }
 
     .header-right {
-        float: none;
+        /* float: none; */
         margin: 5px auto;
         display: block;
-        text-align: center;
     }
 
     .mainNav ul li a {
@@ -186,7 +228,6 @@
         display: block;
     }
     .logo-area.dnone {
-    display: none;
 }
 
 }
@@ -226,15 +267,19 @@
 
     .logo-area {
         /* padding: 10px 0; */
-        display: block;
         width: 229px;
-        display: block;
+        display: inline-block;
         float: none;
         margin: auto;
         height: auto;
     }
-    .logo-area.dnone {
-    display: none;
+    .logo-area.dnone {display: inline-block;}
+    .mainNav ul{
+        top:5px;
+    }
+
+.navIcon {
+    top: -22px;
 }
 
     .header-right {
