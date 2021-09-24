@@ -134,9 +134,19 @@ global $user_id;
             </div>
 
 
-            <div class="header-right">
+           <div class="header-right mainNav">
+                <span class="navIcon" onclick="toggleNave()">|||</span>
+                <ul id="navId">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="books.html"><i class="fa fa-book"></i> Books</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                    <li><a href="contact.html"><i class="fas fa-comments"></i> Contact Us</a></li>
+                    <li><a href="recipt.html"><i class="fas fa-search-location"></i> Receipt</a></li>
+                </ul>
                 <div class="search-product">
-                    <form action="searchbook.php" method="POST"><input type="text" name="book_name" placeholder="Search"><button type="submit"><i class="fa fa-search"></i></button></form>
+                    <form action="searchbook.php" method="POST"><input type="text" name="book_name"
+                            placeholder="Search"><button type="submit"><i class="fa fa-search"></i></button></form>
                 </div>
 
 
@@ -210,16 +220,5 @@ global $user_id;
         </div>
     </div>
     <div class="clearboth"></div>
-    <div class="mainNav">
-        <div class="safeArea">
-            <ul>
-                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="books">Books</a></li>
-                <li><a href="news">News</a></li>
-                <li><a href="cart">Cart</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="recipt">Receipt</a></li>
-            </ul>
-        </div>
-    </div>
+   
     <!-- end top header -->
