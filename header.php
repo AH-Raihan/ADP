@@ -43,8 +43,8 @@ global $user_id;
     <meta property="og:image" content="images/logo.png" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <script src="https://use.fontawesome.com/c1f2a839e6.js"></script>
+ <script src="https://kit.fontawesome.com/743da73c93.js" crossorigin="anonymous"></script>
+   
     <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
 
     <!-- Place your stylesheet here-->
@@ -55,18 +55,7 @@ global $user_id;
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
-    <style>
-        .goog-te-gadget-icon {
-            display: none !important;
-        }
-
-        .goog-te-menu2-item div,
-        .goog-te-menu2-item:link div,
-        .goog-te-menu2-item:visited div,
-        .goog-te-menu2-item:active div {
-            color: #37a543 !important;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -137,12 +126,12 @@ global $user_id;
            <div class="header-right mainNav">
                 <span class="navIcon" onclick="toggleNave()">|||</span>
                 <ul id="navId">
-                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="books.html"><i class="fa fa-book"></i> Books</a></li>
-                    <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
-                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                    <li><a href="contact.html"><i class="fas fa-comments"></i> Contact Us</a></li>
-                    <li><a href="recipt.html"><i class="fas fa-search-location"></i> Receipt</a></li>
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/books"><i class="fa fa-book"></i> Books</a></li>
+                    <li><a href="/news"><i class="fas fa-newspaper"></i> News</a></li>
+                    <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                    <li><a href="/contact"><i class="fas fa-comments"></i> Contact Us</a></li>
+                    <li><a href="/recipt"><i class="fas fa-search-location"></i> Receipt</a></li>
                 </ul>
                 <div class="search-product">
                     <form action="searchbook.php" method="POST"><input type="text" name="book_name"
