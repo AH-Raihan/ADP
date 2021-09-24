@@ -97,7 +97,9 @@
 
 <!-- start subject section -->
 
-<h4 class="m-3 safeArea bg-secendary text-white p-3 bg-secondary" style="text-align: left;color: #fafafa !important;background-image: linear-gradient(-45deg, #8CC63F 0%, #8CC63F 33%, #0B9444 100%);border: 1px solid #ffffff;box-shadow: 0 1px 5px 0px #767373;margin: 10px auto !important;"> <b>বিষয় ভিত্তিক বই</b></h4>
+<h4 class="m-3 safeArea bg-secendary text-white p-3 bg-secondary header-title">
+            <b>বিষয় ভিত্তিক বই</b>
+        </h4>
     <div class="safeArea products-container">
         
         <div class="row">
