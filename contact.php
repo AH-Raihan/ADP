@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-12 jumbotron my-5 bg-adp ">
                 <h3>Send message</h3>
-                <form action="">
+                <form method="post" name="google-sheet">
                     <input type="text" class="form-control my-3" placeholder="your Name">
                     <input type="text" class="form-control my-3" placeholder="subject">
                     <input type="text" class="form-control my-3" placeholder="email">
-                    <textarea name="message" class="form-control my-3" id="" cols="30" rows="10"></textarea>
-                    <input type="submit" class="btn btn-block btn-light my-3" name="" id="">
+                    <textarea name="message" class="form-control my-3" id="" cols="30" rows="10" placeholder="message type here.."></textarea>
+                    <input type="submit" class="btn btn-block btn-light my-3" name="submit" value="Submit">
                 </form>
             </div>
         </div>
