@@ -23,6 +23,9 @@ elseif ($router=='/recipt'){
 elseif ($router=='/books'){
     include("books.php");
 }
+elseif ($router=='/contact'){
+    include("contact.php");
+}
 elseif ($router=='/terms'){
     include("terms.php");
 }
