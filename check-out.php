@@ -1,7 +1,7 @@
 <?php require_once("header.php"); ?>
 <form action="order.php" method="post">
     <div class="signupMainContainer clearfix">
-        <div class="safeArea ">
+        <div class="safeArea row">
 
 
             <?php require_once("config.php");
@@ -44,7 +44,7 @@
                             </div>
 
                         </div>
-                        <div class="col-sm-6 pull-right d-inline-block">
+                        <div class="col-sm-5 d-inline-block">
                             <div class="emailAddress ">
                                 <p>Region *</p><input type="text" name="Region" placeholder="বিভাগ" value="<?php echo $orders['Region']; ?>" required>
                             </div>
