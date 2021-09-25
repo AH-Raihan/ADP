@@ -286,7 +286,7 @@
         float: none;
         margin: 5px auto;
         display: block;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .search-product button {
