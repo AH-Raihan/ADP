@@ -13,7 +13,7 @@
     }
     .mainNav ul{
         position: absolute;
-        top: 100%;
+        top: 70%;
         z-index: 11111;
         margin: 0;
         text-align: center;
@@ -23,12 +23,13 @@
         background-color: #fff;
         border: solid 1px #dbdbdb;
         opacity: 0;
+        display:none;
         -webkit-transform-origin: 0% 0%;
         transform-origin: 0% 0%;
         -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
         transition: opacity 0.3s, -webkit-transform 0.3s;
         transition: transform 0.3s, opacity 0.3s;
-        transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+        transition: .5s;
         box-shadow: 0px 8px 15px 0px #3333335e;
     }
     .mainNav ul li{
@@ -286,7 +287,6 @@
         float: none;
         margin: 5px auto;
         display: block;
-        /* text-align: center; */
     }
 
     .search-product button {
