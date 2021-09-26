@@ -309,8 +309,8 @@ a {
     display:inline-block;
 }
 .navIcon:hover + ul{
-    display:block;
     opacity: 1;
+    height: initial;
 }
 .mainNav ul li {
     list-style: none;
@@ -323,7 +323,7 @@ a {
 }
 #navId:hover{
     opacity:1;
-    display: block;
+    height: initial;
 }
 .mainNav ul li:hover{
      border-left: 5px solid #359b62;
