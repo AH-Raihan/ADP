@@ -163,10 +163,12 @@ a {
 .logo-area {
     display: inline-block;
     float: left;
-    width: 320px;
+    max-width: 320px;
     height: 100%;
 }
-
+td input#check {
+    margin: 10px 3px 2px;
+}
 .logo-area img {
     height: 100%;
     margin-top: -8px;
@@ -1014,6 +1016,7 @@ margin-right: 5px;
     padding: 12px 15px;
 }.cartTable tr td{
    padding: 12px 15px;
+   text-align: center;
 }
 .producttitle{}
 .productwriter{font-size: 15px;color: #5d5b5b;}
