@@ -85,7 +85,7 @@ require_once("config.php");  ?>
                                     <td><img width="80px" src="images/<?php echo $cartbook["book_img"]; ?>" alt="Book Image" title=""></td>
                                     <td><span class="producttitle"><?php echo $cartbook["book_name"]; ?></span><br><span class="productwriter"><?php echo $cartbook["book_writer"]; ?></span></td>
                                     <td class="productprice"><span id="totalPrice"><?php echo $cartinfo["total_taka"]; ?></span> <input class="productquantity" type="number" oninput="quant(this.value,<?php echo $cart_id; ?>,<?php echo $cartinfo['price']; ?>);" id="quantity" value="<?php echo $quantity; ?>" min="1" max="10" maxlength="2" required></td>
-                                    <td><button class="deletecart deleteCartID" onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>">&times;</button> </td>
+                                    <td><button class="deletecart deleteCartID close" onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>">&times;</button> </td>
                                     <td><input id="check" type="checkbox" value="<?php echo $cartinfo["total_taka"]; ?>" name="price[]"></td>
                                     <input type="hidden" name="<?php echo "orderCart" . $cart_id; ?>" value="<?php echo $cartbook["book_name"]; ?>">
 
