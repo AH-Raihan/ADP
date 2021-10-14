@@ -19,8 +19,9 @@ require_once("header.php");
         <div class="signupcontainer">
          
          
-         <form action="signin_core.php" method="post">
+         
           <div class="leftSide col-sm-6 clearFix">
+          <form action="signin_core.php" method="post">
               <div class="emailAddress">
                   <p>Email Address *</p>
                   <input type="text" placeholder="Please Enter Your Email address" name="emailaddr" required>
@@ -36,6 +37,7 @@ require_once("header.php");
               <div class="signupBtn">
                   <input type="submit" value="Login">
               </div>
+              </form>
               <p>Or, sign in with</p>
               <!-- <div class="facebooksignup">
                   <button><i class="fa fa-facebook-f"></i> Facebook</button>
@@ -45,7 +47,7 @@ require_once("header.php");
               </div>
           </div>
           
-          </form>
+          
           <?php 
           if (isset($_REQUEST["wrongUsrPwd"])) {
              echo '<div style="color: red;font-weight:700;margin:10px;text-align:center;">Wrong User Or Password!</div>';
