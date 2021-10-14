@@ -142,17 +142,17 @@ $book_name = $_REQUEST["book_name"];
                             <input type="hidden" name="bookId" value="<?php echo $book_id;?>">
                             <div class="starsInput">
                                 <div class="starInputRadio" style="display: none;">
-                                    <input type="radio" name="stars" class="rwsi" value="1" checked>
+                                    <input type="radio" name="stars" class="rwsi" value="1">
                                     <input type="radio" name="stars" class="rwsi" value="2">
                                     <input type="radio" name="stars" class="rwsi" value="3">
                                     <input type="radio" name="stars" class="rwsi" value="4">
-                                    <input type="radio" name="stars" class="rwsi" value="5">
+                                    <input type="radio" name="stars" class="rwsi" value="5" checked>
                                 </div>
-                                <span class="reviewChecked reviewWI" id="review1"><i class="fa fa-star"></i></span>
-                                <span class="reviewWI" id="review2"><i class="fa fa-star ">1</i></span>
-                                <span class="reviewWI" id="review3"><i class="fa fa-star ">2</i></span>
-                                <span class="reviewWI" id="review4"><i class="fa fa-star "></i></span>
-                                <span class="reviewWI" id="review5"><i class="fa fa-star "></i></span>
+                                <span class="reviewChecked" data-valu="1"><i class="fa fa-star"></i></span>
+                                <span class="reviewWI" data-valu="2"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI" data-valu="3"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI" data-valu="4"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI reviewWI" data-valu="5"><i class="fa fa-star "></i></span>
                             </div>
 
                             <script>
@@ -160,18 +160,19 @@ $book_name = $_REQUEST["book_name"];
                                 var rwsi = document.getElementsByClassName("rwsi");
 
                                 for (let i = 0; i < reviewWI.length; i++) {
-                                    reviewWI[i].children.addEventListener("click", function() {
-                                        var rws = this.innerHTML;
+                                    reviewWI[i].addEventListener("click", function() {
+                                        var rws = this.getAttribute('data-valu');
                                         reviewWI[0].classList.remove("reviewChecked");
                                         reviewWI[1].classList.remove("reviewChecked");
                                         reviewWI[2].classList.remove("reviewChecked");
                                         reviewWI[3].classList.remove("reviewChecked");
                                         reviewWI[4].classList.remove("reviewChecked");
 
-                                        rwsi[i].checked = true;
+                                        rwsi[rws-1].checked = true;
+                                        console.log(rws);
 
                                         for (let index = 0; index < rws; index++) {
-                                            reviewWI[index].classList.toggle("reviewChecked");
+                                            reviewWI[index].classList.add("reviewChecked");
                                         }
                                     });
 
