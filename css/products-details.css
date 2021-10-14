@@ -15,7 +15,7 @@
 
 .product-details-thumbnail-img-container {
     display: inline-block;
-    width: 29%;
+    max-width: 29%;
     position: relative;
     border: 1px solid #dfdfdf;
 }
@@ -51,13 +51,13 @@
 
 .products-details-book-details {
 
-    display: inline-block;
+display: inline-block;
 
-    width: 50%;
+width: 50%;
 
-    padding: 10px;
+padding: 10px;
 
-    float: right;
+float: right;
 }
 
 .products-details-book-title {
@@ -120,19 +120,12 @@
 .products-details-add-to-cart {
     margin: 15px 0;
     padding: 10px;
-
     font-size: 20px;
-
-    background: #19659b;
-
-    color: white;
-
     border-radius: 4px;
-
     text-transform: uppercase;
-
-    margin-right: 84px;
+    margin-right: 60px;
     outline: none;
     border: none;
     display: inline-block;
+    cursor: pointer;
 }
