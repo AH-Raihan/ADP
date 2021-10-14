@@ -142,7 +142,7 @@ global $user_id;
                 <!-- <div class="wishList"><i class="fa fa-heart-o"> </i><span>1</span></div> -->
                 <div id="mySidenav" class="sidenav cartContainer">
                     <span id="closecartslide" onclick="closeNav()">&times;</span>
-                    <h4 class="shopii">Shopping Cart :</h4>
+                    <h4 class="shopii">--Shopping Cart--</h4>
 
 
                     <?php
@@ -172,7 +172,7 @@ global $user_id;
                                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>
                                     <h4 class="cartSlide-book-writer"><?php echo $cartbook["book_writer"]; ?></h4>
                                     <span class="cartSlide-book-present-price">TK. <span id="cartSlidePrice"><?php echo $totalTaka; ?></span></span>
-                                    <button onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="deleteCartID closecartitem btn btn-danger">&times;</button>
+                                    <button onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="deleteCartID text-danger close">&times;</button>
                                 </div>
                             </div>
                     <?php    }
