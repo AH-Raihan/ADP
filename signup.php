@@ -11,8 +11,9 @@ require_once("header.php");
         </div>
         <div class="clearboth"></div>
         <div class="signupcontainer">
-            <form action="signup_core.php" method="post">
+            
                 <div class="leftSide col-sm-6">
+                <form action="signup_core.php" method="post">
                     <div class="emailAddress">
                         <p>Email Address *</p><input type="email" name="emailaddr"
                             placeholder="Please Enter Your Email address" required>
@@ -37,12 +38,13 @@ require_once("header.php");
                 <p>Full name *</p><input type="text" name="fullname" placeholder="Please Enter Your Full Name" required>
             </div>
             <div class="signupBtn"><input type="submit" value="Sign Up"></div>
+            
+           </form>
             <p>Or,
                 sign up with</p>
             <!-- <div class="facebooksignup"><button><i class="fa fa-facebook-f"></i>acebook</button></div> -->
             <div class="googlesignup" style="width: 100%;"><button  onclick="window.location = '<?php echo $login_url; ?>'"><i class="fa fa-google"></i>oogle</button></div>
         </div>
-        </form>
         <?php 
           if (isset($_REQUEST["emailUsed"])) {
              echo '<div style="color: red;font-weight:700;margin:10px;text-align:center;">This Email Is Already Used</div>';
