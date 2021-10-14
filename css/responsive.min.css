@@ -8,8 +8,8 @@
     #cart{
       bottom:0;
       top:auto;
-      right: 36%;
-      border-radius: 65px 65px 0 0;
+      right: 0;
+      border-radius: 39px 0px 0 0;
     }
     .mainNav ul{
         position: absolute;
@@ -40,7 +40,7 @@
    
     .navIcon{
       display:inline-block;
-      top: 20px;
+      top: 25px;
       right: 15px;
       cursor: pointer;
       transition: .4s;
@@ -173,13 +173,25 @@
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .topaddress {
         display: none !important;
     }
 
     .catalog-menu {
         display: none;
+    }
+    .product-details-thumbnail-img-container{
+        max-width: 56% !important;
+        margin: 0 auto;
+        display: block !important;
+    }
+    .products-details-book-details{
+        float: none !important;
+        width: 100% !important;
+        text-align: center;
+        max-width: 100%;
+        display: block !important;
     }
 
     .logo-area {
@@ -230,6 +242,9 @@
         display: block;
     }
     .logo-area.dnone {
+}
+.products{
+    width: 90%;
 }
 
 }
