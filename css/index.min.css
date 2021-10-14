@@ -1,8 +1,10 @@
-v@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap);
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&display=swap');
 body {
     background: #f6f6f6;
     background: linear-gradient(to right, #1f7c6c -19%, #42ae5a);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 300;
 }
   
   .bg-glass {
@@ -171,7 +173,7 @@ td input#check {
 }
 .logo-area img {
     height: 100%;
-    margin-top: -8px;
+    margin-top: -6px;
 }
 
 .main-logo {
@@ -423,13 +425,12 @@ td input#check {
 }
 
 .products:hover > .add-to-cart {
-    display: block;
+    visibility: visible;
+    width: 80%;
     opacity: 1;
+    height: auto;
 }
 
-.products:hover > .book-view {
-    opacity: 1
-}
 
 .products:hover:after {
     content: "";
@@ -500,18 +501,21 @@ td input#check {
     padding: 8px 10px;
     font-size: 18px;
     border: none;
+    display: block;
     opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
     cursor: pointer;
     text-align: center;
-    transition: .4s opacity;
+    transition: 0.5s;
+    transition-delay: 0.2s;
     top: 40%;
     left: 50%;
     color: #eaeaea;
-    transition-delay: 0.3s;
     border-radius: 2px;
     transform: translate(-50%, -50%);
     z-index: 11;
-    width: 71%;
+    width: 0%;
     outline: none;
 }
 
@@ -1103,7 +1107,7 @@ margin-right: 5px;
     display: block;
     border: 1px solid #ccc;
     padding: 10px;
-    background: #e3f8f8;
+    background: #eeeeee;
 }
 .writeReview input[type="text"]{
     padding: 10px;
@@ -1114,13 +1118,20 @@ margin-right: 5px;
     width: 80%;
 }
 .writeReview input[type="submit"]{
-    padding: 10px;outline: none;border: none;background: #8cc63f;color: white;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: #2e8668;
+    color: white;
+    cursor: pointer;
 }
 .writeReview textarea{
     display: block;
     width: 95%;
     margin: 5px auto;
+    border: 1px solid #d2d2d2;
 }
 .reviewWI {
     font-size: 20px;
+    cursor: pointer;
 }
