@@ -430,6 +430,10 @@ td input#check {
     opacity: 1;
     height: auto;
 }
+.products:hover > .book-view{
+    display:block;
+    opacity:1;
+}
 
 
 .products:hover:after {
