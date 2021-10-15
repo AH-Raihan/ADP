@@ -301,6 +301,7 @@
 
     .header-right {
         float: none;
+        height: 0;
         margin: 5px auto;
         display: block;
         /* text-align: center; */
@@ -377,7 +378,6 @@
         display: none;
     }
     .logo-area.dnone {
-    display: none;
 }
 
     .navigation ul li a {
@@ -436,5 +436,3 @@
         width: 100%;
     }
 }
-
-
