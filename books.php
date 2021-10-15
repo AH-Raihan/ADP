@@ -15,7 +15,7 @@
             if ($bookQuery == true) {
                 while ($books = mysqli_fetch_array($bookQuery)) { ?>
 
-                    <div class="products col-sm-2 item">
+                    <div class="products col-sm-2 item" data-aos="zoom-in">
                     <button data-bookId="<?php echo $books['book_id']; ?>" class="add-to-cart addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
                         <div class="product-thumbnail-img"><img class="productImage" src="images/<?php echo $books["book_img"]; ?>" alt=""></div>
                         <?php $salePrice = $books["book_sale_price"];

@@ -1,4 +1,5 @@
-<?php require_once("header.php"); ?>
+<?php  
+if(isset($_REQUEST['price'])){ require_once("header.php"); ?>
 <form action="order.php" method="post">
     <div class="signupMainContainer clearfix">
         <div class="safeArea row">
@@ -64,9 +65,9 @@
                             <div class="emailAddress col-sm-6 d-inline-block">
                                 <label for="bkashSelect"><input class="d-inline-block w-auto" id="bkashSelect" type="radio" name="paymentMethod" id="" value="bkash" onclick="conDisplay();"> bKash</label>
                             </div>
-                            <!-- <div class="emailAddress col-sm-6 d-inline-block">
+                            <div class="emailAddress col-sm-6 d-inline-block">
                                 <label for="rocketSelect"><input class="d-inline-block w-auto" id="rocketSelect" type="radio" name="paymentMethod" id="" value="rocket" onclick="conDisplay();"> Rocket</label>
-                            </div> -->
+                            </div>
 
                             <div class="bkash bg-bkash w-100 p-3 rounded" id="bkashCon" style="display: none;">
                                 <p class="text-light">Send Money To: 01915 71 11 72 (personal)</p>
@@ -77,14 +78,17 @@
                                     <p>bKash Transaction Id *</p><input type="text" name="trxid" placeholder="bKash Transaction Id" value="" id="trxid">
                                 </div>
                             </div>
-                            <!-- <div class="bkash bg-rocket my-2 w-100 rounded" id="rocketCon" style="display: none;">
+                            
+
+                            <div class="bkash bg-rocket my-2 w-100 rounded" id="rocketCon" style="display: none;">
                                 <div class="emailAddress col-sm-5 d-inline-block">
                                     <p class="text-light">Send Money To: 01849945080</p>
                                     <p>Rocket Number *</p><input type="text" name="RocketNumber" placeholder="Rocket Number" value="" maxlength="11" minlength="11" id="RocketNumber">
                                 </div>
                                 <div class="emailAddress col-sm-6 d-inline-block">
                                     <p>Rocket Transaction Id *</p><input type="text" name="Rockettrxid" placeholder="Rocket Transaction Id" value="" id="Rockettrxid">
-                                </div> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -171,4 +175,6 @@
     }
 </script>
 <div class="clearboth"></div>
-<?php require_once("footer.php"); ?>
+<?php require_once("footer.php"); }else{
+    include('home.php');
+} ?>

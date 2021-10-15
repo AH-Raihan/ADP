@@ -168,7 +168,7 @@
                 if ($newsQuery == true) {
                     while ($news = mysqli_fetch_array($newsQuery)) { ?>
 
-                        <div class="col-sm-4 news-con" data-aos="zoom-in">
+                        <div class="col-sm-4 news-con" data-aos="slide-up">
                             <div class="news">
                                 <div class="news-thumbnail-img"><img src="images/<?php echo $news['news_img']; ?> " alt="news img"></div>
                                 <p class="news-time"><i class="fa fa-clock"></i> <?php echo $news['news_date']; ?> </p>

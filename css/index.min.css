@@ -728,9 +728,9 @@ td input#check {
     padding: 6px 14px;
     outline: 0;
     border: 1px solid #08c6a3;
-    width: 100%
+    width: 100%;
 }
-#cashSelect,#bkashSelect{
+#cashSelect,#bkashSelect ,#rocketSelect{
     width:auto;
 }
 .EmailVerficationCode input {

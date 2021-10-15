@@ -12,4 +12,4 @@ if(isset($_REQUEST["otp"])){
     }else{
         header("location:otp.php?auth=$authToken&wrongOtp");
     }
-} ?>
+}

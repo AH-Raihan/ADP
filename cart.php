@@ -24,38 +24,40 @@ require_once("config.php");  ?>
                                                 $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
                                                 while ($cartinfo = mysqli_fetch_array($cartQuery)) {
                                                     $cartcount = mysqli_num_rows($cartQuery);
+                                                    global $cartcount;
                                                 }
-                                                global $cartcount;
+                                                
                                                 if ($cartcount == "0") {
                                                     echo "0";
                                                 } else {
                                                     echo "<span>" . $cartcount . "</span>";
                                                 }
                                             } ?> Item)</th>
-                            <th style="text-align: right;">Total: <span id="totaltop"><?php
-                                                                                        $totalpriceslide = 0;
-                                                                                        global $user_id;
-                                                                                        $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
-                                                                                        if ($cartQuery == true) {
-                                                                                            while ($cartinfo = mysqli_fetch_array($cartQuery)) {
-                                                                                                $user_id = $cartinfo["user_id"];
-                                                                                                $book_id = $cartinfo["book_id"];
-                                                                                                $quantity = $cartinfo["quantity"];
+                            <th style="text-align: right;">Total: <span id="totaltop">
+                                    <?php
+                                    $totalpriceslide = 0;
+                                    global $user_id;
+                                    $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
+                                    if ($cartQuery == true) {
+                                        while ($cartinfo = mysqli_fetch_array($cartQuery)) {
+                                            $user_id = $cartinfo["user_id"];
+                                            $book_id = $cartinfo["book_id"];
+                                            $quantity = $cartinfo["quantity"];
 
-                                                                                                if ($cartinfo == true) {
-                                                                                                    $totalpriceslide += $cartinfo["total_taka"];
-                                                                                                } else {
-                                                                                                    $totalpriceslide = 0;
-                                                                                                }
+                                            if ($cartinfo == true) {
+                                                $totalpriceslide += $cartinfo["total_taka"];
+                                            } else {
+                                                $totalpriceslide = 0;
+                                            }
 
-                                                                                                $selectcartBook = "SELECT * FROM books WHERE book_id='$book_id'";
-                                                                                                $bookcartQuery = mysqli_query($conn, $selectcartBook);
-                                                                                                while ($cartbookt = mysqli_fetch_array($bookcartQuery)) {
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                        echo $totalpriceslide;
-                                                                                        ?></span> Tk.</th>
+                                            $selectcartBook = "SELECT * FROM books WHERE book_id='$book_id'";
+                                            $bookcartQuery = mysqli_query($conn, $selectcartBook);
+                                            while ($cartbookt = mysqli_fetch_array($bookcartQuery)) {
+                                            }
+                                        }
+                                    }
+                                    echo $totalpriceslide;
+                                    ?></span> Tk.</th>
                         </tr>
                     </table>
                 </div>
@@ -126,7 +128,7 @@ require_once("config.php");  ?>
                     <input type="checkbox" name="giftwrap" value="giftwrapchecked">
                     <span class="checkmark"></span>
                 </label> -->
-                    <button type="submit"  id="submit" class="btn bg-adp" style="width: 100%;">Check Out</button>
+                    <button type="submit" id="submit" class="btn bg-adp" style="width: 100%;">Check Out</button>
 
                 </div>
             </div>
@@ -157,12 +159,12 @@ require_once("config.php");  ?>
 
     };
     $('#submit').click(function() {
-      checked = $("input[type=checkbox]:checked").length;
+        checked = $("input[type=checkbox]:checked").length;
 
-      if(!checked) {
-        alert("You must check at least one product.");
-        return false;
-      }
+        if (!checked) {
+            alert("You must check at least one product.");
+            return false;
+        }
 
     });
 </script>

@@ -1,4 +1,8 @@
-<?php require_once("topFooter.php"); ?>
+<?php
+
+use GuzzleHttp\Subscriber\Cookie;
+
+require_once("topFooter.php"); ?>
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -41,8 +45,6 @@
         easing: 'ease', // default easing for AOS animations
         once: false, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
-
-
     });
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -55,83 +57,77 @@
     }
 
     /* Set the width of the side navigation to 0 */
-    function closeNav() {
-        mySidenav.style.width = "0";
-    }
+    function closeNav() {  mySidenav.style.width = "0"; }
 
     // ajax Requst=============================
-
-
-
     var cart = document.getElementById("cart");
     var body = document.querySelector("body");
     var alertBox = document.querySelector("#alertBox");
-
-
     //add to cart
     var addToCartBtn = document.getElementsByClassName("addToCartBtn");
     var deleteCartID = document.getElementsByClassName("deleteCartID");
 
     for (let btnl = 0; btnl < addToCartBtn.length; btnl++) {
         addToCartBtn[btnl].addEventListener('click', function() {
-                var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
+            var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
 
-
+            <?php if (isset($_COOKIE['PHPLGADP'])) { ?> 
                 $.post("add-to-cart.php", {
-                        addCartBookID: addCartBookIDdd,
-                        user_id: userID
-                    }, function(returnDataATC) {
-                        mySidenav.innerHTML = returnDataATC;
+                    addCartBookID: addCartBookIDdd,
+                    user_id: userID
+                }, function(returnDataATC) {
+                    mySidenav.innerHTML = returnDataATC;
 
-                        var totalpriceslide = document.getElementById("totalpriceslide").value;
-                        $.post("carticon.php", {
-                            user_id: userID,
-                            totalpriceslide: totalpriceslide
-                        }, function(carticondataa) {
-                            cart.innerHTML = carticondataa;
-                        });
-
+                    var totalpriceslide = document.getElementById("totalpriceslide").value;
+                    $.post("carticon.php", {
+                        user_id: userID,
+                        totalpriceslide: totalpriceslide
+                    }, function(carticondataa) {
+                        cart.innerHTML = carticondataa;
                         alertCon = document.getElementById("alertCon");
                         alertCon.style.transform = "translate(-50%,-1%)";
                         setTimeout(function() {
                             alertCon.style.transform = "translate(-50%,-160%)";
                             alertCon.remove();
                         }, 2500);
-                        var deleteCartID = document.getElementsByClassName("deleteCartID");
-                        });
-                });
-        }
-
-        // delete to cart
-        for (let btnld = 0; btnld < deleteCartID.length; btnld++) {
-            deleteCartID[btnld].addEventListener('click', function() {
-                var deleteCartIDd = deleteCartID[btnld].getAttribute("data-deleteCartID");
-
-
-                $.post("deletecart.php", {
-                    deleteCartID: deleteCartIDd,
-                    user_id: userID
-                }, function(returnDataDTC) {
-                    mySidenav.innerHTML = returnDataDTC;
-
-                    var totalpriceslide = document.getElementById("totalpriceslide").value;
-                    $.post("carticon.php", {
-                        user_id: userID,
-                        totalpriceslide: totalpriceslide
-                    }, function(carticondatad) {
-                        cart.innerHTML = carticondatad;
                     });
-
-                    alertCon = document.getElementById("alertCon");
-                    alertCon.style.transform = "translate(-50%,-1%)";
-                    setTimeout(function() {
-                        alertCon.style.transform = "translate(-50%,-160%)";
-                        alertCon.remove();
-                    }, 2500);
-                    var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
                 });
+            <?php } else { ?>
+                window.location.assign('/signin');
+            <?php } ?>
+        });
+    }
+
+    // delete to cart
+    for (let btnld = 0; btnld < deleteCartID.length; btnld++) {
+        deleteCartID[btnld].addEventListener('click', function() {
+            var deleteCartIDd = deleteCartID[btnld].getAttribute("data-deleteCartID");
+
+
+            $.post("deletecart.php", {
+                deleteCartID: deleteCartIDd,
+                user_id: userID
+            }, function(returnDataDTC) {
+                mySidenav.innerHTML = returnDataDTC;
+
+                var totalpriceslide = document.getElementById("totalpriceslide").value;
+                $.post("carticon.php", {
+                    user_id: userID,
+                    totalpriceslide: totalpriceslide
+                }, function(carticondatad) {
+                    cart.innerHTML = carticondatad;
+                });
+
+                alertCon = document.getElementById("alertCon");
+                alertCon.style.transform = "translate(-50%,-1%)";
+                setTimeout(function() {
+                    alertCon.style.transform = "translate(-50%,-160%)";
+                    alertCon.remove();
+                }, 2500);
+                var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
             });
-        }
+        });
+    }
 </script>
 
 </body>

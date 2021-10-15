@@ -15,7 +15,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"])){
         $authToken=md5(sha1($emailaddr.$fullname));
         if ($checkCount===1) {
             setcookie("PHPLGADP",$authToken,time()+86400*360);
-            header("location:index.php");
+            header("location:/");
         } else {
             header("location:signin.php?wrongUsrPwd");
         }
@@ -24,7 +24,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"])){
    
     
 }else{ 
-    header("location:signin.php");
+    header("location:/signin");
 }
 
 ?>

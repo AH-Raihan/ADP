@@ -55,7 +55,6 @@
                   <script>
                     var statuses=document.getElementById('statuses');
                     statuses.value="<?php echo $orders['order_status']; ?>";
-                    
                   </script>
                 </form>
               </td>
@@ -73,11 +72,14 @@
 <script type="text/javascript">
   $(document).ready(function() {
     setupLeftMenu();
-    $('.datatable').dataTable({ order:[[1,'desc']]});
+    //$('.datatable').dataTable({ order:[[1,'desc']]});
+    $('.datatable').dataTable({order:[[2,"asc"]]});
     setSidebarHeight();
   });
    var msg=document.getElementById("msg");
-   setTimeout(function(){ msg.remove(); }, 3000);
-   window.history.replaceState("updated","Order Update","/admin/orders.php");
+   setTimeout(function(){ 
+     msg.remove();
+     window.history.replaceState("updated","Order Update","/admin/orders.php");
+   }, 3000);
 </script>
 <?php include 'inc/footer.php'; ?>
