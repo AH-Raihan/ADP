@@ -67,7 +67,21 @@ while ($data = mysqli_fetch_array($runselectUsr)) {
                                     <div class="book-details">
                                         <h3 class="book-title productTitle"><?php echo $orders["book_name"]; ?></h3>
                                         <h4 class="book-present-price">Quantity: <?php echo $orders["quantity"]; ?></h4>
-                                        <h4 class="book-present-price">order status: <?php echo $orders["order_status"]; ?></h4>
+                                        <h4 class="book-present-price">order status: <?php $orderStatus= $orders["order_status"]; 
+                                        if($orderStatus==="Completed"){
+                                            echo '<span class="text-success">'.$orderStatus.' <i class="fas fa-check-circle"></i> </span>';
+                                        }
+                                        if($orderStatus==="Pending"){
+                                            echo '<span class="text-info">'.$orderStatus.' <i class="fas fa-clock"></i> </span>';
+                                        }
+                                        if($orderStatus==="Waiting"){
+                                            echo '<span class="text-warning">'.$orderStatus.' <i class="fas fa-spinner"></i> </span>';
+                                        }
+                                        if($orderStatus==="Cenceled"){
+                                            echo '<span class="text-danger">'.$orderStatus.' <i class="fa fa-times-circle"></i>  </span>';
+                                        }
+                                        
+                                        ?></h4>
                                         <span class="book-present-price">TK. <span class="productPrice"><?php echo $orders["total_price"]; ?></span></span>
                                     </div>
                                 </a>

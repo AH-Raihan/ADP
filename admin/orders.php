@@ -9,7 +9,7 @@
       echo "<p id='msg' style='position:fixed;top:10px;right:40%;display:inline-block;color:white;background:red;font-size:17px;border-radius:28px;padding:10px;margin:2px'>Update Faild!</p>";
     } ?>
     <div class="block overflow-auto">
-      <table class="data display datatable w-100" id="example" style="overflow-x: auto;">
+      <table class="data display datatable w-100"  id="" style="overflow-x: auto;">
         <thead>
           <tr>
             <td>Id</td>
@@ -46,13 +46,17 @@
               <td>
                 <form action="orderaction.php">
                   <input type="hidden" name="orderid" value="<?php echo $orders['order_id']; ?>">
-                  <select name="status" onchange="submit();">
-                    <option value="<?php echo $orders["order_status"]; ?>"><?php echo $orders["order_status"]; ?></option>
-                    <option value="pending">pending</option>
+                  <select name="status" id="statuses" onchange="submit();">
+                    <option value="Pending">Pending</option>
                     <option value="Waiting">Waiting</option>
-                    <option value="completed">completed</option>
-                    <option value="cenceled">cenceled</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cenceled">Cenceled</option>
                   </select>
+                  <script>
+                    var statuses=document.getElementById('statuses');
+                    statuses.value="<?php echo $orders['order_status']; ?>";
+                    
+                  </script>
                 </form>
               </td>
             </tr>
@@ -65,13 +69,15 @@
   </div>
 </div>
 
+
 <script type="text/javascript">
   $(document).ready(function() {
     setupLeftMenu();
-    $('.datatable').dataTable();
+    $('.datatable').dataTable({ order:[[1,'desc']]});
     setSidebarHeight();
   });
-  var msg=document.getElementById("msg");
-  setTimeout(function(){ msg.remove(); }, 3000);
+   var msg=document.getElementById("msg");
+   setTimeout(function(){ msg.remove(); }, 3000);
+   window.history.replaceState("updated","Order Update","/admin/orders.php");
 </script>
 <?php include 'inc/footer.php'; ?>

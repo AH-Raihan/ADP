@@ -86,14 +86,13 @@ require_once("config.php");  ?>
                                     <td><span class="producttitle"><?php echo $cartbook["book_name"]; ?></span><br><span class="productwriter"><?php echo $cartbook["book_writer"]; ?></span></td>
                                     <td class="productprice"><span id="totalPrice"><?php echo $cartinfo["total_taka"]; ?></span> <input class="productquantity" type="number" oninput="quant(this.value,<?php echo $cart_id; ?>,<?php echo $cartinfo['price']; ?>);" id="quantity" value="<?php echo $quantity; ?>" min="1" max="10" maxlength="2" required></td>
                                     <td><button class="deletecart deleteCartID close" onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>">&times;</button> </td>
-                                    <td><input id="check" type="checkbox" value="<?php echo $cartinfo["total_taka"]; ?>" name="price[]"></td>
+                                    <td><input id="check" type="checkbox" checked value="<?php echo $cartinfo["total_taka"]; ?>" name="price[]"></td>
                                     <input type="hidden" name="<?php echo "orderCart" . $cart_id; ?>" value="<?php echo $cartbook["book_name"]; ?>">
 
                                 </tr>
                     <?php   }
                         }
                     } ?>
-                    <input type="hidden" name="" value="">
                 </table>
             </div>
             <div class="col-sm-4">
@@ -127,7 +126,7 @@ require_once("config.php");  ?>
                     <input type="checkbox" name="giftwrap" value="giftwrapchecked">
                     <span class="checkmark"></span>
                 </label> -->
-                    <button type="submit" class="btn bg-adp" style="width: 100%;">Check Out</button>
+                    <button type="submit"  id="submit" class="btn bg-adp" style="width: 100%;">Check Out</button>
 
                 </div>
             </div>
@@ -157,6 +156,14 @@ require_once("config.php");  ?>
             });
 
     };
-    var deletecart = document.getElementsByClassName
+    $('#submit').click(function() {
+      checked = $("input[type=checkbox]:checked").length;
+
+      if(!checked) {
+        alert("You must check at least one product.");
+        return false;
+      }
+
+    });
 </script>
 <?php require_once("footer.php"); ?>

@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_REQUEST["nextUrl"]) && isset($_REQUEST["stars"]) && isset($_REQUEST["message"]) && isset($_REQUEST["bookId"]) && isset($_REQUEST["userId"])){
     require_once("config.php");
    $nextUrl =$_REQUEST["nextUrl"];

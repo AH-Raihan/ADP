@@ -170,6 +170,7 @@ a {
 }
 td input#check {
     margin: 10px 3px 2px;
+    transform: scale(1.3);
 }
 .logo-area img {
     height: 100%;
@@ -729,7 +730,9 @@ td input#check {
     border: 1px solid #08c6a3;
     width: 100%
 }
-
+#cashSelect,#bkashSelect{
+    width:auto;
+}
 .EmailVerficationCode input {
     padding: 6px 14px;
     outline: 0;
@@ -1028,7 +1031,7 @@ margin-right: 5px;
 }
 .producttitle{}
 .productwriter{font-size: 15px;color: #5d5b5b;}
-.deletecart{font-size: 26px;color: red;}
+.deletecart{font-size: 26px;color: red;transform: scale(1.3);}
 .cartselect{width: 13px;}
 .productprice:before{content: "Tk. "}
 .productquantity{width: 60px}
