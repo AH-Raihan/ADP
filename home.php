@@ -1,7 +1,7 @@
 <?php require_once("header.php"); ?>
 <div class="clearboth"></div>
 <div class="adver-banner">
-    <div class="safeArea"><img src="images/banner@2x-1-scaled.jpg" alt="Add"></div>
+    <div class="safeArea"><img src="images/banner@2x-1-scaled.png" alt="Add"></div>
 </div>
 
 <div class="clearboth"></div>
@@ -39,8 +39,7 @@
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;">
                     <div style="background-color:#d3890e;">
-                        <img alt="slide" data-u="image" style="opacity:1;" data-src="images/banner3.jpg" />
-
+                        <img alt="slide" data-u="image" style="opacity:1;" data-src="images/banner3.png" />
                     </div>
                     <div>
                         <img alt="slide" data-u="image" data-src="images/banner1.jpg" />
@@ -168,7 +167,7 @@
                 if ($newsQuery == true) {
                     while ($news = mysqli_fetch_array($newsQuery)) { ?>
 
-                        <div class="col-sm-4 news-con" data-aos="slide-up">
+                        <div class="col-sm-4 news-con" data-aos="zoom-in">
                             <div class="news">
                                 <div class="news-thumbnail-img"><img src="images/<?php echo $news['news_img']; ?> " alt="news img"></div>
                                 <p class="news-time"><i class="fa fa-clock"></i> <?php echo $news['news_date']; ?> </p>
