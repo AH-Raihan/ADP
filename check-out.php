@@ -1,4 +1,4 @@
-<?php  
+<?php 
 if(isset($_REQUEST['price'])){ require_once("header.php"); ?>
 <form action="order.php" method="post">
     <div class="signupMainContainer clearfix">
@@ -68,6 +68,9 @@ if(isset($_REQUEST['price'])){ require_once("header.php"); ?>
                             <div class="emailAddress col-sm-6 d-inline-block">
                                 <label for="rocketSelect"><input class="d-inline-block w-auto" id="rocketSelect" type="radio" name="paymentMethod" id="" value="rocket" onclick="conDisplay();"> Rocket</label>
                             </div>
+                            <div class="emailAddress col-sm-6 d-inline-block">
+                                <label for="nagadSelect"><input class="d-inline-block w-auto" id="nagadSelect" type="radio" name="paymentMethod" id="" value="nagad" onclick="conDisplay();"> Nagad</label>
+                            </div>
 
                             <div class="bkash bg-bkash w-100 p-3 rounded" id="bkashCon" style="display: none;">
                                 <p class="text-light">Send Money To: 01915 71 11 72 (personal)</p>
@@ -83,10 +86,20 @@ if(isset($_REQUEST['price'])){ require_once("header.php"); ?>
                             <div class="bkash bg-rocket my-2 w-100 rounded" id="rocketCon" style="display: none;">
                                 <div class="emailAddress col-sm-5 d-inline-block">
                                     <p class="text-light">Send Money To: 01849945080</p>
-                                    <p>Rocket Number *</p><input type="text" name="RocketNumber" placeholder="Rocket Number" value="" maxlength="11" minlength="11" id="RocketNumber">
+                                    <p>Rocket Number *</p><input type="text" name="bkashNumber" placeholder="Rocket Number" value="" maxlength="11" minlength="11" id="RocketNumber">
                                 </div>
                                 <div class="emailAddress col-sm-6 d-inline-block">
-                                    <p>Rocket Transaction Id *</p><input type="text" name="Rockettrxid" placeholder="Rocket Transaction Id" value="" id="Rockettrxid">
+                                    <p>Rocket Transaction Id *</p><input type="text" name="trxid" placeholder="Rocket Transaction Id" value="" id="trxid">
+                                </div>
+                            </div>
+                            
+                            <div class="bkash bg-nagad my-2 w-100 rounded" id="nagadCon" style="display: none;">
+                                <div class="emailAddress col-sm-5 d-inline-block">
+                                    <p class="text-light">Send Money To: 01849945080</p>
+                                    <p>Nagad Number *</p><input type="text" name="bkashNumber" placeholder="Nagad Number" value="" maxlength="11" minlength="11" id="RocketNumber">
+                                </div>
+                                <div class="emailAddress col-sm-6 d-inline-block">
+                                    <p>Nagad Transaction Id *</p><input type="text" name="trxid" placeholder="Nagad Transaction Id" value="" id="trxid">
                                 </div>
                             </div>
                         </div>
@@ -142,12 +155,14 @@ if(isset($_REQUEST['price'])){ require_once("header.php"); ?>
     var cashSelect = document.getElementById("cashSelect");
     var bkashSelect = document.getElementById("bkashSelect");
     var rocketSelect = document.getElementById("rocketSelect");
+    var nagadSelect = document.getElementById("nagadSelect");
 
 
 
 
     var bkashCon = document.getElementById("bkashCon");
     var rocketCon = document.getElementById("rocketCon");
+    var nagadCon = document.getElementById("nagadCon");
 
     function conDisplay() {
         if (cashSelect.checked) {
@@ -165,12 +180,20 @@ if(isset($_REQUEST['price'])){ require_once("header.php"); ?>
             bkashCon.style.display = "none";
         }
         if (rocketSelect.checked) {
-            var RocketNumber = document.getElementById("RocketNumber");
-            var Rockettrxid = document.getElementById("Rockettrxid");
+            var bkashNumber = document.getElementById("bkashNumber");
+            var trxid = document.getElementById("trxid");
 
             rocketCon.style.display = "block";
         } else {
             rocketCon.style.display = "none";
+        }
+        if (nagadSelect.checked) {
+            var bkashNumber = document.getElementById("bkashNumber");
+            var trxid = document.getElementById("trxid");
+
+            nagadCon.style.display = "block";
+        } else {
+            nagadCon.style.display = "none";
         }
     }
 </script>

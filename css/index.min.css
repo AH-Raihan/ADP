@@ -23,6 +23,10 @@ body {
       background: #8B3E90;
       color: white;
   }
+  div#nagadCon {
+    background: radial-gradient(#E11C22, #8E1417);
+    color: #fff;
+}
   .bg-adp{
       background: linear-gradient(0deg, #217e5ef0 38%, #3ea467e6 82%);
       color: white !important;
@@ -730,7 +734,7 @@ td input#check {
     border: 1px solid #08c6a3;
     width: 100%;
 }
-#cashSelect,#bkashSelect ,#rocketSelect{
+#cashSelect,#bkashSelect ,#rocketSelect ,#nagadSelect{
     width:auto;
 }
 .EmailVerficationCode input {

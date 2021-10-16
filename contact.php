@@ -15,7 +15,7 @@
     </div>
 
  <script>
-         const scriptURL = 'https://script.google.com/macros/s/AKfycbwKj2124zTsz995mCORk6VgQvF7FEZxjgocJh-NtFT6On__vxNJq0x8ojsGcVp5m9Pg8w/exec'
+         const scriptURL = 'https://script.google.com/macros/s/AKfycbzEusN2p9fxmYnycV65ltTrfn7Yrtz8dPjyjCKQ5M4hQ5HD6Xo4GVPXL3ok06Wa9KSc/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
@@ -23,13 +23,7 @@
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("You have successfully submitted."))
                 .catch(error => console.error('Error!', error.message))
-            })
+            });
    
- 
-    if (!navigator.serviceWorker.controller) {
-        navigator.serviceWorker.register("/sw.js").then(function (reg) {
-            console.log("Service worker has been registered for scope: " + reg.scope);
-        });
-    }
 </script>
 <?php include('footer.php'); ?>
