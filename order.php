@@ -11,6 +11,7 @@ while ($data = mysqli_fetch_array($runselectUsr)) {
     $user_id = $data["user_id"];
 }
 
+$orderCartDelete =$_REQUEST["orderCartDelete"];
 $addr =$_REQUEST["addr"];
 $mobile =$_REQUEST["MobileNumber"];
 $transport =$_REQUEST["transport"];
@@ -28,10 +29,10 @@ $insertAddrQuery=mysqli_query($conn,$insertAddr);
 if ($insertAddrQuery==true) {
    
 
-$selectCart = "SELECT * FROM cart WHERE user_id='$user_id'";
+$selectCart = "SELECT * FROM cart WHERE user_id='$user_id' AND cart_id IN($orderCartDelete)";
 $selectCartQuery = mysqli_query($conn, $selectCart);
 while ($carts = mysqli_fetch_array($selectCartQuery)) {
-    $cart_id = $carts["cart_id"];
+    echo $cart_id = $carts["cart_id"] ."<br>";
     global $user_id;
     $book_id = $carts["book_id"];
     $quantity = $carts["quantity"];
@@ -42,14 +43,15 @@ while ($carts = mysqli_fetch_array($selectCartQuery)) {
 
     $order = "INSERT INTO orders(order_id,user_id,book_id,transport,quantity,book_name,total_price,patableTotal,paymentMethod,bkashNumber,trx) VAlUES('$orderid','$user_id','$book_id','$transport','$quantity','$book_name','$total_taka','$patableTotal','$paymentMethod','$bkashNumber','$trx')";
     $orderQuery = mysqli_query($conn, $order);
-    if ($orderQuery == true) {
-        header("location:/");
-        $deleteCart = "DELETE FROM cart WHERE cart_id='$cart_id'";
-        $deleteCartQuery = mysqli_query($conn, $deleteCart);
-    } else {
-        header("location:/?error");
-    }
 
-}} else {
+}
+if ($selectCartQuery == true) {
+    echo $orderCartDelete;
+    $deleteCart = "DELETE FROM cart WHERE cart_id IN($orderCartDelete)";
+    $deleteCartQuery = mysqli_query($conn, $deleteCart);
+} else {
+    header("location:/?error");
+}
+} else {
     header("location:/?");
 }

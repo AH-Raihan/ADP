@@ -173,7 +173,7 @@ global $user_id;
                                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>
                                     <h4 class="cartSlide-book-writer"><?php echo $cartbook["book_writer"]; ?></h4>
                                     <span class="cartSlide-book-present-price">TK. <span id="cartSlidePrice"><?php echo $totalTaka; ?></span></span>
-                                    <button onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="deleteCartID text-danger close">&times;</button>
+                                    <button  data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="deleteCartID text-danger close">&times;</button>
                                 </div>
                             </div>
                     <?php    }

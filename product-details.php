@@ -133,7 +133,7 @@ $book_name = $_REQUEST["book_name"];
                              $countorder=mysqli_num_rows($orderQuery);
                              if($countorder > 0){
                                 $order=mysqli_fetch_assoc($orderQuery);
-                                 if( $order["order_status"] ==="completed"){ ?>
+                                 if( $order["order_status"] ==="Completed"){ ?>
 
                             
                         <form class="writeReview" action="review.php" method="post">

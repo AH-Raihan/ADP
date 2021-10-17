@@ -7,6 +7,22 @@ require_once("config.php");  ?>
 <div class="loader" id="loader" style="position: fixed;top:50%;left:50%;z-index:1111;transform:translate(-50%,-50%);font-size:50px; display:none;">
     <i class="fas fa-cog fa-spin"></i>
 </div>
+<?php if (isset($_COOKIE["PHPLGADP"])) {
+    $authToken = $_COOKIE["PHPLGADP"];
+    $selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
+    $runselectUsr = mysqli_query($conn, $selectUsr);
+
+    while ($usriddata = mysqli_fetch_array($runselectUsr)) {
+        $user_id = $usriddata["user_id"];
+    }
+    global $user_id;
+    $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
+    while ($cartinfo = mysqli_fetch_array($cartQuery)) {
+        $cartcount = mysqli_num_rows($cartQuery);
+        global $cartcount;
+    }
+} ?>
+    <input type="hidden" id="userIDCart" value="<?php echo $user_id; ?>">
 <form action="check-out.php" method="post">
     <div class="cartcontainer bangla-font">
         <div class="safeArea row" style="background: #fff;">
@@ -15,27 +31,7 @@ require_once("config.php");  ?>
                 <div class="totalhishab" style="background: white;width: 100%;height: 49px;margin: 10px auto;">
                     <table class="cartTable" style="background: white;">
                         <tr>
-                            <th>My Cart (<?php if (isset($_COOKIE["PHPLGADP"])) {
-                                                $authToken = $_COOKIE["PHPLGADP"];
-                                                $selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
-                                                $runselectUsr = mysqli_query($conn, $selectUsr);
-
-                                                while ($usriddata = mysqli_fetch_array($runselectUsr)) {
-                                                    $user_id = $usriddata["user_id"];
-                                                }
-                                                global $user_id;
-                                                $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
-                                                while ($cartinfo = mysqli_fetch_array($cartQuery)) {
-                                                    $cartcount = mysqli_num_rows($cartQuery);
-                                                    global $cartcount;
-                                                }
-                                                
-                                                if ($cartcount == "0") {
-                                                    echo "0";
-                                                } else {
-                                                    echo "<span>" . $cartcount . "</span>";
-                                                }
-                                            } ?> Item)</th>
+                            <th>My Cart (<span id="totalCart">0</span> Item)</th>
                             <th style="text-align: right;">Total: <span id="totaltop">
                                     <?php
                                     $totalpriceslide = 0;
@@ -64,7 +60,7 @@ require_once("config.php");  ?>
                         </tr>
                     </table>
                 </div>
-                <table class="cartTable">
+                <table class="cartTable" id="cartTableItems">
                     <?php
                     $authToken = $_COOKIE["PHPLGADP"];
                     $selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
@@ -86,12 +82,25 @@ require_once("config.php");  ?>
                             $bookcartQuery = mysqli_query($conn, $selectcartBook);
 
                             while ($cartbook = mysqli_fetch_array($bookcartQuery)) {  ?>
-                                <tr>
-                                    <td><img width="80px" src="images/<?php echo $cartbook["book_img"]; ?>" alt="Book Image" title=""></td>
-                                    <td><span class="producttitle"><?php echo $cartbook["book_name"]; ?></span><br><span class="productwriter"><?php echo $cartbook["book_writer"]; ?></span></td>
-                                    <td class="productprice"><span id="totalPrice" class="totalPrice"><?php echo $cartinfo["total_taka"]; ?></span> <input class="productquantity" type="number" data-cartId="<?php echo $cartinfo['cart_id']; ?>" data-price="<?php echo $cartinfo['price']; ?>" id="quantity" value="<?php echo $quantity; ?>" min="1" max="10" maxlength="2" required></td>
-                                    <td><button class="deletecart deleteCartID close" onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>">&times;</button> </td>
-                                    <td><input id="check" class="checkProducts" type="checkbox" checked id="totalTakaSubmit" value="<?php echo $cartinfo["total_taka"]; ?>" name="price[]"></td>
+                                <tr class="itemsCart">
+                                    <td>
+                                        <img width="80px" src="images/<?php echo $cartbook["book_img"]; ?>" alt="Book Image" title="">
+                                    </td>
+                                    <td>
+                                        <span class="producttitle"><?php echo $cartbook["book_name"]; ?></span>
+                                        <br><span class="productwriter"><?php echo $cartbook["book_writer"]; ?></span>
+                                    </td>
+                                    <td class="productprice">
+                                        <span id="totalPrice" class="totalPrice"><?php echo $cartinfo["total_taka"]; ?></span>
+                                        <input class="productquantity" type="number" data-cartId="<?php echo $cartinfo['cart_id']; ?>" data-price="<?php echo $cartinfo['price']; ?>" id="quantity" value="<?php echo $quantity; ?>" min="1" max="10" maxlength="2" required>
+                                    </td>
+                                    <td>
+                                        <button onclick="return confirm('Are you Sure?');" type="button" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="deleteCartID deletecart text-danger close">&times;</button>
+                                    </td>
+                                    <td>
+                                        <input id="check" class="checkProducts" type="checkbox" id="totalTakaSubmit" checked value="<?php echo $cartinfo["total_taka"]; ?>" name="price[]">
+                                        <input type="checkbox" class="deleteCartIdValue d-none" name="orderCartDelete[]" checked value="<?php echo  $cartinfo['cart_id']; ?>">
+                                    </td>
                                     <input type="hidden" name="<?php echo "orderCart" . $cart_id; ?>" value="<?php echo $cartbook["book_name"]; ?>">
 
                                 </tr>
@@ -146,81 +155,101 @@ require_once("config.php");  ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    document.getElementById('mySidenav').remove();
-    document.getElementById('cart').remove();
-    var loader=document.getElementById("loader");
+    userID.remove();
+    var createUser= `<input type="hidden" id="userID" value="<?php echo $user_id; ?>">`;
+    document.querySelector('body').innerHTML +=createUser;
 
-    var productquantity=document.getElementsByClassName("productquantity");
-    var totalPrice=document.getElementsByClassName("totalPrice");
-    var checkProducts=document.getElementsByClassName("checkProducts");
-    var check=document.getElementsByClassName("check");
+    document.getElementById('mySidenav').style.display="none";
+    document.getElementById('cart').style.display="none";
+    var loader = document.getElementById("loader");
+    var itemsCart = document.getElementsByClassName("itemsCart");
 
-    var Subtotal=document.getElementById("Subtotal");
-    var Total=document.getElementById("Total");
-    var totaltop=document.getElementById("totaltop");
-    var SubtotalInner=document.getElementById("SubtotalInner");
-    var TotalInner=document.getElementById("TotalInner");
-    var totalTakaSubmit=document.getElementById("totalTakaSubmit");
-    
-    
+    var productquantity = document.getElementsByClassName("productquantity");
+    var totalPrice = document.getElementsByClassName("totalPrice");
+    var checkProducts = document.getElementsByClassName("checkProducts");
+    var check = document.getElementsByClassName("check");
 
-    for(let i=0;i< productquantity.length;i++){
-        productquantity[i].addEventListener('input',function quant() {
-            loader.style.display="block";
-
-            var quantity=this.value;
-            var price=this.getAttribute('data-price');
-            var cartId=this.getAttribute('data-cartId');
+    var Subtotal = document.getElementById("Subtotal");
+    var Total = document.getElementById("Total");
+    var totaltop = document.getElementById("totaltop");
+    var SubtotalInner = document.getElementById("SubtotalInner");
+    var TotalInner = document.getElementById("TotalInner");
+    var deleteCartIdValue = document.getElementsByClassName("deleteCartIdValue");
 
 
-        $.post("quantity.php", {
-                cartId: cartId,
-                quantity: quantity,
-                price: price
+    var totalCartV = 0;
+    for (let index = 1; index < itemsCart.length + 1; index++) {
+        totalCartV = index;
+    }
+    document.getElementById('totalCart').innerHTML = totalCartV;
+    if (totalCartV <= 0) {
+        document.getElementById('cartTableItems').innerHTML = "<p style='padding:15px;text-align:center;'>Cart Is Empty!</p>";
+    }
 
-            },
-            function(data, status) {
-               totalPrice[i].innerHTML=quantity*price;
-                //location.reload();
-                totalPriceV=0;
-                for(let u=0;u <totalPrice.length;u++){
-                    //alert(totalPrice[u].innerHTML) ;
-                    if(checkProducts[u].checked){
-                    totalPriceV += parseInt(totalPrice[u].innerHTML) ;
+    for (let i = 0; i < productquantity.length; i++) {
+
+        productquantity[i].addEventListener('input', function quant() {
+            loader.style.display = "block";
+
+            var quantity = this.value;
+            var price = this.getAttribute('data-price');
+            var cartId = this.getAttribute('data-cartId');
+
+
+            $.post("quantity.php", {
+                    cartId: cartId,
+                    quantity: quantity,
+                    price: price
+
+                },
+                function(data, status) {
+                    totalPrice[i].innerHTML = quantity * price;
+                    //location.reload();
+                    totalPriceV = 0;
+                    for (let u = 0; u < totalPrice.length; u++) {
+                        //alert(totalPrice[u].innerHTML) ;
+                        if (checkProducts[u].checked) {
+                            totalPriceV += parseInt(totalPrice[u].innerHTML);
+                        }
+
                     }
-                   
-                }
-                Subtotal.value= totalPriceV ;
-                SubtotalInner.innerHTML = totalPriceV ;
-                Total.value = totalPriceV ;
-                TotalInner.innerHTML = totalPriceV ;
-                totaltop.innerHTML = totalPriceV ;
+                    Subtotal.value = totalPriceV;
+                    SubtotalInner.innerHTML = totalPriceV;
+                    Total.value = totalPriceV;
+                    TotalInner.innerHTML = totalPriceV;
+                    totaltop.innerHTML = totalPriceV;
 
-                loader.style.display="none";
+                    loader.style.display = "none";
+
+                });
 
         });
-
-    });
     }
-    
-    for(let x=0; x< totalPrice.length;x++){
-        checkProducts[x].addEventListener('click',function(){
-            var prices=productquantity[x].getAttribute('data-price');
 
-                totalPriceV=0;
-                for(let y=0;y <totalPrice.length;y++){
-                    //alert(totalPrice[u].innerHTML) ;
-                    if(checkProducts[y].checked){
-                    totalPriceV += parseInt(totalPrice[y].innerHTML) ;
-                    }
-                   
+
+    for (let x = 0; x < totalPrice.length; x++) {
+        checkProducts[x].addEventListener('click', function() {
+            var prices = productquantity[x].getAttribute('data-price');
+            if (checkProducts[x].checked) {
+                deleteCartIdValue[x].checked=true;
+            } else {
+                deleteCartIdValue[x].checked=false;
+            }
+
+            totalPriceV = 0;
+            for (let y = 0; y < totalPrice.length; y++) {
+                //alert(totalPrice[u].innerHTML) ;
+                if (checkProducts[y].checked) {
+                    totalPriceV += parseInt(totalPrice[y].innerHTML);
                 }
-                Subtotal.value= totalPriceV ;
-                SubtotalInner.innerHTML = totalPriceV ;
-                Total.value = totalPriceV ;
-                TotalInner.innerHTML = totalPriceV ;
-                totaltop.innerHTML = totalPriceV ;
-                totalTakaSubmit.value = totalPriceV ;
+
+            }
+            Subtotal.value = totalPriceV;
+            SubtotalInner.innerHTML = totalPriceV;
+            Total.value = totalPriceV;
+            TotalInner.innerHTML = totalPriceV;
+            totaltop.innerHTML = totalPriceV;
+            totalTakaSubmit.value = totalPriceV;
         })
     }
 

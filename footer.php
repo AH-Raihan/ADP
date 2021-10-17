@@ -1,8 +1,4 @@
-<?php
-
-use GuzzleHttp\Subscriber\Cookie;
-
-require_once("topFooter.php"); ?>
+<?php require_once("topFooter.php"); ?>
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -57,7 +53,9 @@ require_once("topFooter.php"); ?>
     }
 
     /* Set the width of the side navigation to 0 */
-    function closeNav() {  mySidenav.style.width = "0"; }
+    function closeNav() {
+        mySidenav.style.width = "0";
+    }
 
     // ajax Requst=============================
     var cart = document.getElementById("cart");
@@ -71,7 +69,7 @@ require_once("topFooter.php"); ?>
         addToCartBtn[btnl].addEventListener('click', function() {
             var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
 
-            <?php if (isset($_COOKIE['PHPLGADP'])) { ?> 
+            <?php if (isset($_COOKIE['PHPLGADP'])) { ?>
                 $.post("add-to-cart.php", {
                     addCartBookID: addCartBookIDdd,
                     user_id: userID
@@ -108,7 +106,11 @@ require_once("topFooter.php"); ?>
                 deleteCartID: deleteCartIDd,
                 user_id: userID
             }, function(returnDataDTC) {
-                mySidenav.innerHTML = returnDataDTC;
+                if (mySidenav == true) {
+                    mySidenav.innerHTML = returnDataDTC;
+                    //document.getElementsByClassName('deleteCartID')[btnld].remove();
+                }
+
 
                 var totalpriceslide = document.getElementById("totalpriceslide").value;
                 $.post("carticon.php", {
@@ -126,6 +128,7 @@ require_once("topFooter.php"); ?>
                 }, 2500);
                 var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
             });
+            window.location.reload();
         });
     }
 </script>

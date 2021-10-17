@@ -948,11 +948,11 @@ td input#check {
 
 .cartSlide-book-title {
 
-    display: inline-block;
+display: block;
 
-    font-size: 17px;
+font-size: 17px;
 
-    float: right;
+text-align: left;
 }
 
 .cartSlide-book-writer {

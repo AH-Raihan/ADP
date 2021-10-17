@@ -371,6 +371,12 @@
     .logo-area img {
         max-width: 94%;
     }
+    .main-stars{
+        font-size:25px;
+    }
+    .stars{
+        font-size:20px;
+    }
 }
 
 @media screen and (max-width: 320px) {
