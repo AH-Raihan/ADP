@@ -1,6 +1,7 @@
 <?php
 if (isset($_REQUEST['price'])) {
-    require_once("header.php"); ?>
+
+    require_once("header.php");  ?>
     <form action="order.php" method="post">
         <div class="signupMainContainer clearfix">
             <div class="safeArea row">
@@ -125,7 +126,7 @@ if (isset($_REQUEST['price'])) {
                                             </tr> -->
                                     <tr>
                                         <td>Total</td>
-                                        <td style="text-align: right"><?php echo $prices; ?> Tk.</td>
+                                        <td style="text-align: right"><?php echo $_REQUEST["Total"]; ?> Tk.</td>
                                     </tr>
                                     <tr>
                                         <td>courier Charge</td>
@@ -133,7 +134,8 @@ if (isset($_REQUEST['price'])) {
                                     </tr>
                                     <tr>
                                         <td>Payable Total</td>
-                                        <td style="text-align: right"><?php echo $prices + $bkashvat; ?> Tk. <input type="hidden" name="patableTotal" value="<?php echo $_REQUEST['Total'] + $bkashvat; ?>"></td>
+                                        <td style="text-align: right"><?php echo $_REQUEST["Total"];
+                                                                        +$bkashvat; ?> Tk. <input type="hidden" name="patableTotal" value="<?php echo $_REQUEST['Total'] + $bkashvat; ?>"></td>
                                     </tr>
                                 </table>
                                 <hr>
