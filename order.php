@@ -46,9 +46,10 @@ while ($carts = mysqli_fetch_array($selectCartQuery)) {
 
 }
 if ($selectCartQuery == true) {
-    echo $orderCartDelete;
+     $orderCartDelete;
     $deleteCart = "DELETE FROM cart WHERE cart_id IN($orderCartDelete)";
     $deleteCartQuery = mysqli_query($conn, $deleteCart);
+    header("location:/");
 } else {
     header("location:/?error");
 }
