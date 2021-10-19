@@ -130,12 +130,12 @@ if (isset($_REQUEST['price'])) {
                                     </tr>
                                     <tr>
                                         <td>courier Charge</td>
-                                        <td style="text-align: right"><?php echo $bkashvat = 30/*$_REQUEST["Total"] * 0.02;*/ ?> Tk.</td>
+                                        <td style="text-align: right"><?php echo $bkashvat = 30;/*$_REQUEST["Total"] * 0.02;*/ ?> Tk.</td>
                                     </tr>
                                     <tr>
                                         <td>Payable Total</td>
-                                        <td style="text-align: right"><?php echo $_REQUEST["Total"];
-                                                                        +$bkashvat; ?> Tk. <input type="hidden" name="patableTotal" value="<?php echo $_REQUEST['Total'] + $bkashvat; ?>"></td>
+                                        <td style="text-align: right"><?php echo $_REQUEST["Total"]
+                                                                        + $bkashvat; ?> Tk. <input type="hidden" name="patableTotal" value="<?php echo $_REQUEST['Total'] + $bkashvat; ?>"></td>
                                     </tr>
                                 </table>
                                 <hr>
