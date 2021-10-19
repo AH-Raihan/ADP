@@ -44,9 +44,6 @@
     .waffle, .grid-fixed-table {
         width: 100% !important;
     }
-    body{
-        background: red;
-    }
 </style>
 </head>
 <body>
