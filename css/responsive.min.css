@@ -2,16 +2,20 @@
     .safeArea {
         max-width: 96% !important;
     }
+
     .sitebranding {
-      overflow:inherit;
+        overflow: inherit;
     }
-    #cart{
-      bottom:0;
-      top:auto;
-      right: 0;
-      border-radius: 39px 0px 0 0;
+
+    #cart {
+        bottom: 0;
+        top: auto;
+        display: none;
+        right: 0;
+        border-radius: 39px 0px 0 0;
     }
-    .mainNav ul{
+
+    .mainNav ul {
         position: absolute;
         top: 80%;
         z-index: 11111;
@@ -33,20 +37,58 @@
         transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
         box-shadow: 0px 8px 15px 0px #3333335e;
     }
-    .mainNav ul li{
-     display:block;
-     z-index:1111111111; 
+
+    .mainNav ul li {
+        display: block;
+        z-index: 1111111111;
     }
-   
-    .navIcon{
-      display:inline-block;
-      top: 25px;
-      right: 15px;
-      cursor: pointer;
-      transition: .4s;
-      transform: translateY(-50%) rotateZ(90deg);
+
+    .navIcon {
+        display: inline-block;
+        top: 25px;
+        right: 15px;
+        cursor: pointer;
+        transition: .4s;
+        transform: translateY(-50%) rotateZ(90deg);
     }
-    
+
+    .bottom-header {
+        display: block;
+        width: 100%;
+        z-index: 111111;
+    }
+
+    .bottom-header {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        background: #fff;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        z-index: 1111111111;
+    }
+
+    .bottom-header a {
+        padding: 15px;
+        color: #0b9444;
+        border: 1px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #dce2df;
+    }
+    .top-bar{
+        display:none;
+        border:none;
+        
+    }
+    .right-top-bar{
+        display: none;
+    }
+
 }
 
 /* For desktop: */
@@ -181,12 +223,14 @@
     .catalog-menu {
         display: none;
     }
-    .product-details-thumbnail-img-container{
+
+    .product-details-thumbnail-img-container {
         max-width: 56% !important;
         margin: 0 auto;
         display: block !important;
     }
-    .products-details-book-details{
+
+    .products-details-book-details {
         float: none !important;
         width: 100% !important;
         text-align: center;
@@ -202,9 +246,10 @@
         float: none;
         height: 54px;
     }
+
     .sitebranding {
-      height: auto !important;
-      padding: 10px 0 !important;
+        height: auto !important;
+        padding: 10px 0 !important;
     }
 
     .header-right {
@@ -241,11 +286,12 @@
         float: none !important;
         display: block;
     }
-    .logo-area.dnone {
-}
-.products{
-    width: 90%;
-}
+
+    .logo-area.dnone {}
+
+    .products {
+        width: 90%;
+    }
 
 }
 
@@ -272,10 +318,12 @@
         margin: 15px 0;
         float: none !important;
     }
-.sitebranding {
-      height: auto !important;
-      padding: 5px !important;
+
+    .sitebranding {
+        height: auto !important;
+        padding: 5px !important;
     }
+
     .createaccount {
         padding: 0;
         float: none !important;
@@ -290,14 +338,18 @@
         margin: auto;
         height: auto;
     }
-    .logo-area.dnone {display: inline-block;}
-    .mainNav ul{
-        top:5px;
+
+    .logo-area.dnone {
+        display: inline-block;
     }
 
-.navIcon {
-    top: -22px;
-}
+    .mainNav ul {
+        top: 5px;
+    }
+
+    .navIcon {
+        top: -22px;
+    }
 
     .header-right {
         float: none;
@@ -371,31 +423,36 @@
     .logo-area img {
         max-width: 94%;
     }
-    .main-stars{
-        font-size:25px;
+
+    .main-stars {
+        font-size: 25px;
     }
-    .stars{
-        font-size:20px;
+
+    .stars {
+        font-size: 20px;
     }
+
 }
 
 @media screen and (max-width: 320px) {
     .topaddress {
         display: none;
     }
-    .logo-area.dnone {
-}
+
+    .logo-area.dnone {}
 
     .navigation ul li a {
         font-family: none !important;
     }
+
     .sitebranding {
-      height: auto!important;
-      padding: 6px 5px !important;
+        height: auto !important;
+        padding: 6px 5px !important;
     }
-    .logo-area{
-      height: 51px;
-      margin: 6px auto;
+
+    .logo-area {
+        height: 51px;
+        margin: 6px auto;
     }
 
     .search-product input {
@@ -415,7 +472,7 @@
 
     .navigationDrop ul li a {
         font-size: 10px !important;
-        font-family: Arial,  sans-serif !important;
+        font-family: Arial, sans-serif !important;
     }
 
     .mainNav ul li {
@@ -442,5 +499,3 @@
         width: 100%;
     }
 }
-
-

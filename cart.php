@@ -22,7 +22,7 @@ require_once("config.php");  ?>
         global $cartcount;
     }
 } ?>
-    <input type="hidden" id="userIDCart" value="<?php echo $user_id; ?>">
+<input type="hidden" id="userIDCart" value="<?php echo $user_id; ?>">
 <form action="check-out.php" method="post">
     <div class="cartcontainer bangla-font">
         <div class="safeArea row" style="background: #fff;">
@@ -156,11 +156,11 @@ require_once("config.php");  ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     userID.remove();
-    var createUser= `<input type="hidden" id="userID" value="<?php echo $user_id; ?>">`;
-    document.querySelector('body').innerHTML +=createUser;
+    var createUser = `<input type="hidden" id="userID" value="<?php echo $user_id; ?>">`;
+    document.querySelector('body').innerHTML += createUser;
 
-    document.getElementById('mySidenav').style.display="none";
-    document.getElementById('cart').style.display="none";
+    document.getElementById('mySidenav').style.display = "none";
+    document.getElementById('cart').style.display = "none";
     var loader = document.getElementById("loader");
     var itemsCart = document.getElementsByClassName("itemsCart");
 
@@ -231,9 +231,9 @@ require_once("config.php");  ?>
         checkProducts[x].addEventListener('click', function() {
             var prices = productquantity[x].getAttribute('data-price');
             if (checkProducts[x].checked) {
-                deleteCartIdValue[x].checked=true;
+                deleteCartIdValue[x].checked = true;
             } else {
-                deleteCartIdValue[x].checked=false;
+                deleteCartIdValue[x].checked = false;
             }
 
             totalPriceV = 0;

@@ -28,6 +28,7 @@ while ($userD = mysqli_fetch_array($userDQuery)) { ?>
                     <div style="width: 98%;margin:auto;">
                         <div class="border shadow p-3 mb-5 bg-white list-group">
                             <p style="text-align: center;">Hello <b><?php echo $userD["full_name"]; ?></b></p>
+                            <a href="/logout.php" style="display: inline-block; text-align:center; ">Logout<i class="fa fa-sign-out" aria-hidden="true"></i></a>
                         </div>
 
                         <div class="border shadow bg-white list-group">

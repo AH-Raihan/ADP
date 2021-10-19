@@ -75,7 +75,7 @@ if (isset($_REQUEST['price'])) {
                                 </div>
 
                                 <div class="bkash bg-bkash w-100 p-3 rounded" id="bkashCon" style="display: none;">
-                                    <p class="text-light">Send Money To: 01915 71 11 72 (personal)</p>
+                                    <p class="text-animation">Send Money To: 01915 71 11 72 (personal)</p>
                                     <div class="emailAddress col-sm-5 d-inline-block">
                                         <p>bKash Number *</p><input type="text" name="bkashNumber" placeholder="bKash Number" value="" maxlength="11" minlength="11" id="bkashNumber">
                                     </div>
@@ -87,7 +87,7 @@ if (isset($_REQUEST['price'])) {
 
                                 <div class="bkash bg-rocket my-2 w-100 rounded" id="rocketCon" style="display: none;">
                                     <div class="emailAddress col-sm-5 d-inline-block">
-                                        <p class="text-light">Send Money To: 01849945080</p>
+                                        <p class="text-animation">Send Money To: 01849945080</p>
                                         <p>Rocket Number *</p><input type="text" name="bkashNumber" placeholder="Rocket Number" value="" maxlength="11" minlength="11" id="RocketNumber">
                                     </div>
                                     <div class="emailAddress col-sm-6 d-inline-block">
@@ -97,7 +97,7 @@ if (isset($_REQUEST['price'])) {
 
                                 <div class="bkash bg-nagad my-2 w-100 rounded" id="nagadCon" style="display: none;">
                                     <div class="emailAddress col-sm-5 d-inline-block">
-                                        <p class="text-light">Send Money To: 01849945080</p>
+                                        <p class="text-animation">Send Money To: 01849945080</p>
                                         <p>Nagad Number *</p><input type="text" name="bkashNumber" placeholder="Nagad Number" value="" maxlength="11" minlength="11" id="RocketNumber">
                                     </div>
                                     <div class="emailAddress col-sm-6 d-inline-block">

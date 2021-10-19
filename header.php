@@ -62,6 +62,15 @@ global $user_id;
 <body>
     <div id="alertBox"></div>
     <input type="hidden" id="userID" value="<?php echo $user_id; ?>">
+
+
+    <div class="bottom-header">
+            <a href="/"><i class="fa fa-home"></i></a>
+            <a href="/cart"><i class="fas fa-shopping-cart"></i>  </a> 
+            <a href="/myorders"><i class='fa fa-shopping-bag'></i></a>
+            <a href="/myaccount"><i class="fa fa-user"></i></a>
+    </div>
+
     <!-- start top address-->
     <div class="top-header">
         <div class="safeArea">
