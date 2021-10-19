@@ -3,8 +3,8 @@
 if (isset($_REQUEST['addCartBookID']) && isset($_REQUEST['user_id'])) {
 
     require_once("config.php");
-    $user_id=$_REQUEST['user_id'];
-    
+    $user_id = $_REQUEST['user_id'];
+
 
 
     if (!isset($_COOKIE["PHPLGADP"])) {
@@ -13,7 +13,7 @@ if (isset($_REQUEST['addCartBookID']) && isset($_REQUEST['user_id'])) {
     } else {
 
         $book_id = $_REQUEST["addCartBookID"];
-        
+
 
         $bookSelect = "SELECT * FROM books WHERE book_id='$book_id'";
         $bookSelectQuery = mysqli_query($conn, $bookSelect);
@@ -86,14 +86,14 @@ if (isset($_REQUEST['addCartBookID']) && isset($_REQUEST['user_id'])) {
                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>
                     <h4 class="cartSlide-book-writer"><?php echo $cartbook["book_writer"]; ?></h4>
                     <span class="cartSlide-book-present-price">TK. <span id="cartSlidePrice"><?php echo $totalTakaa; ?></span></span>
-                    <button class="deleteCartID" onclick="return confirm('Are you Sure?');" data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="closecartitem btn btn-danger">&times;</button>
+                    <button data-deleteCartID="<?php echo $cartinfo['cart_id']; ?>" class="deleteCartID text-danger close">&times;</button>
                 </div>
             </div>
     <?php    }
     }  ?>
 
     <div class="cartslisetoo">
-    <input type="hidden" id="totalpriceslide" value="<?php echo  $totalpriceslide; ?>">
+        <input type="hidden" id="totalpriceslide" value="<?php echo  $totalpriceslide; ?>">
         <p class="cart-Slide-toatal">Total</p>
         <p class="cart-Slide-toatalf"><span id="cartSlideTotalPrice"><?php echo  $totalpriceslide; ?></span> Taka</p>
     </div>

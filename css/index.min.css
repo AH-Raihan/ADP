@@ -6,6 +6,7 @@ body {
     background: linear-gradient(to right, #1f7c6c -19%, #42ae5a);
     font-family: 'Hind Siliguri', sans-serif;
     font-weight: 300;
+    scroll-behavior: smooth;
 }
 
 .bg-glass {
@@ -170,7 +171,7 @@ a {
     overflow: hidden;
     box-shadow: 0px 8px 15px 0px #0c812357;
     padding: 23px 0 !important;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px auto;
 }
 
@@ -1099,7 +1100,7 @@ td input#check {
 }
 
 .productquantity {
-    width: 60px
+    width: 50px;
 }
 
 .carttotaldetils {

@@ -65,10 +65,10 @@ global $user_id;
 
 
     <div class="bottom-header">
-            <a href="/"><i class="fa fa-home"></i></a>
-            <a href="/cart"><i class="fas fa-shopping-cart"></i>  </a> 
-            <a href="/myorders"><i class='fa fa-shopping-bag'></i></a>
-            <a href="/myaccount"><i class="fa fa-user"></i></a>
+            <a href="/"><i class="fa fa-home"></i> <br>   Home </a>
+            <a href="/cart"><i class="fas fa-shopping-cart"></i><br> Cart </a> 
+            <a href="/myorders"><i class='fa fa-shopping-bag'></i><br> Orders</a>
+            <a href="/myaccount"><i class="fa fa-user"></i><br> Account</a>
     </div>
 
     <!-- start top address-->

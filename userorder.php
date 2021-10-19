@@ -21,7 +21,7 @@ while ($data = mysqli_fetch_array($runselectUsr)) {
                                                                                     echo $name['full_name'];
                                                                                 } ?></b></p>
                                                                                 
-                            <a href="/logout.php" style="display: inline-block; text-align:center; ">Logout<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            <a href="/logout.php" style="display: inline-block; text-align:center; ">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="border shadow bg-white list-group">
