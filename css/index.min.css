@@ -1251,3 +1251,13 @@ td input#check {
     display: none;
     background: white;
 }
+
+
+.bottom-header a {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-header a span {
+    font-size:12px;
+}

@@ -637,7 +637,7 @@
 		 * Converts a tinymce.html.Node video/object/embed to an img element.
 		 *
 		 * The video/object/embed will be converted into an image placeholder with a JSON data attribute like this:
-		 * <img class="mceItemMedia mceItemFlash" width="100" height="100" data-mce-json="{..}" />
+		 * <img loading="lazy" class="mceItemMedia mceItemFlash" width="100" height="100" data-mce-json="{..}" />
 		 *
 		 * The JSON structure will be like this:
 		 * {'params':{'flashvars':'something','quality':'high','src':'someurl'}, 'video':{'sources':[{src: 'someurl', type: 'video/mp4'}]}}

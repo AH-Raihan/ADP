@@ -65,10 +65,10 @@ global $user_id;
 
 
     <div class="bottom-header">
-            <a href="/"><i class="fa fa-home"></i> <br>   Home </a>
-            <a href="/cart"><i class="fas fa-shopping-cart"></i><br> Cart </a> 
-            <a href="/myorders"><i class='fa fa-shopping-bag'></i><br> Orders</a>
-            <a href="/myaccount"><i class="fa fa-user"></i><br> Account</a>
+            <a href="/"><i class="fa fa-home"></i>  <span>Home</span>  </a>
+            <a href="/cart"><i class="fas fa-shopping-cart"></i> <span>Cart</span>  </a> 
+            <a href="/myorders"><i class='fa fa-shopping-bag'></i> <span>Orders</span>  </a>
+            <a href="/myaccount"><i class="fa fa-user"></i> <span>Account</span> </a>
     </div>
 
     <!-- start top address-->
@@ -129,7 +129,7 @@ global $user_id;
             <div class="logo-area">
                 <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
                 <p style="display:none;">Alor Dishari Publications</p>
-                <a href="/home"><img src="images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
+                <a href="/home"><img loading="lazy" src="images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
             </div>
 
 
@@ -176,7 +176,7 @@ global $user_id;
 
                             <div class="cartslideitems">
                                 <div class="cartSlideThumb">
-                                    <img src="images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
+                                    <img loading="lazy" src="images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
                                 </div>
                                 <div class="cartslidedetails">
                                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>
@@ -199,7 +199,7 @@ global $user_id;
 
                 </div>
                 <div id="cart">
-                    <div class="cart"><img src="images/carticon.png" width="40px" alt="" id="cartslideshow" onclick="openNav()"><?php
+                    <div class="cart"><img loading="lazy" src="images/carticon.png" width="40px" alt="" id="cartslideshow" onclick="openNav()"><?php
 
                                                                                                                                 $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
                                                                                                                                 while ($cartinfo = mysqli_fetch_array($cartQuery)) {

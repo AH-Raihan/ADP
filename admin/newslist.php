@@ -24,7 +24,7 @@
           while ($orders = mysqli_fetch_array($orderQuery)) { ?>
             
               <tr>
-              <td><img width="80px" src="../images/<?php echo $orders["news_img"]; ?>" alt=""> </td>
+              <td><img loading="lazy" width="80px" src="../images/<?php echo $orders["news_img"]; ?>" alt=""> </td>
                 <td><?php echo $orders["news_title"]; ?> </td>
                 <td><?php echo $orders["news_discription"]; ?> </td>
                 <td><?php echo $orders["news_date"]; ?> </td>

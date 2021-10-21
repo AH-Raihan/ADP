@@ -93,7 +93,7 @@
       <div class="popup"> \
         <div class="content"> \
         </div> \
-        <a href="#" class="close"><img src="./img/cross.png" title="close" class="close_image" /></a> \
+        <a href="#" class="close"><img loading="lazy" src="./img/cross.png" title="close" class="close_image" /></a> \
       </div> \
     </div>'
     },
@@ -105,7 +105,7 @@
 
       $('#facebox .content').empty()
       $('#facebox .body').children().hide().end().
-        append('<div class="loading"><img src="'+$.facebox.settings.loadingImage+'"/></div>')
+        append('<div class="loading"><img loading="lazy" src="'+$.facebox.settings.loadingImage+'"/></div>')
 
       $('#facebox').css({
         top:	getPageScroll()[1] + (getPageHeight() / 10),
@@ -254,7 +254,7 @@
   function fillFaceboxFromImage(href, klass) {
     var image = new Image()
     image.onload = function() {
-      $.facebox.reveal('<div class="image"><img src="' + image.src + '" /></div>', klass)
+      $.facebox.reveal('<div class="image"><img loading="lazy" src="' + image.src + '" /></div>', klass)
     }
     image.src = href
   }

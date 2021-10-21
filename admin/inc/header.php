@@ -7,7 +7,7 @@
     header("location:login.php");
 }
 ?>
-<!DOCTYPE html
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -44,6 +44,9 @@
     .waffle, .grid-fixed-table {
         width: 100% !important;
     }
+    body{
+        background: red;
+    }
 </style>
 </head>
 <body>
@@ -51,7 +54,7 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="../../../images/logo.png" alt="Logo" />
+                    <img loading="lazy" src="../../../images/logo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
 					<h1>Alor Dishari Publications</h1>
@@ -59,7 +62,7 @@
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
-                        <img src="img/img-profile.jpg" alt="Profile Pic" /></div>
+                        <img loading="lazy" src="img/img-profile.jpg" alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello Admin</li>
@@ -76,7 +79,7 @@
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="index.php"><span>Dashboard</span></a> </li>
-                <li class="ic-form-style"><a href="#"><span>User Profile</span></a></li>
+                <li class="ic-form-style"><a href=""><span>User Profile</span></a></li>
 				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
 				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
                 <li class="ic-charts"><a href="/"><span>Visit Website</span></a></li>

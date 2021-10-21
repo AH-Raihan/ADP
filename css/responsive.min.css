@@ -68,17 +68,17 @@
         bottom: 0;
         left: 0;
         margin: 0;
+        height: 48px;
         width: 100%;
         z-index: 1111111111;
+        box-shadow: 0 -1px 1px 0 rgb(0 0 0 / 15%);
     }
 
     .bottom-header a {
-        padding: 15px;
+        padding: 4px 0 2px;
         color: #0b9444;
-        border: 1px;
         width: 100%;
         text-align: center;
-        border: 1px solid #dce2df;
     }
     .top-bar{
         display:none;
@@ -88,6 +88,10 @@
     .right-top-bar{
         display: none;
     }
+    .footerBottomContainer{
+    padding: 6px 19px;
+    height: 90px;
+}
 
 }
 
@@ -386,6 +390,15 @@
     .rightSide {
         float: none;
     }
+    .footerBottomContainer{
+    padding: 6px 19px;
+    height: 145px;
+}
+.copyright, .developer{
+    text-align:center;
+    float: none;
+    display: block;
+}
 
     .headsignupcontainer {
         text-align: center;

@@ -644,7 +644,7 @@
 				});
 			} else {
 				if (tinymce.isWebKit) {
-					// We need to compress the styles on WebKit since if you paste <img border="0" /> it will become <img border="0" style="... lots of junk ..." />
+					// We need to compress the styles on WebKit since if you paste <img loading="lazy" border="0" /> it will become <img loading="lazy" border="0" style="... lots of junk ..." />
 					// Removing the mce_style that contains the real value will force the Serializer engine to compress the styles
 					each(dom.select('*', o.node), function(el) {
 						el.removeAttribute('data-mce-style');

@@ -65,7 +65,7 @@ while ($data = mysqli_fetch_array($runselectUsr)) {
                             <div class="border p-3 m-3 col-sm-3">
                                 <p>Order Id : <span class="text-danger"><?php echo $orders["order_id"]; ?></span> </p>
                                 <a href="/product-details.php?book_name=<?php echo $orders["book_name"]; ?>">
-                                    <div class="product-thumbnail-img"><img class="productImage" src="images/<?php echo $books['book_img']; ?>" alt=""></div>
+                                    <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="images/<?php echo $books['book_img']; ?>" alt=""></div>
                                     <div class="book-details">
                                         <h3 class="book-title productTitle"><?php echo $orders["book_name"]; ?></h3>
                                         <h4 class="book-present-price">Quantity: <?php echo $orders["quantity"]; ?></h4>

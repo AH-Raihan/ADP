@@ -36,8 +36,8 @@
                 </li> -->
                 <li><a class="menuitem">Slider Option</a>
                     <ul class="submenu">
-                        <li><a href="#">Add Slider</a> </li>
-                        <li><a href="#">Slider List</a> </li>
+                        <li><a href="addslider.php">Add Slider</a> </li>
+                        <li><a href="sliderlist.php">Slider List</a> </li>
                     </ul>
                 </li>
                 <!-- <li><a class="menuitem">Category Option</a>
@@ -48,8 +48,8 @@
                 </li>  -->
                 <li><a class="menuitem">Advertise Banner</a>
                     <ul class="submenu">
-                        <li><a href="#">Add Advertise </a> </li>
-                        <li><a href="#">Advertise List</a> </li>
+                        <li><a href="addcat.php">Add Advertise </a> </li>
+                        <li><a href="catlist.php">Advertise List</a> </li>
                     </ul>
                 </li>
 

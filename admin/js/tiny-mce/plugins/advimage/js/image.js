@@ -452,9 +452,9 @@ var ImageDialog = {
 		u = tinyMCEPopup.editor.documentBaseURI.toAbsolute(u);
 
 		if (!st)
-			tinyMCEPopup.dom.setHTML('prev', '<img id="previewImg" src="' + u + '" border="0" onload="ImageDialog.updateImageData(this);" onerror="ImageDialog.resetImageData();" />');
+			tinyMCEPopup.dom.setHTML('prev', '<img loading="lazy" id="previewImg" src="' + u + '" border="0" onload="ImageDialog.updateImageData(this);" onerror="ImageDialog.resetImageData();" />');
 		else
-			tinyMCEPopup.dom.setHTML('prev', '<img id="previewImg" src="' + u + '" border="0" onload="ImageDialog.updateImageData(this, 1);" />');
+			tinyMCEPopup.dom.setHTML('prev', '<img loading="lazy" id="previewImg" src="' + u + '" border="0" onload="ImageDialog.updateImageData(this, 1);" />');
 	}
 };
 

@@ -31,7 +31,7 @@ $deletecart="DELETE FROM cart WHERE cart_id='$cartdeleteid' AND user_id='$userID
 
             <div class="cartslideitems">
                 <div class="cartSlideThumb">
-                    <img src="images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
+                    <img loading="lazy" src="images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
                 </div>
                 <div class="cartslidedetails">
                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>

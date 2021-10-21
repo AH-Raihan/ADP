@@ -29,7 +29,7 @@ class Controller {
             <tr>
                 <td>'.$userInfo["email_addr"].'</td>
                 <td>'.$userInfo["l_name"].'</td>
-                <td><img style="max-width: 50px;" src="'.$userInfo["avatar"].'" alt="User Avatar"></td>
+                <td><img loading="lazy" style="max-width: 50px;" src="'.$userInfo["avatar"].'" alt="User Avatar"></td>
                 <td>'.$userInfo["email"].'</td>
             </tr>
             ';

@@ -84,7 +84,7 @@ require_once("config.php");  ?>
                             while ($cartbook = mysqli_fetch_array($bookcartQuery)) {  ?>
                                 <tr class="itemsCart">
                                     <td>
-                                        <img width="80px" src="images/<?php echo $cartbook["book_img"]; ?>" alt="Book Image" title="">
+                                        <img loading="lazy" width="80px" src="images/<?php echo $cartbook["book_img"]; ?>" alt="Book Image" title="">
                                     </td>
                                     <td>
                                         <span class="producttitle"><?php echo $cartbook["book_name"]; ?></span>

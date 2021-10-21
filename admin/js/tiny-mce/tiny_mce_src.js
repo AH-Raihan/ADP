@@ -2960,7 +2960,7 @@ tinymce.html.Styles = function(settings, schema) {
 						if (node.attributes.map['data-mce-bogus'])
 							continue;
 
-						// Keep empty elements like <img />
+						// Keep empty elements like <img loading="lazy" />
 						if (elements[node.name])
 							return false;
 
@@ -3316,7 +3316,7 @@ tinymce.html.Styles = function(settings, schema) {
 						if (blockElements[name])
 							removeWhitespaceBefore(newNode);
 
-						// Change current node if the element wasn't empty i.e not <br /> or <img />
+						// Change current node if the element wasn't empty i.e not <br /> or <img loading="lazy" />
 						if (!empty)
 							node = newNode;
 					}
@@ -4782,7 +4782,7 @@ tinymce.html.Writer = function(settings) {
 						if (node.getAttribute('data-mce-bogus'))
 							continue;
 
-						// Keep empty elements like <img />
+						// Keep empty elements like <img loading="lazy" />
 						name = node.nodeName.toLowerCase();
 						if (elements && elements[name]) {
 							// Ignore single BR elements in blocks like <p><br /></p>
@@ -8880,7 +8880,7 @@ tinymce.create('tinymce.ui.Separator:tinymce.ui.Control', {
 			l = DOM.encode(s.label || '');
 			h = '<a role="button" id="' + this.id + '" href="javascript:;" class="' + cp + ' ' + cp + 'Enabled ' + s['class'] + (l ? ' ' + cp + 'Labeled' : '') +'" onmousedown="return false;" onclick="return false;" aria-labelledby="' + this.id + '_voice" title="' + DOM.encode(s.title) + '">';
 			if (s.image && !(this.editor  &&this.editor.forcedHighContrastMode) )
-				h += '<img class="mceIcon" src="' + s.image + '" alt="' + DOM.encode(s.title) + '" />' + l;
+				h += '<img loading="lazy" class="mceIcon" src="' + s.image + '" alt="' + DOM.encode(s.title) + '" />' + l;
 			else
 				h += '<span class="mceIcon ' + s['class'] + '"></span>' + (l ? '<span class="' + cp + 'Label">' + l + '</span>' : '');
 

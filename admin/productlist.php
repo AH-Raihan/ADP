@@ -28,7 +28,7 @@
           
             <tr>
               <td><?php echo $orders["book_id"]; ?> </td>
-              <td><img width="60px" src="../images/<?php echo $orders['book_img']; ?>" alt=""> </td>
+              <td><img loading="lazy" width="60px" src="../images/<?php echo $orders['book_img']; ?>" alt=""> </td>
               <td><?php echo $orders["book_name"]; ?> </td>
               <td><?php echo $orders["book_writer"]; ?> </td>
               <td><?php echo $orders["book_price"]; ?> </td>
