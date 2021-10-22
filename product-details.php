@@ -21,7 +21,7 @@ $book_name = $_REQUEST["book_name"];
                             <div class="product-details-thumbnail-img"><img loading="lazy" src="images/<?php echo $Sbooks["book_img"]; ?>" alt=""></div>
                             <?php $salePrice = $Sbooks["book_sale_price"];
                             if ($salePrice > 0) {
-                                echo "<div class='sale'><img loading="lazy" src='images/sale.png' alt='sale'></div>";
+                                echo "<div class='sale'><img loading='lazy' src='images/sale.png' alt='sale'></div>";
                             }
                             ?>
                         </div>
