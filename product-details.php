@@ -148,11 +148,11 @@ $book_name = $_REQUEST["book_name"];
                                     <input type="radio" name="stars" class="rwsi" value="4">
                                     <input type="radio" name="stars" class="rwsi" value="5" checked>
                                 </div>
-                                <span class="reviewChecked" data-valu="1"><i class="fa fa-star"></i></span>
-                                <span class="reviewWI" data-valu="2"><i class="fa fa-star "></i></span>
-                                <span class="reviewWI" data-valu="3"><i class="fa fa-star "></i></span>
-                                <span class="reviewWI" data-valu="4"><i class="fa fa-star "></i></span>
-                                <span class="reviewWI reviewWI" data-valu="5"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI reviewChecked" data-valu="1"><i class="fa fa-star"></i></span>
+                                <span class="reviewWI reviewChecked" data-valu="2"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI reviewChecked" data-valu="3"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI reviewChecked" data-valu="4"><i class="fa fa-star "></i></span>
+                                <span class="reviewWI reviewChecked" data-valu="5"><i class="fa fa-star "></i></span>
                             </div>
 
                             <script>
