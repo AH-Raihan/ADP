@@ -1,6 +1,7 @@
 @media only screen and (max-width: 1300px) {
     .safeArea {
         max-width: 96% !important;
+        overflow-x:hidden;
     }
 
     .sitebranding {
