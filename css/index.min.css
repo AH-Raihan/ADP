@@ -452,11 +452,6 @@ td input#check {
     background: #fff;
 }
 .prices {
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
-    width:100%;
-    transform: translate(-50%, -2%);
 }
 .products:hover {
     box-shadow: inset 0 0 20px 5px #45ff39;
