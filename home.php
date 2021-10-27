@@ -122,6 +122,8 @@
                             <div class="book-details">
                                 <h3 class="book-title productTitle"><?php echo $books["book_name"]; ?></h3>
                                 <h4 class="book-writer"><?php echo $books["book_writer"]; ?></h4>
+                                <div class="prices">
+                                
                                 <?php $salePrice = $books["book_sale_price"];
                                 if ($salePrice > 0) { ?>
 
@@ -135,7 +137,7 @@
                                     <span class="book-present-price">TK. <span class="productPrice"><?php echo $books["book_sale_price"]; ?></span></span>
 
                                 <?php  } ?>
-
+                                </div>
                             </div>
                             <a class="book-view" href="product-details.php?book_name=<?php echo $books['book_name']; ?>">View Details</a>
                         </div>
