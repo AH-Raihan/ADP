@@ -456,6 +456,7 @@ td input#check {
     position: absolute;
     bottom: 2%;
     left: 50%;
+    width:100%;
     transform: translate(-50%, -2%);
 }
 .products:hover {
