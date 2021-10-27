@@ -449,9 +449,15 @@ td input#check {
     padding: 5px 10px;
     border: 1px solid #848484;
     /* color: white; */
+    height: 360px;
     background: #fff;
 }
-
+.prices {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+}
 .products:hover {
     box-shadow: inset 0 0 20px 5px #45ff39;
 }
@@ -495,7 +501,7 @@ td input#check {
 }
 
 .book-title {
-    font-size: 19px
+    font-size: 18px;
 }
 
 .book-writer {
@@ -505,13 +511,13 @@ td input#check {
 .book-previous-price {
     font-size: 18px;
     color: #686868;
-    margin-right: 7px
+    margin-right: 7px;
 }
 
 .book-present-price {
     font-size: 15px;
     color: #000;
-    font-weight: 500
+    font-weight: 500;
 }
 
 .book-view {
