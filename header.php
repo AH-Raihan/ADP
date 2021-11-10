@@ -125,7 +125,7 @@ global $user_id;
     <!-- end top address-->
     <!-- start top header-->
     <div class="sitebranding">
-        <div class="safeArea">
+        <div class="safeArea" style="overflow-x: inherit;">
             <div class="logo-area">
                 <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
                 <p style="display:none;">Alor Dishari Publications</p>
