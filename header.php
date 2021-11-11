@@ -35,6 +35,7 @@ global $user_id;
     <meta name="application-name" content="Alor Dishari Publications">
     <meta name="apple-mobile-web-app-title" content="Alor Dishari Publications">
     <meta name="theme-color" content="#8CC63F">
+    <meta name="google-site-verification" content="0orDbIlP4Vprs6Sk6LtMHbxf3b1iAB5DyjEz5yzebPU" />
 
     <meta property="og:site_name" content="alordisharipublications.com">
     <meta property="og:url" content="" />
