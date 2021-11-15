@@ -137,7 +137,7 @@ global $user_id;
            <div class="header-right mainNav">
                 <span class="navIcon" onclick="toggleNave()">|||</span>
                 <ul id="navId">
-                    <li class="list-item888'><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
                     <li class="list-item"><a href="/books"><i class="fa fa-book"></i> Books</a></li>
                     <li><a href="/news"><i class="fas fa-newspaper"></i> News</a></li>
                     <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
