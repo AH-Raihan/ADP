@@ -19,10 +19,10 @@ global $user_id;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/logo.png">
-    <title>Alor Dishari Publications</title>
+    <title>Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স</title>
 
 
-    <meta name="description" content="Online Book Order Alor Dishari Publications">
+    <meta name="description" content="Online Book Order Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স">
     <meta name="keywords" content="Alor Dishari Publications,Alor Dishari ,ecommerce website, Boook Order Online">
     <meta name="author" content="Azizul Hasan Raihan">
 
@@ -129,7 +129,7 @@ global $user_id;
         <div class="safeArea" style="overflow: inherit;">
             <div class="logo-area">
                 <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
-                <p style="display:none;">Alor Dishari Publications</p>
+                <p style="display:none;">আলোর দিশারী পাবলিকেশন্স</p>
                 <a href="/home"><img loading="lazy" src="images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
             </div>
 
@@ -137,12 +137,12 @@ global $user_id;
            <div class="header-right mainNav">
                 <span class="navIcon" onclick="toggleNave()">|||</span>
                 <ul id="navId">
-                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="/books"><i class="fa fa-book"></i> Books</a></li>
+                    <li class="list-item888'><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="list-item"><a href="/books"><i class="fa fa-book"></i> Books</a></li>
                     <li><a href="/news"><i class="fas fa-newspaper"></i> News</a></li>
                     <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
                     <li><a href="/contact"><i class="fas fa-comments"></i> Contact Us</a></li>
-                    <li><a href="/recipt"><i class="fas fa-search-location"></i> Receipt</a></li>
+                    <li class="list-item"><a href="/recipt"><i class="fas fa-search-location"></i> Receipt</a></li>
                 </ul>
                 <div class="search-product">
                     <form action="searchbook.php" method="POST"><input type="text" name="book_name"
