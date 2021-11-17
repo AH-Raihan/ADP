@@ -112,7 +112,7 @@
 
                         <div class="products w-75 item">
                             <button data-bookId="<?php echo $books['book_id']; ?>" class="add-to-cart addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
-                            <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="images/<?php echo $books["book_img"]; ?>" alt="<?php echo $books['book_name'];"></div>
+                            <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="images/<?php echo $books["book_img"]; ?>" alt="<?php echo $books['book_name']; ?>"></div>
                             <?php $salePrice = $books["book_sale_price"];
                             if ($salePrice > 0) {
                                 echo "<div class='sale'><img loading='lazy' src='images/sale.png' alt='sale'></div>";
