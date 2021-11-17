@@ -112,7 +112,7 @@
 
                         <div class="products w-75 item">
                             <button data-bookId="<?php echo $books['book_id']; ?>" class="add-to-cart addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
-                            <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="images/<?php echo $books["book_img"]; ?>" alt="thumbnail"></div>
+                            <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="images/<?php echo $books["book_img"]; ?>" alt="<?php echo $books['book_name'];"></div>
                             <?php $salePrice = $books["book_sale_price"];
                             if ($salePrice > 0) {
                                 echo "<div class='sale'><img loading='lazy' src='images/sale.png' alt='sale'></div>";
@@ -139,7 +139,7 @@
                                 <?php  } ?>
                                 </div>
                             </div>
-                            <a class="book-view" href="product-details.php?book_name=<?php echo $books['book_name']; ?>">View Details</a>
+                            <a class="book-view" href="http://alordishari.herokuapp.com/product-details.php?book_name=<?php echo $books['book_name']; ?>">View Details</a>
                         </div>
 
                 <?php    }
@@ -171,11 +171,11 @@
 
                         <div class="col-sm-4 news-con" data-aos="zoom-in">
                             <div class="news">
-                                <div class="news-thumbnail-img"><img loading="lazy" src="images/<?php echo $news['news_img']; ?> " alt="news img"></div>
+                                <div class="news-thumbnail-img"><img loading="lazy" src="images/<?php echo $news['news_img']; ?> " alt="<?php echo $news['news_title']; ?>"></div>
                                 <p class="news-time"><i class="fa fa-clock"></i> <?php echo $news['news_date']; ?> </p>
                                 <h3 class="news-title"><?php echo $news['news_title']; ?> </h3>
                                 <p class="news-description"><?php echo $news['news_discription']; ?></p>
-                                <a class="readmorepost bg-glass" href="post-details.php?post_title=<?php echo $news['news_title']; ?>">Read More...</a>
+                                <a class="readmorepost bg-glass" href="http://alordishari.herokuapp.com/post-details.php?post_title=<?php echo $news['news_title']; ?>">Read More...</a>
 
                             </div>
                         </div>
