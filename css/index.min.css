@@ -1264,3 +1264,31 @@ td input#check {
 .bottom-header a span {
     font-size:12px;
 }
+
+.error404{
+    font-size: 25vh;
+    text-align:center;
+    padding-top: 29px;
+    font-weight: 900;
+    background: url('https://image.shutterstock.com/image-vector/abstract-futuristic-cyberspace-binary-code-260nw-740523562.jpg');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: left;
+    animation:errorAnimation 3s infinite;
+}
+.pageNotFound{
+font-size: 40px;
+    text-align:center;
+    background: linear-gradient(45deg, #f8de16, #0cea64);
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes errorAnimation{
+    0%{
+    background-position: left;
+    }
+    100%{
+       background-position: right; 
+    }
+}
