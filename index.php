@@ -17,7 +17,7 @@ elseif ($router=='/myaccount') { include("user.php"); }
 elseif ($router=='/myorders')  { include("userorder.php");}
 
 
-elseif (preg_match_all($sentex,$router,$result[1]){ include("home.php") }
+elseif (preg_match_all($sentex,$router,$result[1]){ include("home.php"); }
 
 //other core
 elseif ($router=='/otp.php') { homeRedirect('otp.php'); }
