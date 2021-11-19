@@ -2,10 +2,11 @@
 require_once("header.php");
 require_once("config.php");
 header('Content-Type: text/html; charset=utf-8');
+
 $server= $_SERVER["REQUEST_URI"];
 $sentex='/\/book\/([^\/]+)/';
 preg_match_all($sentex,$server,$result);
-$book_name = implode("",$result[1]);
+echo $book_name = implode(" ",$result[1]);
 
 ?> 
 
