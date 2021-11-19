@@ -1,21 +1,16 @@
 <?php
 require_once("header.php");
 require_once("config.php");
-
+header('Content-Type: text/html; charset=utf-8');
 $server= $_SERVER["REQUEST_URI"];
 $sentex='/\/book\/([^\/]+)/';
 preg_match_all($sentex,$server,$result);
-$book_name = implode("",$result[1]);;
-
-foreach($result as $booksdd){
- var_dump($booksdd);   
-}
+$book_name = implode("",$result[1]);
 
 ?> 
 
 <div class="product-details-container">
     <div class="safeArea ">
-        <input type="text" value="<?php echo $book_name; ?>">
         
         <?php
         if (preg_match($sentex,$server)) {
