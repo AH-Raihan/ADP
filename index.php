@@ -17,7 +17,7 @@ elseif ($router=='/signup')    { include("signup.php"); }           elseif ($rou
 //elseif ($router=='/check-out') { loginRedirect('check-out.php'); }  elseif ($router=='/check-out.php'){ loginRedirect('check-out.php');}
 elseif ($router=='/myaccount') { include("user.php"); }
 elseif ($router=='/myorders')  { include("userorder.php");}
-elseif ($router=='/product-details.php')  { header('location:/wrong');}
+elseif ($router=='/product-details.php')  { header("location:/wrong");}
 
 
 elseif (preg_match($sentex,$router)){ include("home.php"); }
