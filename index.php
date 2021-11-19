@@ -18,7 +18,7 @@ elseif ($router=='/myaccount') { include("user.php"); }
 elseif ($router=='/myorders')  { include("userorder.php");}
 
 
-elseif (preg_match($sentex,$router){ include("home.php"); }
+elseif (preg_match($sentex,$router)){ include("home.php"); }
 
 //other core
 elseif ($router=='/otp.php') { homeRedirect('otp.php'); }
@@ -26,11 +26,11 @@ elseif ($router=='/otp.php') { homeRedirect('otp.php'); }
 elseif ($router=='/admin')     { include("/admin/index.php"); }
 
 else{  
-//require_once("header.php");
+require_once("header.php");
     echo "<p style='font-size:100px;text-align:center;padding-top:50px;'>404</p>";
     echo "<p style='text-align:center;>Page Not Found</p>";
     
-//require_once("footer.php");
+require_once("footer.php");
 }
 
 
