@@ -6,7 +6,6 @@ $server= $_SERVER["REQUEST_URI"];
 $sentex='/\/book\/([^\/]+)/';
 preg_match_all($sentex,$server,$result);
 
-print_r($result[1]);
 ?>
 
 <div class="product-details-container">
@@ -56,10 +55,10 @@ print_r($result[1]);
 
             <?php }
             } else {
-                header("location:index.php");
+                header("location:/");
             }
         } else {
-            header("location:index.php");
+            header("location:/");
         }
             ?>
 
