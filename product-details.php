@@ -1,7 +1,11 @@
 <?php
 require_once("header.php");
 require_once("config.php");
-$book_name = $_REQUEST["book_name"];
+
+$server= $_SERVER["REQUEST_URI"];
+$sentex='/\/book\/([^\/]+)/';
+preg_match_all($sentex,$server,$result);
+
 ?>
 
 <div class="product-details-container">
@@ -9,7 +13,7 @@ $book_name = $_REQUEST["book_name"];
         <?php
         if (isset($_REQUEST["book_name"])) {
 
-            $selectQuery = "SELECT * FROM books WHERE book_name='$book_name'";
+            $selectQuery = "SELECT * FROM books WHERE book_name='$result[1]'";
             $Query = mysqli_query($conn, $selectQuery);
 
             if ($selectQuery == true) {
