@@ -7,7 +7,9 @@ $sentex='/\/book\/([^\/]+)/';
 preg_match_all($sentex,$server,$result);
 
 ?>
-<?php echo $result[1]; ?>
+<?php print_r($result[1]); 
+implode("",$result[1]);
+?>
 <textarea>
 <?php echo $result[1]; ?>
 </textarea>
