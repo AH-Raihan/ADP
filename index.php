@@ -1,6 +1,5 @@
 <?php   $router=$_SERVER['REQUEST_URI'];
 $sentex='/(\/\?fbclid=+[A-Za-z0-9_-]+)/';
-echo $router;
 if      ($router=='/')         { include("home.php"); }
 elseif ($router=='/index.php') { include("home.php"); }
 elseif ($router=='/cart')      { loginRedirect('cart.php'); }
