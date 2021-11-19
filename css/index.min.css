@@ -1286,9 +1286,9 @@ font-size: 40px;
 }
 @keyframes errorAnimation{
     0%{
-    background-position: left;
+    background-position-y: 0%;
     }
     100%{
-       background-position: right; 
+       background-position-y: 100%; 
     }
 }
