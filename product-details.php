@@ -3,7 +3,6 @@ require_once("header.php");
 require_once("config.php");
 
 $server= $_SERVER["REQUEST_URI"];
-echo $server;
 $sentex='/\/book\/([^\/]+)/';
 preg_match_all($sentex,$server,$result);
 
@@ -13,7 +12,7 @@ print_r($result[1]);
 <div class="product-details-container">
     <div class="safeArea ">
         <?php
-        if (isset($_REQUEST["book_name"])) {
+        if (preg_match($sentex,$server)) {
 
             $selectQuery = "SELECT * FROM books WHERE book_name='$result[1]'";
             $Query = mysqli_query($conn, $selectQuery);
