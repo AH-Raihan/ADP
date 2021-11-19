@@ -5,7 +5,7 @@ require_once("config.php");
 $server= $_SERVER["REQUEST_URI"];
 $sentex='/\/book\/([^\/]+)/';
 preg_match_all($sentex,$server,$result);
-$book_name=implode(" ",$result[1]);;
+$book_name = implode("",$result[1]);;
 
 ?> 
 
