@@ -1,4 +1,5 @@
 <?php   $router=$_SERVER['REQUEST_URI'];
+$sentex='/(\/\?fbclid=+[A-Za-z0-9_-]+)/';
 if      ($router=='/')         { include("home.php"); }
 elseif ($router=='/index.php') { include("home.php"); }
 elseif ($router=='/cart')      { loginRedirect('cart.php'); }
@@ -15,12 +16,20 @@ elseif ($router=='/signup')    { include("signup.php"); }           elseif ($rou
 elseif ($router=='/myaccount') { include("user.php"); }
 elseif ($router=='/myorders')  { include("userorder.php");}
 
+
+elseif (preg_match_all($sentex,$router,$result[1]){ include("home.php") }
+
 //other core
 elseif ($router=='/otp.php') { homeRedirect('otp.php'); }
 
 elseif ($router=='/admin')     { include("/admin/index.php"); }
 
-else{  include("home.php"); }
+else{  
+require_once("header.php");
+    echo "<p style='font-size:100px;text-align:center;padding:50px;>404</p>";
+    
+require_once("footer.php");
+}
 
 
 function loginRedirect($url){
