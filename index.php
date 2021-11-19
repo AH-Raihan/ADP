@@ -26,8 +26,8 @@ elseif ($router=='/admin')     { include("/admin/index.php"); }
 
 else{  
 require_once("header.php");
-    echo "<p style='font-size: 98px;text-align:center;padding-top: 29px;font-weight: 900;color: aliceblue;'>404</p>";
-    echo "<p style='text-align:center;font-size: 40px;color: white;'>Page Not Found</p>";
+    echo "<p class='error404'>404</p>";
+    echo "<p class='pageNotFound'>Page Not Found</p>";
     
 require_once("footer.php");
 }
