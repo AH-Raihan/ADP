@@ -11,7 +11,7 @@ $book_name = implode("",$result[1]);;
 
 <div class="product-details-container">
     <div class="safeArea ">
-        <input type="text" value="<?php $book_name ?>"/>
+        <input type="text" value="<?php echo $book_name; ?>">
         
         <?php
         if (preg_match($sentex,$server)) {
