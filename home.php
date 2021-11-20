@@ -1,10 +1,9 @@
 <?php 
-require_once("header.php");
-$host = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"] ;
-?>
+require_once("header.php"); 
+$host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
 <div class="clearboth"></div>
 <div class="adver-banner">
-    <div class="safeArea"><img loading="lazy" src="<?php echo $host?>/images/banner@2x-1-scaled.png" alt="Add"></div>
+    <div class="safeArea"><img loading="lazy" src="<?php echo $host;?>/images/banner@2x-1-scaled.png" alt="Add"></div>
 </div>
 <div class="clearboth"></div>
 

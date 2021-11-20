@@ -21,6 +21,9 @@ $book_name = preg_replace($sentexUrl,' ',$book_nameUrl);
             $selectQuery = "SELECT * FROM books WHERE book_name='$book_name'";
             
             $Query = mysqli_query($conn, $selectQuery);
+            if(mysqli_num_rows($Query)===0){
+                echo "<script>window.location.replace('/404');</script>";
+            }
 
             if ($Query == true) {
                 while ($Sbooks = mysqli_fetch_array($Query)) {
@@ -60,11 +63,11 @@ $book_name = preg_replace($sentexUrl,' ',$book_nameUrl);
                         </div>
 
             <?php }
-            } else {
-                header("location:/home");
+            }else {
+                header("location:/");
             }
         } else {
-            header("location:/home");
+            header("location:/");
         }
             ?>
                     </div>
