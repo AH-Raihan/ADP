@@ -1,4 +1,5 @@
 <?php
+$host = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"] ;
 
 if (isset($_REQUEST['addCartBookID']) && isset($_REQUEST['user_id'])) {
 
@@ -80,7 +81,7 @@ if (isset($_REQUEST['addCartBookID']) && isset($_REQUEST['user_id'])) {
 
             <div class="cartslideitems">
                 <div class="cartSlideThumb">
-                    <img loading="lazy" src="images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
+                    <img loading="lazy" src="<?php echo $host; ?>/images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
                 </div>
                 <div class="cartslidedetails">
                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>
@@ -99,7 +100,7 @@ if (isset($_REQUEST['addCartBookID']) && isset($_REQUEST['user_id'])) {
     </div>
     <div class="clearboth"></div>
     <!-- <a href="shipping.html" class="shippingcartbtn btn btn-dark">Proces to checkOut</a> -->
-    <a href="cart" class="viewcartbtn btn bg-adp"><i class="fa fa-shopping-cart"></i> View Cart</a>
+    <a href="<?php echo $host; ?>/cart" class="viewcartbtn btn bg-adp"><i class="fa fa-shopping-cart"></i> View Cart</a>
 
     </div>
     <div class="alertCon" id="alertCon">

@@ -17,10 +17,10 @@
 
                     <div class="products col-sm-2 item" data-aos="zoom-in">
                     <button data-bookId="<?php echo $books['book_id']; ?>" class="add-to-cart addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
-                        <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="images/<?php echo $books["book_img"]; ?>" alt=""></div>
+                        <div class="product-thumbnail-img"><img loading="lazy" class="productImage" src="<?php echo $ServerHost; ?>/images/<?php echo $books["book_img"]; ?>" alt=""></div>
                         <?php $salePrice = $books["book_sale_price"];
                         if ($salePrice > 0) {
-                            echo "<div class='sale'><img loading='lazy' src='images/sale.png' alt='sale'></div>";
+                            echo "<div class='sale'><img loading='lazy' src='$ServerHost/images/sale.png' alt='sale'></div>";
                         }
                         ?>
 
@@ -44,7 +44,11 @@
                             </div>
 
                         </div>
-                        <a class="book-view" href="product-details.php?book_name=<?php echo $books['book_name']; ?>">View Details</a>
+                        <a class="book-view" href="<?php echo $ServerHost; ?>/book/<?php 
+                        $sentexBookUrl='/(\s+)/';
+                        $book_nameUrl=$books['book_name'];
+                        echo preg_replace($sentexBookUrl,'-',$book_nameUrl ); 
+                         ?>">View Details</a>
                     </div>
 
             <?php    }

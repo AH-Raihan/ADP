@@ -17,7 +17,11 @@
                                 <p class="news-time"><i class="fa fa-clock"></i> <?php echo $news['news_date']; ?> </p>
                                 <h3 class="news-title"><?php echo $news['news_title']; ?> </h3>
                                 <p class="news-description"><?php echo $news['news_discription']; ?></p>
-                                <a class="readmorepost bg-glass" href="post-details.php?post_title=<?php echo $news['news_title']; ?>">Read More...</a>
+                                <a class="readmorepost bg-glass" href="<?php echo $ServerHost; ?>/post/<?php
+                                $sentexNewsUrl='/(\s+)/';
+                                $name_newsUrl=$news['news_title'];
+                                echo preg_replace($sentexNewsUrl,'-',$name_newsUrl); 
+                                ?>">Read More...</a>
 
                             </div>
                         </div>

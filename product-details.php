@@ -1,35 +1,37 @@
 <?php
+if($_SERVER['REQUEST_URI']==='/product-details.php'){
+ header('location:/');
+}
 require_once("header.php");
 require_once("config.php");
-header('Content-Type: text/html; charset=utf-8');
-
-$server= $_SERVER["REQUEST_URI"];
-$sentex='/\/book\/([^\/]+)/';
+$server= $_SERVER["QUERY_STRING"];
+$sentex="/url\=book\/([^\/]+)/";
 preg_match_all($sentex,$server,$result);
-echo $book_name = $result[1];
-
+$book_nameUrl=$result[1][0];
+$sentexUrl='/(-+)/';
+$book_name = preg_replace($sentexUrl,' ',$book_nameUrl);
 ?> 
 
 <div class="product-details-container">
     <div class="safeArea ">
-        
         <?php
+
         if (preg_match($sentex,$server)) {
 
             $selectQuery = "SELECT * FROM books WHERE book_name='$book_name'";
             
             $Query = mysqli_query($conn, $selectQuery);
 
-            if ($selectQuery == true) {
+            if ($Query == true) {
                 while ($Sbooks = mysqli_fetch_array($Query)) {
                     $book_id = $Sbooks["book_id"]; ?>
 
                     <div class="products-details clearfix bg-glass">
                         <div class="product-details-thumbnail-img-container col-sm-3">
-                            <div class="product-details-thumbnail-img"><img loading="lazy" src="images/<?php echo $Sbooks["book_img"]; ?>" alt=""></div>
+                            <div class="product-details-thumbnail-img"><img loading="lazy" src="<?php echo $host; ?>/images/<?php echo $Sbooks["book_img"]; ?>" alt=""></div>
                             <?php $salePrice = $Sbooks["book_sale_price"];
                             if ($salePrice > 0) {
-                                echo "<div class='sale'><img loading='lazy' src='images/sale.png' alt='sale'></div>";
+                                echo "<div class='sale'><img loading='lazy' src='$host/images/sale.png' alt='sale'></div>";
                             }
                             ?>
                         </div>
@@ -53,19 +55,18 @@ echo $book_name = $result[1];
                             <?php  } ?>
 
                             <!-- <a href="#" class="products-details-open-book">একটু পড়ে দেখুন</a> -->
-                            <button data-bookId="<?php echo $Sbooks['book_id']; $book_id=$Sbooks['book_id']; ?>" class="products-details-add-to-cart bg-adp addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
+                            <button data-bookId="<?php echo $Sbooks['book_id'];  ?>" class="products-details-add-to-cart bg-adp addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
                             <!-- <a href="#" class="products-details-add-to-wishlist"><i class="fa fa-heart"></i> Add To WishList</a> -->
                         </div>
 
             <?php }
             } else {
-                header("location:/");
+                header("location:/home");
             }
         } else {
-            header("location:/");
+            header("location:/home");
         }
             ?>
-
                     </div>
                     <div class="review-container bg-glass">
                         <?php

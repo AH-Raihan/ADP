@@ -1,6 +1,7 @@
 <?php   $router=$_SERVER['REQUEST_URI'];
 $sentex='/(\/\?)/';
 $sentexProduct='/\/book\/([^\/]+)/';
+$sentexPost='/\/post\/([^\/]+)/';
 
 if      ($router=='/')         { include("home.php"); }
 elseif ($router=='/index.php') { include("home.php"); }
@@ -17,12 +18,12 @@ elseif ($router=='/signup')    { include("signup.php"); }           elseif ($rou
 //elseif ($router=='/check-out') { loginRedirect('check-out.php'); }  elseif ($router=='/check-out.php'){ loginRedirect('check-out.php');}
 elseif ($router=='/myaccount') { include("user.php"); }
 elseif ($router=='/myorders')  { include("userorder.php");}
-elseif ($router=='/product-details.php')  { header("location:/wrong");}
 
 
 elseif (preg_match($sentex,$router)){ include("home.php"); }
 
 elseif (preg_match($sentexProduct,$router)){ include("product-details.php"); }
+elseif (preg_match($sentexPost,$router)){ include("post-details.php"); }
 
 //other core
 elseif ($router=='/otp.php') { homeRedirect('otp.php'); }

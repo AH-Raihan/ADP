@@ -3,10 +3,10 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 
-<script src="js/aos.js"></script>
-<script src="js/fontawesome.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/custom.js"></script>
+<script src="<?php echo $host?>/js/aos.js"></script>
+<script src="<?php echo $host?>/js/fontawesome.js"></script>
+<script src="<?php echo $host?>/js/jquery.js"></script>
+<script src="<?php echo $host?>/js/custom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -70,14 +70,14 @@
             var addCartBookIDdd = addToCartBtn[btnl].getAttribute("data-bookId");
 
             <?php if (isset($_COOKIE['PHPLGADP'])) { ?>
-                $.post("add-to-cart.php", {
+                $.post("<?php echo $host; ?>/add-to-cart.php", {
                     addCartBookID: addCartBookIDdd,
                     user_id: userID
                 }, function(returnDataATC) {
                     mySidenav.innerHTML = returnDataATC;
 
                     var totalpriceslide = document.getElementById("totalpriceslide").value;
-                    $.post("carticon.php", {
+                    $.post("<?php echo $host; ?>/carticon.php", {
                         user_id: userID,
                         totalpriceslide: totalpriceslide
                     }, function(carticondataa) {
@@ -91,7 +91,7 @@
                     });
                 });
             <?php } else { ?>
-                window.location.assign('/signin');
+                window.location.assign('<?php echo $host; ?>/signin');
             <?php } ?>
         });
     }
@@ -113,7 +113,7 @@
 
 
                 var totalpriceslide = document.getElementById("totalpriceslide").value;
-                $.post("carticon.php", {
+                $.post("<?php echo $host; ?>/carticon.php", {
                     user_id: userID,
                     totalpriceslide: totalpriceslide
                 }, function(carticondatad) {

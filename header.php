@@ -1,5 +1,6 @@
 <?php session_start();
 require_once("config.php");
+$host = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"] ;
 $totalpriceslide = 0;
 if (isset($_COOKIE["PHPLGADP"])) {
     $authToken = $_COOKIE["PHPLGADP"];
@@ -14,11 +15,10 @@ global $user_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="<?php echo $host?>/images/logo.png">
     <title>Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স</title>
 
 
@@ -29,7 +29,7 @@ global $user_id;
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="<?php echo $host?>/manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Alor Dishari Publications">
@@ -41,20 +41,20 @@ global $user_id;
     <meta property="og:url" content="" />
     <meta property="og:title" content="Alor Dishari Publications" />
     <meta property="og:description" content="Online Book Order  Alor Dishari Publications Official Website" />
-    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:image" content="<?php echo $host?>/images/logo.png" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
  <script src="https://kit.fontawesome.com/743da73c93.js" crossorigin="anonymous"></script>
    
-    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script src="<?php echo $host?>/js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
 
     <!-- Place your stylesheet here-->
-    <link href="css/index.min.css" rel="stylesheet" type="text/css">
-    <link href="css/responsive.min.css" rel="stylesheet" type="text/css">
-    <link href="css/other.css" rel="stylesheet" type="text/css">
-    <link href="css/aos.css" rel="stylesheet" type="text/css">
-    <link href="css/products-details.css" rel="stylesheet" type="text/css">
-    <link rel="manifest" href="manifest.json">
+    <link href="<?php echo $host?>/css/index.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $host?>/css/responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $host?>/css/other.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $host?>/css/aos.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $host?>/css/products-details.css" rel="stylesheet" type="text/css">
+    <link rel="manifest" href="<?php echo $host?>/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
     
@@ -66,10 +66,10 @@ global $user_id;
 
 
     <div class="bottom-header">
-            <a href="/"><i class="fa fa-home"></i>  <span>Home</span>  </a>
-            <a href="/cart"><i class="fas fa-shopping-cart"></i> <span>Cart</span>  </a> 
-            <a href="/myorders"><i class='fa fa-shopping-bag'></i> <span>Orders</span>  </a>
-            <a href="/myaccount"><i class="fa fa-user"></i> <span>Account</span> </a>
+            <a href="<?php echo $host?>/"><i class="fa fa-home"></i>  <span>Home</span>  </a>
+            <a href="<?php echo $host?>/cart"><i class="fas fa-shopping-cart"></i> <span>Cart</span>  </a> 
+            <a href="<?php echo $host?>/myorders"><i class='fa fa-shopping-bag'></i> <span>Orders</span>  </a>
+            <a href="<?php echo $host?>/myaccount"><i class="fa fa-user"></i> <span>Account</span> </a>
     </div>
 
     <!-- start top address-->
@@ -130,19 +130,19 @@ global $user_id;
             <div class="logo-area">
                 <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
                 <p style="display:none;">আলোর দিশারী পাবলিকেশন্স</p>
-                <a href="/home"><img loading="lazy" src="images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
+                <a href="<?php echo $host?>/home"><img loading="lazy" src="<?php echo $host?>/images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
             </div>
 
 
            <div class="header-right mainNav">
                 <span class="navIcon" onclick="toggleNave()">|||</span>
                 <ul id="navId">
-                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                    <li class="list-item"><a href="/books"><i class="fa fa-book"></i> Books</a></li>
-                    <li><a href="/news"><i class="fas fa-newspaper"></i> News</a></li>
-                    <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                    <li><a href="/contact"><i class="fas fa-comments"></i> Contact Us</a></li>
-                    <li class="list-item"><a href="/recipt"><i class="fas fa-search-location"></i> Receipt</a></li>
+                    <li><a href="<?php echo $host?>/"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="list-item"><a href="<?php echo $host?>/books"><i class="fa fa-book"></i> Books</a></li>
+                    <li><a href="<?php echo $host?>/news"><i class="fas fa-newspaper"></i> News</a></li>
+                    <li><a href="<?php echo $host?>/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                    <li><a href="<?php echo $host?>/contact"><i class="fas fa-comments"></i> Contact Us</a></li>
+                    <li class="list-item"><a href="<?php echo $host?>/recipt"><i class="fas fa-search-location"></i> Receipt</a></li>
                 </ul>
                 <div class="search-product">
                     <form action="searchbook.php" method="POST"><input type="text" name="book_name"
@@ -177,7 +177,7 @@ global $user_id;
 
                             <div class="cartslideitems">
                                 <div class="cartSlideThumb">
-                                    <img loading="lazy" src="images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
+                                    <img loading="lazy" src="<?php echo $host?>/images/<?php echo $cartbook["book_img"]; ?>" alt="cart image">
                                 </div>
                                 <div class="cartslidedetails">
                                     <h3 class="cartSlide-book-title"><?php echo $cartbook["book_name"]; ?></h3>
@@ -196,11 +196,11 @@ global $user_id;
                     </div>
                     <div class="clearboth"></div>
                     <!-- <a href="shipping.html" class="shippingcartbtn btn btn-dark">Proces to checkOut</a> -->
-                    <a href="cart" class="viewcartbtn btn bg-adp"><i class="fa fa-shopping-cart"></i> View Cart</a>
+                    <a href="<?php echo $host?>/cart" class="viewcartbtn btn bg-adp"><i class="fa fa-shopping-cart"></i> View Cart</a>
 
                 </div>
                 <div id="cart">
-                    <div class="cart"><img loading="lazy" src="images/carticon.png" width="40px" alt="" id="cartslideshow" onclick="openNav()"><?php
+                    <div class="cart"><img loading="lazy" src="<?php echo $host?>/images/carticon.png" width="40px" alt="" id="cartslideshow" onclick="openNav()"><?php
 
                                                                                                                                 $cartQuery = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id'");
                                                                                                                                 while ($cartinfo = mysqli_fetch_array($cartQuery)) {

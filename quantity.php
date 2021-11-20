@@ -16,6 +16,6 @@ if($updateQ==true){
  
 }
 }else{
-    header("location:cart.php");
+    header("location:/cart");
 }
 ?>
