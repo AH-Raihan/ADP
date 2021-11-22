@@ -1,11 +1,10 @@
 {
         "name": "Alor Dishari Publications",
-        "theme_color": "#FFFFFF",
+        "theme_color": "#309463",
         "background_color": "#FFFFFF",
         "display": "browser",
         "scope": "/",
         "start_url": "/",
-        "name": "Alor Dishari Publications",
         "short_name": "Alor Dishari Publications",
         "description": "Alor Dishari Publications Official Website",
         "lang": "en-US",
