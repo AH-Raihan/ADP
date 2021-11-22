@@ -39,7 +39,7 @@ global $user_id;
 
 
     <meta name="description" content="Online Book Order Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স | সাফল্যের আলোকে বিশ্ব তোমাকে দেখাতে">
-    <meta name="keywords" content="Alor Dishari Publications,Alor Dishari ,ecommerce website, Boook Order Online">
+    <meta name="keywords" content="Alor Dishari Publications,Alor Dishari ,ecommerce website, Book Order Online, আলোর দিশারী সাজেশন">
     <meta name="author" content="Azizul Hasan Raihan">
 
 
