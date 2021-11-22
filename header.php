@@ -22,7 +22,7 @@ global $user_id;
     <title>Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স</title>
 
 
-    <meta name="description" content="Online Book Order Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স">
+    <meta name="description" content="Online Book Order Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স | সাফল্যের আলোকে বিশ্ব তোমাকে দেখাতে">
     <meta name="keywords" content="Alor Dishari Publications,Alor Dishari ,ecommerce website, Boook Order Online">
     <meta name="author" content="Azizul Hasan Raihan">
 
@@ -39,10 +39,10 @@ global $user_id;
     <meta name="msvalidate.01" content="C620BF4FC2797C0BECB5DA13E4D04983" />
     <meta name="google-site-verification" content="0orDbIlP4Vprs6Sk6LtMHbxf3b1iAB5DyjEz5yzebPU" />
 
-    <meta property="og:site_name" content="alordisharipublications.com">
-    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Alor Dishari Publications">
+    <meta property="og:url" content="http://alordishari.herokuapp.com" />
     <meta property="og:title" content="Alor Dishari Publications" />
-    <meta property="og:description" content="Online Book Order  Alor Dishari Publications Official Website" />
+    <meta property="og:description" content="সাফল্যের আলোকে বিশ্ব তোমাকে দেখাতে" />
     <meta property="og:image" content="<?php echo $host?>/images/logo.png" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
