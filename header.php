@@ -146,7 +146,7 @@ global $user_id;
             <div class="logo-area">
                 <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
                 <p style="display:none;">আলোর দিশারী পাবলিকেশন্স</p>
-                <a href="<?php echo $host ?>/home"><img loading="lazy" src="<?php echo $host ?>/images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
+                <a href="<?php echo $host ?>/"><img loading="lazy" src="<?php echo $host ?>/images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
             </div>
 
 
