@@ -19,7 +19,17 @@ global $user_id;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo $host?>/images/logo.png">
-    <title>Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স</title>
+    <title><?php 
+    $subUrlRemovePattern ="/(\/book\/)/";
+    $phpSyntexRemovePattern = "/(\.php)/";
+    $urlForTitle = $_SERVER["SCRIPT_NAME"];
+    if(preg_match($subUrlRemovePattern,$urlForTitle)){
+        $removedSubUrl= preg_replace($subUrlRemovePattern,'',$urlForTitle);
+        echo preg_replace($phpSyntexRemovePattern,'',$removedSubUrl);
+    }else{
+        echo "Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স";
+    }
+        ?></title>
 
 
     <meta name="description" content="Online Book Order Alor Dishari Publications । আলোর দিশারী পাবলিকেশন্স | সাফল্যের আলোকে বিশ্ব তোমাকে দেখাতে">
