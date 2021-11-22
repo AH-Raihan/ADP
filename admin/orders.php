@@ -73,7 +73,7 @@
   $(document).ready(function() {
     setupLeftMenu();
     //$('.datatable').dataTable({ order:[[1,'desc']]});
-    $('.datatable').dataTable({order:[[2,"asc"]]});
+    $('.datatable').dataTable({"order":false});
     setSidebarHeight();
   });
    var msg=document.getElementById("msg");
