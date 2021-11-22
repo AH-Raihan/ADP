@@ -104,7 +104,7 @@
   var modalAddrTable = document.getElementById('modalAddrTable');
 
   function getAddr(id) {
-    var url=`http://localhost:8080/admin/addrAjax.php?id=${id}`;
+    var url=`<?pho echo $host; ?>/admin/addrAjax.php?id=${id}`;
     axios.get(url,{userid:id})
     .then(function(response){
       modal.style.display="block";
