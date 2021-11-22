@@ -2,17 +2,18 @@
 <?php include 'inc/sidebar.php'; ?>
 <div class="grid_10">
   <div class="box round first grid">
-    <h2>Post List</h2>
+    <h2>Orders List</h2>
     <?php if (isset($_REQUEST['updated'])) {
-      echo "<p id='msg' style='position:fixed;top:10px;right:40%;display:inline-block;color:white;background:#28d54d;font-size:17px;border-radius:28px;padding:10px;margin:2px'>Updated Successfully!</p>";
+      echo "<p id='msg' style='background:#28d54d;'>Updated Successfully!</p>";
     } elseif (isset($_REQUEST['notupdated'])) {
-      echo "<p id='msg' style='position:fixed;top:10px;right:40%;display:inline-block;color:white;background:red;font-size:17px;border-radius:28px;padding:10px;margin:2px'>Update Faild!</p>";
+      echo "<p id='msg' style='background:red;'>Update Faild!</p>";
     } ?>
     <div class="block overflow-auto">
-      <table class="data display datatable w-100"  id="" style="overflow-x: auto;">
+      <table id="orderDatatable" class="data display datatable w-100" style="overflow-x: auto;">
         <thead>
           <tr>
-            <td>Id</td>
+            <td>SL</td>
+            <td>Order Id</td>
             <td>Date & Time</td>
             <td>Book Name</td>
             <td>Payment Method</td>
@@ -33,8 +34,21 @@
           while ($orders = mysqli_fetch_array($orderQuery)) { ?>
 
             <tr>
+              <td><?php echo $orders["id"]; ?> </td>
               <td><?php echo $orders["order_id"]; ?> </td>
-              <td><?php echo $orders["Cdate"]; ?> </td>
+              <td class="Cdate"><?php
+                                $Cdate = $orders["Cdate"];
+                                $CdateOnlyDate = substr($Cdate, 0, 10);
+                                $today = date("Y-m-d");
+                                $yesterdatMatch = date("Y-m") . "-" . date("d") - 1;
+                                if ($today === $CdateOnlyDate) {
+                                  echo "Today";
+                                } elseif ($yesterdatMatch === $CdateOnlyDate) {
+                                  echo "YesterDay";
+                                } else {
+                                  echo $Cdate;
+                                }
+                                ?></td>
               <td><?php echo $orders["book_name"]; ?> </td>
               <td><?php echo $orders["paymentMethod"]; ?> </td>
               <td><?php echo $orders["bkashNumber"]; ?> </td>
@@ -42,20 +56,15 @@
               <td><?php echo $orders["transport"]; ?> </td>
               <td><?php echo $orders["quantity"]; ?> </td>
               <td><?php echo $orders["total_price"]; ?> Tk.</td>
-              <td><a href="addr.php?user_id=<?php echo $orders['user_id']; ?> " class="text-info">View Details</a></td>
-              <td>
+              <td onclick="getAddr(<?php echo $orders['user_id']; ?>);" style="cursor: pointer;color:#0fa363;font-weight:600;">Details<td>
                 <form action="orderaction.php">
                   <input type="hidden" name="orderid" value="<?php echo $orders['order_id']; ?>">
-                  <select name="status" id="statuses" onchange="submit();">
+                  <select name="status" class="statuses" onchange="submit();" data-value="<?php echo $orders['order_status']; ?>">
                     <option value="Pending">Pending</option>
                     <option value="Waiting">Waiting</option>
                     <option value="Completed">Completed</option>
                     <option value="Cenceled">Cenceled</option>
                   </select>
-                  <script>
-                    var statuses=document.getElementById('statuses');
-                    statuses.value="<?php echo $orders['order_status']; ?>";
-                  </script>
                 </form>
               </td>
             </tr>
@@ -65,21 +74,55 @@
 
       </table>
     </div>
+
+    <div class="modal" id="modal">
+      <div class="modalBody">
+        <div class="closeModal"><span onclick="this.parentNode.parentNode.style.display='none';">X</span></div>
+        <table id="modalAddrTable" >
+          
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 
 
 <script type="text/javascript">
+  const statuses = document.getElementsByClassName('statuses');
+  for (let i = 0; i < statuses.length; i++) {
+    statuses[i].value = statuses[i].getAttribute('data-value');
+  }
   $(document).ready(function() {
     setupLeftMenu();
-    //$('.datatable').dataTable({ order:[[1,'desc']]});
-    $('.datatable').dataTable({"order":false});
     setSidebarHeight();
+    $('#orderDatatable').dataTable({
+      "aaSorting": [[ 0, "desc" ]]
+    });
   });
-   var msg=document.getElementById("msg");
-   setTimeout(function(){ 
-     msg.remove();
-     window.history.replaceState("updated","Order Update","/admin/orders.php");
-   }, 3000);
+
+  var modal = document.getElementById('modal');
+  var modalAddrTable = document.getElementById('modalAddrTable');
+
+  function getAddr(id) {
+    var url=`http://localhost:8080/admin/addrAjax.php?id=${id}`;
+    axios.get(url,{userid:id})
+    .then(function(response){
+      modal.style.display="block";
+      modalAddrTable.innerHTML=response.data;
+    })
+    .catch(function(error){
+      alert(error);
+    })
+  }
+
+
+  var msg = document.getElementById("msg");
+  if(typeof(msg) != 'undefined' && msg != null){
+     
+  setTimeout(function() {
+      msg.remove();
+    window.history.replaceState("updated", "Order Update", "/admin/orders.php");
+  }, 3000);
+}
 </script>
 <?php include 'inc/footer.php'; ?>

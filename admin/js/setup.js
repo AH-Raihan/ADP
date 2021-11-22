@@ -7,7 +7,7 @@ var height = $(document).height();
     height -= $('#site_info').outerHeight();
 	height-=1;
 	//salert(height);
-    $('.sidemenu').css('height', height);					   
+    					   
 						},100);
 }
 

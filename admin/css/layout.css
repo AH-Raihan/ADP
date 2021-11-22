@@ -29,7 +29,7 @@ body {
   .floatright{float:right;}
   .fontwhite{color:#fff;}
   .small{font-size:9px;}
-  .inline-ul li{display:inline;color: #8BC53F;}
+  .inline-ul li{display:inline;color: #007832;}
   .marginleft10{margin-left:10px;}
   .grey{color:#C2C2C2;}
   
@@ -116,14 +116,14 @@ body {
 	  font-size:1.2em;
 	  font-weight:bold;
 	  color: #ffffff;
-	  background: #8BC53F;
+	  background: #007832;
 	  margin: -10px -10px 0 -10px;
 	  padding:10px 12px;
 	  border-bottom:1px solid #B3CBD6;
 	  -moz-border-radius: 5px 5px 0px 0px; /* Firefox */
 	  -webkit-border-radius: 5px 5px 0px 0px; /* Safari, Chrome */
 	  border-radius: 5px 5px 0px 0px; /* CSS3 */
-  }
+	 }
   .box h2 a,
   .box h2 a.visible {
 	  color:#1B548D;
@@ -187,7 +187,7 @@ body {
   /* sidebar menu
   ----------------------------------------------- */
   
-  .box.sidemenu{background-color: #8BC53F;border-right:1px solid #3A5665;padding:0px;margin:0px;cursor:pointer;}
+  .box.sidemenu{background-color: #007832;border-right:1px solid #3A5665;padding:0px;margin:0px;cursor:pointer;}
   .box.sidemenu .block{padding-top:0px; margin-top:0px;}
   
   /* paragraphs, quotes and lists
@@ -290,9 +290,9 @@ body {
 	  background:#E6F0F3;
   }
   ul.section li a.current {
-	  color: #8BC53F;
+	  color: #0B9444;
 	  background: #fff;
-  }
+	 }
   ul.section li a.current:hover {
 	  color:#1B548D;
 	  background:url(../img/sidemenu-repeat-hover.jpg) repeat-x;
@@ -437,10 +437,10 @@ body {
   ----------------------------------------------- */
   #site_info {
 	  color:#fff;
-	  background: #8BC53F;
-	  border-top: 1px solid #d2fc8e;
+	  background: #007832;
+	  border-top: 1px solid #0f6232;
 	  padding-left:20px;
-  }
+	 }
   
   #site_info p{line-height:35px; margin-bottom:0px;}
   #site_info a {
@@ -698,7 +698,8 @@ body {
 	  clear: both;
 	  _height: 302px;
 	  zoom: 1; /* Feeling sorry for IE */
-  }
+	  overflow: auto;
+	 }
   
   .dataTables_processing {
 	  position: absolute;
@@ -805,12 +806,18 @@ body {
   }
   
   .sorting_desc {
-	  background: #7ab62c url(../img/table/sort_desc.png) no-repeat center right; padding:8px 5px; text-align:left; color:#fff;
-  }
+	  background: #008638 url(../img/table/sort_desc.png) no-repeat center right;
+	  padding:8px 5px;
+	  text-align:left;
+	  color:#fff;
+	 }
   
   .sorting {
-	  background:#90d13b   url(../img/table/sort_both.png) no-repeat center right; padding:8px 5px; text-align:left; color:#fff;
-  }
+	  background: #0B9444 url(../img/table/sort_both.png) no-repeat center right;
+	  padding:8px 5px;
+	  text-align:left;
+	  color:#fff;
+	 }
   
   .sorting_asc_disabled {
 	  background: #7aaf35 url(../img/table/sort_asc_disabled.png) no-repeat center right; padding:8px 5px; text-align:left; color:#fff;

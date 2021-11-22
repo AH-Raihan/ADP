@@ -13,12 +13,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="icon" href="../images/logo.png">
     <title>Alor Dishari Admin</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen" />
     <link href="css/table/demo_page.css" rel="stylesheet" type="text/css" />
     <link href="css/table/demo_page.css" rel="stylesheet" type="text/css" />
     <!-- BEGIN: load jquery -->
@@ -31,8 +33,10 @@
     <script src="js/jquery-ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
     <script src="js/jquery-ui/jquery.ui.sortable.min.js" type="text/javascript"></script>
     <script src="js/table/jquery.dataTables.min.js" type="text/javascript"></script>
+
+    <script src="js/axios.min.js" type="text/javascript"></script>
+
     <!-- END: load jquery -->
-    <script type="text/javascript" src="js/table/table.js"></script>
     <script src="js/setup.js" type="text/javascript"></script>
 	 <script type="text/javascript">
         $(document).ready(function () {
@@ -43,9 +47,6 @@
 <style type="text/css">
     .waffle, .grid-fixed-table {
         width: 100% !important;
-    }
-    body{
-        background: red;
     }
 </style>
 </head>
