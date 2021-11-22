@@ -77,7 +77,7 @@
 
     <div class="modal" id="modal">
       <div class="modalBody">
-        <div class="closeModal"><span onclick="this.parentNode.parentNode.style.display='none';">X</span></div>
+        <div class="closeModal"><span onclick="this.parentNode.parentNode.parentNode.style.display='none';">X</span></div>
         <table id="modalAddrTable" >
           
         </table>
