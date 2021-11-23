@@ -6,7 +6,7 @@
     <h2> Dashbord</h2>
     <div class="block">
       <div class="totalOrderDashboard" style="background: #4c4c4c;">
-        Total Orders :
+        Total Orders <br>
         <?php
         require_once("../config.php");
 
@@ -18,7 +18,7 @@
 
 
       <div class="totalOrderDashboard" style="background: #00a712;">
-        Completed Orders :
+        Completed Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Completed'";
         $queryRun = mysqli_query($conn, $selectOrdersQuery);
@@ -27,7 +27,7 @@
       </div>
 
       <div class="totalOrderDashboard" style="background: #056a9f;">
-        Pending Orders :
+        Pending Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Pending'";
         $queryRun = mysqli_query($conn, $selectOrdersQuery);
@@ -36,7 +36,7 @@
       </div>
 
       <div class="totalOrderDashboard" style="background: #e9c106;">
-        Waiting Orders :
+        Waiting Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Waiting'";
         $queryRun = mysqli_query($conn, $selectOrdersQuery);
@@ -45,7 +45,7 @@
       </div>
 
       <div class="totalOrderDashboard" style="background: #f95d5d;">
-        Cancel Orders :
+        Cancel Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Cenceled'";
         $queryRun = mysqli_query($conn, $selectOrdersQuery);
