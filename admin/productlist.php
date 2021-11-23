@@ -34,7 +34,10 @@
               <td><?php echo $orders["book_price"]; ?> </td>
               <td><?php echo $orders["book_sale_price"]; ?> </td>
               <td><?php echo $orders["book_type"]; ?> </td>
-              <td><a href="../product-details.php?book_name=<?php echo $orders['book_name']; ?> " class="text-info">View Details</a></td>
+              <td><a href="<?php 
+                               $bookNameAfter=$orders['book_name'];
+                               $bookNameBefore= preg_replace('/(\s)/','-',$bookNameAfter);
+                               echo $ServerHost.'/book/'.$bookNameBefore; ?> " class="text-info">View Details</a></td>
               <td><a href="productEdit.php?book_id=<?php echo $orders['book_id']; ?> " class="text-info">Edit</a></td>
               <td><a onclick="return confirm('Are You Sure?')" href="addNewCore.php?bookDeleteId=<?php echo $orders['book_id']; ?>">Delete</a></td>
             </tr>
