@@ -16,8 +16,8 @@ elseif ($router=='/privacy')   { include("privacy.php"); }
 elseif ($router=='/signin')    { include("signin.php"); }           elseif ($router=='/signin.php'){ include("signin.php"); }
 elseif ($router=='/signup')    { include("signup.php"); }           elseif ($router=='/signup.php'){  include("signup.php"); }
 //elseif ($router=='/check-out') { loginRedirect('check-out.php'); }  elseif ($router=='/check-out.php'){ loginRedirect('check-out.php');}
-elseif ($router=='/myaccount') { include("user.php"); }
-elseif ($router=='/myorders')  { include("userorder.php");}
+elseif ($router=='/myaccount') { loginRedirect('user.php'); }
+elseif ($router=='/myorders')  { loginRedirect('userorder.php'); }
 
 
 elseif (preg_match($sentex,$router)){ include("home.php"); }
