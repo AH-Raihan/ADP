@@ -1,5 +1,4 @@
-
-
+// navbar logo size
 window.addEventListener('scroll',function(){
   var sitebranding=document.getElementsByClassName('sitebranding');
   sitebranding[0].classList.toggle('sticky', window.scrollY > 0);
@@ -7,12 +6,35 @@ window.addEventListener('scroll',function(){
   logo[0].classList.toggle('dnone', window.scrollY > 0);
 });
 
+
+// window loading sckeleton remove
+var overlayLoad= document.querySelectorAll(".loadoverlay");
 window.addEventListener('load',function(){ 
-  var overlays= document.getElementsByClassName('loadoverlay');
-  for(let i=0; i < overlays.length;i++){ 
-    overlays[i].classList.remove('loadoverlay'); 
+  for(let index=0; index < overlayLoad.length; index++){ 
+    overlayLoad[index].classList.remove("loadoverlay");
   }
 });
+
+  
+// service worker
+
+if(!('serviceWorker') in navigator){
+  console.log('Service Worker Not Supported');
+}
+
+navigator.serviceWorker.register('../serviceWorker.js');
+  
+
+  
+
+
+
+
+
+
+
+
+
 
 
 // disable right click

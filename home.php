@@ -40,7 +40,7 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;">
                     <div style="background-color:#d3890e;">
-                        <img loading="lazy" alt="slide" data-u="image" style="opacity:1;" data-src="<?php echo $host?>/images/banner3.png" />
+                        <img loading="lazy" alt="slide" data-u="image" style="opacity:1;" data-src="<?php echo $host?>/images/banner3.jpg" />
                     </div>
                     <div>
                         <img loading="lazy" alt="slide" data-u="image" data-src="<?php echo $host?>/images/banner1.jpg" />
