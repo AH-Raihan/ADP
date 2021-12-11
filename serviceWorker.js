@@ -42,3 +42,25 @@ self.addEventListener('fetch',function(event){
         })
     )
 });
+
+
+
+
+self.addEventListener('activate', function (event) {
+    // some
+});
+
+
+self.addEventListener('sync', function (event) {
+    if (event.tag === 'foo') {
+        //    event.waitUntil(doSomething());
+    }
+});
+
+self.addEventListener('push', function (event) {
+    event.waitUntil(
+        self.registration.showNotification('I am Webdeveloper', {
+            body: 'My name is Azizul Hasan Raihan'
+        })
+    );
+});
