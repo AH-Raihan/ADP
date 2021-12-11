@@ -7,6 +7,13 @@ window.addEventListener('scroll',function(){
   logo[0].classList.toggle('dnone', window.scrollY > 0);
 });
 
+window.addEventListener('load',function(){ 
+  var overlays= document.getElementsByClassName('loadoverlay');
+  for(let i=0; i < overlays.length;i++){ 
+    overlays[i].classList.remove('loadoverlay'); 
+  }
+});
+
 
 // disable right click
    // document.addEventListener('contextmenu', event => event.preventDefault());
