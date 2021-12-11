@@ -8,7 +8,7 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
 <div class="clearboth"></div>
 
 <div class="slideAndCatagory">
-    <div class="safeArea">
+    <div class="safeArea loadoverlay">
 
         <!--<div class="catalog-menu-box">
             <div class="catalog-menu-wrap">
