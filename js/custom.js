@@ -19,7 +19,7 @@ window.addEventListener('load',function(){
 // service worker
 
 
-if ('serviceWorker' in navigator) {
+/* if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('../serviceWorker.js').then(function(registration) {
       // Registration was successful
@@ -30,6 +30,7 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+*/
 
   
 
