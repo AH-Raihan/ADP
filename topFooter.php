@@ -32,7 +32,7 @@
     <div class="footerBottomContainer">
         <div class="safeArea footerBottom clearfix">
             <p class="copyright">©2021 Alor Dishari Publications</p>
-            <p class="developer">Design & Developed By : <a href="https://facebook.com/web.ahraihan" style="color: #efefef;">Azizul Hasan Raihan</a></p>
+            <p class="developer">Design & Developed By : <a href="https://ahraihan.netlify.app" style="color: #efefef;">Azizul Hasan Raihan</a></p>
         </div>
     </div>
     </div>
