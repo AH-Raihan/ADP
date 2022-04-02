@@ -58,7 +58,7 @@
                     <img loading="lazy" src="../../../images/logo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
-					<h1>Alor Dishari Publications</h1>
+					<!-- <h1>Alor Dishari Publications</h1> -->
 					<!-- <p>www.alordisharipublications.com</p> -->
 				</div>
                 <div class="floatright">
