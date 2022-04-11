@@ -3,12 +3,12 @@ require_once("header.php");
 $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
 <div class="clearboth"></div>
 <div class="adver-banner">
-    <div class="safeArea loadoverlay"><img loading="lazy" src="<?php echo $host;?>/images/banner@2x-1-scaled.png" alt="Add"></div>
+    <div class="safeArea"><img loading="lazy" src="<?php echo $host;?>/images/banner@2x-1-scaled.png" alt="Add"></div>
 </div>
 <div class="clearboth"></div>
 
 <div class="slideAndCatagory">
-    <div class="safeArea loadoverlay">
+    <div class="safeArea">
 
         <!--<div class="catalog-menu-box">
             <div class="catalog-menu-wrap">
@@ -178,7 +178,7 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
 
                         <div class="col-sm-4 news-con" data-aos="zoom-in">
                             <div class="news">
-                                <div class="news-thumbnail-img loadoverlay"><img loading="lazy" src="<?php echo $host?>/images/<?php echo $news['news_img']; ?> " alt="<?php echo $news['news_title']; ?>"></div>
+                                <div class="news-thumbnail-img"><img loading="lazy" src="<?php echo $host?>/images/<?php echo $news['news_img']; ?> " alt="<?php echo $news['news_title']; ?>"></div>
                                 <p class="news-time"><i class="fa fa-clock"></i> <?php echo $news['news_date']; ?> </p>
                                 <h3 class="news-title"><?php echo $news['news_title']; ?> </h3>
                                 <p class="news-description"><?php echo $news['news_discription']; ?></p>
