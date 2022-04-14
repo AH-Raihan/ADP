@@ -1,5 +1,10 @@
 <?php session_start();
 require_once("config.php");
+if($_SERVER["HTTP_X_FORWARDED_PROTO"]==="http"){
+  header("https://" . $_SERVER["HTTP_HOST"];
+}
+
+ 
 if($_SERVER["HTTP_X_FORWARDED_PROTO"]){ 
     $host=  $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" . $_SERVER["HTTP_HOST"];
 }else{
