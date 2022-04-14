@@ -98,7 +98,9 @@ a {
 .wrap {
     display: inline-block
 }
-
+input[type="submit"]{
+   cursor:pointer;
+}
 .header-title {
     text-align: center;
     color: #fafafa !important;
@@ -458,12 +460,21 @@ td input#check {
 }
 
 .products:hover>.add-to-cart {
-    visibility: visible;
-    width: 80%;
-    opacity: 1;
-    height: auto;
+    animation:showAddCart .4s;
 }
-
+@keyframes showAddCart{
+    0%{
+     display:none;
+    }
+   25%{
+       display: block;
+    }
+    100%{
+        width: 80%;
+        opacity: 1;
+        height: auto;
+    }
+}
 .products:hover>.book-view {
     display: block;
     opacity: 1;
@@ -541,10 +552,9 @@ td input#check {
     padding: 8px 10px;
     font-size: 18px;
     border: none;
-    display: block;
+    display: none;
     opacity: 0;
     overflow: hidden;
-    visibility: hidden;
     cursor: pointer;
     text-align: center;
     transition: 0.3s;
@@ -804,7 +814,6 @@ white-space: nowrap;}
     width: 35%;
     display: inline-block
 }
-
 .Gender select {
     padding: 8.5px 14px;
     outline: 0;
@@ -1258,6 +1267,13 @@ white-space: nowrap;}
 .bottom-header a {
     display: flex;
     flex-direction: column;
+}
+.bottom-header a:hover{
+    background: #f2f2f2;
+}
+.bottom-header a:active{
+    background: #f2f2f2;
+    color: #339962;
 }
 
 .bottom-header a span {
