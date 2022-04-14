@@ -1,17 +1,16 @@
 <?php session_start();
 require_once("config.php");
-
+if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
+    $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $location);
+    exit;
+}
  
 if($_SERVER["HTTP_X_FORWARDED_PROTO"]){ 
     $host=  $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" . $_SERVER["HTTP_HOST"];
-if($_SERVER["HTTP_X_FORWARDED_PROTO"]==="http"){
-  header("location:https://" . $_SERVER["HTTP_HOST"];
-}
 }else{
     $host=  $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST";
-if($_SERVER["REQUEST_SCHEME"]==="http"){
-  header("location:https://" . $_SERVER["HTTP_HOST"];
-}
 
 }
 $totalpriceslide = 0;
