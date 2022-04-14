@@ -1,17 +1,13 @@
 var myCache = 'cacheName';
 var cacheAssets =[
     '.',
-    'index.php',
+    'offline.html',
     'css/index.min.css',
     'css/bootstrap.min.css',
     'css/responsive.min.css',
     'css/products-details.css',
     'css/aos.css',
     'css/other.css',
-    'js/aos.js',
-    'js/jssor.slider-28.0.0.min.js',
-    'js/jquery.js',
-    'js/custom.js',
     'images/disharilogo.png',
     'images/banner@2x-1-scaled.png',
     'images/banner3.jpg',
