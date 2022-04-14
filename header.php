@@ -155,7 +155,7 @@ if (!navigator.onLine) {
     </div>
     <!-- end top address-->
     <!-- start top header-->
-    <div class="sitebranding">
+    <div class="sitebranding sticky">
         <div class="safeArea" style="overflow: inherit;">
             <div class="logo-area">
                 <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
