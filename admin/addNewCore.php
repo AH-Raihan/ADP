@@ -146,6 +146,17 @@ elseif (isset($_REQUEST['bookDeleteId'])) {
     }
 }
 
+// Slider Delete
+elseif (isset($_REQUEST['sliderDeleteId'])) {
+    $sliderDeleteId = $_REQUEST['sliderDeleteId'];
+
+    $sliderDelete = "DELETE FROM slider WHERE id='$sliderDeleteId'";
+    $sliderDeleteQuery = mysqli_query($conn, $sliderDelete);
+    if ($sliderDeleteQuery == true) {
+        header("location:sliderlist.php");
+    }
+}
+
 
 else {
     header("location:index.php");
