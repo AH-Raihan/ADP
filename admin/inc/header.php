@@ -7,10 +7,6 @@
     header("location:login.php");
 }
 
- if ($_SERVER["HTTP_X_FORWARDED_PROTO"]==="http"){
-    $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    header('location: ' . $location);
-}
 
 ?>
 <!DOCTYPE html>
