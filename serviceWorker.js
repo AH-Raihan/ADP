@@ -20,6 +20,7 @@ self.addEventListener('install', e => {
 	    'css/products-details.css',
 	    'css/aos.css',
 	    'css/other.css',
+	    'js/fontawesome.js',
 	    'images/disharilogo.png',
 	    'images/banner@2x-1-scaled.png',
 	    'images/banner3.jpg',
