@@ -45,7 +45,7 @@ elseif (isset($_REQUEST['bookName'])) {
     }
 }
 
-*/ // Slider Add ////////////////////////
+ // Slider Add ////////////////////////
 
 if (isset($_REQUEST['sliderTitle'])) {
     $sliderTitle = $_REQUEST["sliderTitle"];
