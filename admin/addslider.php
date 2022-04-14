@@ -11,8 +11,7 @@
                         <label>Slider Title</label>
                     </td>
                     <td>
-                    <!-- class="tinymce" -->
-                        <textarea class="medium" name="title" style="width: 55%;" cols="4" rows="15"></textarea>
+                    <input type="text" class="medium" name="sliderTitle"/>
                     </td>
                 </tr>
             
