@@ -61,7 +61,7 @@ if (isset($_REQUEST['sliderTitle'])) {
     if ($_REQUEST['sliderImageUrl'] !=="") {
          $sliderImageText=$sliderImageUrl;
     }else{
-        $sliderImageText= $host.$sliderImageName;
+        $sliderImageText= $host."/images/".$sliderImageName;
     }
     
     
