@@ -12,9 +12,9 @@ $insertQuery="INSERT INTO reviews (book_id,user_id,stars,message) VALUES('$bookI
 $query=mysqli_query($conn,$insertQuery);
 
 if($query==true){
-    header("location: product-details.php?$nextUrl");
+    header("location: $nextUrl");
 }else{
-    header("location:/");
+    header("location: /");
 }
 
 }
