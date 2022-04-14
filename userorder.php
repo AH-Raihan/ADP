@@ -1,5 +1,5 @@
-<?php require_once("header.php");
-require_once("config.php");
+<?php 
+require_once("header.php");
 $authToken = $_COOKIE["PHPLGADP"];
 $selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
 $runselectUsr = mysqli_query($conn, $selectUsr);
