@@ -1,6 +1,4 @@
-<?php 
-require_once("header.php"); 
-$host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
+<?php require_once("header.php"); ?>
 <div class="clearboth"></div>
 <div class="adver-banner">
     <div class="safeArea"><img loading="lazy" src="<?php echo $host;?>/images/banner@2x-1-scaled.png" alt="Add"></div>
