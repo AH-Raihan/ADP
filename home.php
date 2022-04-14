@@ -39,31 +39,17 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
                     <img loading="lazy" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="<?php echo $host?>/images/spin.svg" />
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;">
+                   <?php 
+                    $sliderSelect="SELECT * FROM slider";
+                    $sliderQuery=mysqli_query($con,$sliderQuery);
+                         
+                     if(sliderQuery==true){
+                         while($slider=mysqli_fetch_array($sliderQuery)){ ?>
                     <div style="background-color:#d3890e;">
-                        <img loading="lazy" alt="slide" data-u="image" style="opacity:1;" data-src="<?php echo $host?>/images/banner3.jpg" />
+                        <img loading="lazy" alt="slide" data-u="image" style="opacity:1;" data-src="<?php echo $slider['image'];?>" />
                     </div>
-                    <div>
-                        <img loading="lazy" alt="slide" data-u="image" data-src="<?php echo $host?>/images/banner1.jpg" />
-                        <div data-ts="flat" data-p="540" data-po="40% 50%" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
-
-                        </div>
-                    </div>
-                    <div style="background-color:#000000;">
-                        <img loading="lazy" alt="slide" data-u="image" style="opacity:1;" data-src="<?php echo $host?>/images/banner2.jpg" />
-
-                    </div>
-                    <div>
-                        <img loading="lazy" alt="slide" data-u="image" data-src="<?php echo $host?>/images/banner-1500x850-1.png" />
-                        <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
-
-                        </div>
-                    </div>
-                    <div>
-                        <img loading="lazy" alt="slide" data-u="image" data-src="<?php echo $host?>/images/banner-1500x850-3.png" />
-                        <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
-
-                        </div>
-                    </div>
+                    
+                    <?php } }?>
                 </div>
                 <!-- Bullet Navigator -->
                 <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
