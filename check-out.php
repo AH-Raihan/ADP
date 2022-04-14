@@ -62,7 +62,7 @@ if (isset($_REQUEST['price'])) {
                             <hr>
                             <div class="col-sm-12">
                                 <div class="emailAddress col-sm-6 d-inline-block">
-                                    <label for="cashSelect"><input class="d-inline-block w-auto" id="cashSelect" type="radio" name="paymentMethod" id="" value="Cash On Delivary" onclick="conDisplay();" checked> Cash On Delivary</label>
+                                    <label for="cashSelect"><input class="d-inline-block w-auto" id="cashSelect" type="radio" name="paymentMethod" id="" value="COD" onclick="conDisplay();" checked> Cash On Delivary</label>
                                 </div>
                                 <div class="emailAddress col-sm-6 d-inline-block">
                                     <label for="bkashSelect"><input class="d-inline-block w-auto" id="bkashSelect" type="radio" name="paymentMethod" id="" value="bkash" onclick="conDisplay();"> bKash</label>
