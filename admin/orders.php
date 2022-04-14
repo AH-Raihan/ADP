@@ -51,7 +51,7 @@
               <td><?php echo $orders["bkashNumber"]; ?> </td>
               <td><?php echo $orders["trx"]; ?> </td>
               <td><?php echo $orders["transport"]; ?> </td>
-              <td><?php echo $orders["quantity"]." PCS.";  echo $orders["total_price"]; ?> Tk. </td>
+              <td><?php echo $orders["quantity"]." PCS.<br>";  echo $orders["total_price"]; ?> Tk. </td>
               <td>
                 <span onclick="getAddr(<?php echo $orders['user_id']; ?>);" style="cursor: pointer;color:#0fa363;font-weight:600;">Details</span>
                 <form action="orderaction.php">
