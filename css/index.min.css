@@ -460,17 +460,14 @@ td input#check {
 }
 
 .products:hover>.add-to-cart {
-    animation:showAddCart .4s;
+    animation: showAddCart .5s ease-in-out;
 }
 @keyframes showAddCart{
-    0%{
+    from{
      display:none;
     }
-   25%{
-       display: block;
-    }
-    100%{
-        width: 80%;
+    to{
+        display: block;width: 80%;
         opacity: 1;
         height: auto;
     }
@@ -552,7 +549,7 @@ td input#check {
     padding: 8px 10px;
     font-size: 18px;
     border: none;
-    display: none;
+    display: block;
     opacity: 0;
     overflow: hidden;
     cursor: pointer;
