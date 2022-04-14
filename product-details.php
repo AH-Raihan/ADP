@@ -149,7 +149,7 @@ $book_name = preg_replace($sentexUrl,' ',$book_nameUrl);
 
                             
                         <form class="writeReview" action="review.php" method="post">
-                            <input type="hidden" name="nextUrl" value="<?php echo $_SERVER['QUERY_STRING'];?>">
+                            <input type="hidden" name="nextUrl" value="<?php echo $_SERVER['REQUEST_URI'];?>">
                             <input type="hidden" name="userId" value="<?php echo $user_id;?>">
                             <input type="hidden" name="bookId" value="<?php echo $book_id;?>">
                             <div class="starsInput">
