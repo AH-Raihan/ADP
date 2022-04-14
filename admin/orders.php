@@ -13,17 +13,15 @@
         <thead>
           <tr>
             <td>SL</td>
-            <td>Order Id</td>
             <td>Date & Time</td>
             <td>Book Name</td>
             <td>Payment Method</td>
             <td>bKash N</td>
             <td>Trx</td>
             <td>Transport</td>
-            <td>Quantity</td>
-            <td>Price</td>
-            <td>Address</td>
-            <td>Action</td>
+            <td>QTY & Price</td>
+            <td>Address & Action</td>
+            <td>Order Id</td>
           </tr>
         </thead>
         <tbody>
@@ -35,7 +33,6 @@
 
             <tr>
               <td><?php echo $orders["id"]; ?> </td>
-              <td><?php echo $orders["order_id"]; ?> </td>
               <td class="Cdate"><?php
                                 $Cdate = $orders["Cdate"];
                                 $CdateOnlyDate = substr($Cdate, 0, 10);
@@ -54,19 +51,20 @@
               <td><?php echo $orders["bkashNumber"]; ?> </td>
               <td><?php echo $orders["trx"]; ?> </td>
               <td><?php echo $orders["transport"]; ?> </td>
-              <td><?php echo $orders["quantity"]; ?> </td>
-              <td><?php echo $orders["total_price"]; ?> Tk.</td>
-              <td onclick="getAddr(<?php echo $orders['user_id']; ?>);" style="cursor: pointer;color:#0fa363;font-weight:600;">Details<td>
+              <td><?php echo $orders["quantity"]." PCS.";  echo $orders["total_price"]; ?> Tk. </td>
+              <td>
+                <span onclick="getAddr(<?php echo $orders['user_id']; ?>);" style="cursor: pointer;color:#0fa363;font-weight:600;">Details</span>
                 <form action="orderaction.php">
-                  <input type="hidden" name="orderid" value="<?php echo $orders['order_id']; ?>">
-                  <select name="status" class="statuses" onchange="submit();" data-value="<?php echo $orders['order_status']; ?>">
-                    <option value="Pending">Pending</option>
-                    <option value="Waiting">Waiting</option>
-                    <option value="Completed">Completed</option>
-                    <option value="Cenceled">Cenceled</option>
-                  </select>
-                </form>
+                    <input type="hidden" name="orderid" value="<?php echo $orders['order_id']; ?>">
+                    <select name="status" class="statuses" onchange="submit();" data-value="<?php echo $orders['order_status']; ?>">
+                      <option value="Pending">Pending</option>
+                      <option value="Waiting">Waiting</option>
+                      <option value="Completed">Completed</option>
+                      <option value="Cenceled">Cenceled</option>
+                    </select>
+                  </form>
               </td>
+              <td><?php echo $orders["order_id"]; ?> </td>
             </tr>
 
           <?php } ?>
