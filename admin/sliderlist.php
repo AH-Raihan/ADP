@@ -10,6 +10,7 @@
             <tr>
               <td>Image</td>
               <td>Slider Title</td>
+              <td>Slider Status</td>
               <td>Slider Url</td>
 <!--               <td>Edit</td> -->
               <td>Delete</td>
@@ -23,11 +24,12 @@
           while ($orders = mysqli_fetch_array($orderQuery)) { ?>
             
               <tr>
-              <td><img loading="lazy" width="80px" src="../images/<?php echo $orders["image"]; ?>" alt=""> </td>
-                <td><?php echo $orders["tilte"]; ?> </td>
+              <td><img loading="lazy" width="80px" src="<?php echo $orders["image"]; ?>" alt=""> </td>
+                <td><?php echo $orders["title"]; ?> </td>
                 <td><?php echo $orders["image"]; ?> </td>
+                <td><?php echo $orders["status"]; ?> </td>
 <!--                 <td><a onclick="return confirm('Are You Sure?')" href="sliderEdit.php?newsEditId=<?php echo $orders['id']; ?>">Edit</a></td> -->
-                <td><a onclick="return confirm('Are You Sure?')" href="addNewCore.php?sliderDeleteID=<?php echo $orders['id']; ?>">Delete</a></td>
+                <td><a onclick="return confirm('Are You Sure?')" href="addNewCore.php?sliderDeleteId=<?php echo $orders['id']; ?>">Delete</a></td>
                 
               </tr>
             
