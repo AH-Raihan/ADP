@@ -1,36 +1,9 @@
-// navbar logo size
-window.addEventListener('scroll',function(){
-  var sitebranding=document.getElementsByClassName('sitebranding');
-  sitebranding[0].classList.toggle('sticky', window.scrollY > 0);
-  var logo=document.getElementsByClassName('logo-area');
-  logo[0].classList.toggle('dnone', window.scrollY > 0);
-});
 
 
-// window loading sckeleton remove
-var overlayLoad= document.querySelectorAll(".loadoverlay");
-window.addEventListener('load',function(){ 
-  for(let index=0; index < overlayLoad.length; index++){ 
-    overlayLoad[index].classList.remove("loadoverlay");
-  }
-});
 
   
-// service worker
 
 
-/* if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('../serviceWorker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-*/
 
   
 
@@ -45,7 +18,7 @@ window.addEventListener('load',function(){
 
 
 // disable right click
-   // document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('contextmenu', event => event.preventDefault());
  
     document.onkeydown = function (e) {
  
