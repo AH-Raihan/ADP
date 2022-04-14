@@ -1,6 +1,10 @@
 <?php session_start();
 require_once("config.php");
-$host = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"];
+if($_SERVER["HTTP_X_FORWARDED_PROTO"]){ 
+    $host=  $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"];
+}else{
+    $host=  $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" . $_SERVER["HTTP_HOST"];
+}
 $totalpriceslide = 0;
 if (isset($_COOKIE["PHPLGADP"])) {
     $authToken = $_COOKIE["PHPLGADP"];
@@ -56,7 +60,7 @@ global $user_id;
     <meta name="google-site-verification" content="0orDbIlP4Vprs6Sk6LtMHbxf3b1iAB5DyjEz5yzebPU" />
 
     <meta property="og:site_name" content="Alor Dishari Publications">
-    <meta property="og:url" content="http://alordishari.herokuapp.com" />
+    <meta property="og:url" content="https://alordishari.herokuapp.com" />
     <meta property="og:title" content="Alor Dishari Publications" />
     <meta property="og:description" content="সাফল্যের আলোকে বিশ্ব তোমাকে দেখাতে" />
     <meta property="og:image" content="<?php echo $host ?>/images/logo.png" />
