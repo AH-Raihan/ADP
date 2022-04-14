@@ -1,7 +1,3 @@
-
-
-
-
 const cacheName = 'ADP-cache';
 
 // Cache all the files to make a PWA
@@ -36,16 +32,16 @@ self.addEventListener('install', e => {
   );
 });
 
-// Our service worker will intercept all fetch requests
-// and check if we have cached the file
-// if so it will serve the cached file
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.open(cacheName)
-      .then(cache => cache.match(event.request, { ignoreSearch: true }))
-      .then(response => {
-        return response || fetch(event.request);
-      })
+    caches.open(cacheName).then(function(cache) {
+      return cache.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
+    })
   );
 });
 
@@ -54,7 +50,7 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('push', function (event) {
     event.waitUntil(
-        self.registration.showNotification('I am Webdeveloper', {
+        self.registration.showNotification('I am Web developer', {
             body: 'My name is Azizul Hasan Raihan'
         })
     );
