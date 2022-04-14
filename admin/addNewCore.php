@@ -58,7 +58,7 @@ if (isset($_REQUEST['sliderTitle'])) {
 
     move_uploaded_file($newsImageTmpName, "../images/" . $sliderImageName);
  
-    if (isset($_REQUEST['sliderImageUrl'])) {
+    if ($_REQUEST['sliderImageUrl'] !=="") {
          $sliderImageText=$sliderImageUrl;
     }else{
         $sliderImageText= $host.$sliderImageName;
