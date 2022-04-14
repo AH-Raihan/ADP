@@ -8,11 +8,12 @@ $message =$_REQUEST["message"];
 $bookId =$_REQUEST["bookId"];
 $userId  =$_REQUEST["userId"];  
 
-$insertQuery="INSERT INTO reviews (book_id,user_id,stars,message) VALUES('$bookId','$userId','$stars','$message')";
+echo $insertQuery="INSERT INTO reviews (book_id,user_id,stars,message) VALUES('$bookId','$userId','$stars','$message')";
 $query=mysqli_query($conn,$insertQuery);
 
 if($query==true){
-    header("location: $nextUrl");
+    echo $nextUrl;
+    //header("location: $nextUrl");
 }else{
     header("location: /");
 }
