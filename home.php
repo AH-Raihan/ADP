@@ -43,7 +43,7 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
                     $sliderSelect="SELECT * FROM slider";
                     $sliderQuery=mysqli_query($conn,$sliderSelect);
                          
-                     if(sliderQuery==true){
+                     if($sliderQuery==true){
                          while($slider=mysqli_fetch_array($sliderQuery)){ ?>
                     <div style="background-color:#d3890e;">
                         <img loading="lazy" alt="slide" data-u="image" style="opacity:1;" data-src="<?php echo $slider['image'];?>" />
