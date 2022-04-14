@@ -461,7 +461,7 @@ td input#check {
 
 .products:hover>.add-to-cart {
     animation: showAddCart .5s ease-in-out;
-}
+animation-fill-mode: forwards;}
 @keyframes showAddCart{
     from{
      display:none;
