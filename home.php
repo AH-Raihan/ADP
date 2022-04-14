@@ -41,7 +41,7 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;">
                    <?php 
                     $sliderSelect="SELECT * FROM slider";
-                    $sliderQuery=mysqli_query($con,$sliderQuery);
+                    $sliderQuery=mysqli_query($conn,$sliderSelect);
                          
                      if(sliderQuery==true){
                          while($slider=mysqli_fetch_array($sliderQuery)){ ?>
