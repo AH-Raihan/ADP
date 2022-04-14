@@ -21,7 +21,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"]) && isset($_REQUEST[
     $insert = "INSERT INTO users (usrauthToken,otp,email_addr,full_name,usr_pwd,birthday,gender) VALUES('$authToken','$otp','$emailaddr','$fullname','$pwd','$birthday','$gender')";
     $insertQuery = mysqli_query($conn, $insert);
     if ($insertQuery == true) {
-
+      $subject = "Alor Dishari Publications OTP";
       $message = '<html><body>';
       $message .= '<h1 style="color: white;
               background: linear-gradient(-45deg, #8CC63F 0%, #8CC63F 33%, #0B9444 100%);
@@ -36,7 +36,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"]) && isset($_REQUEST[
           Team Alor Dishari Publications</p>';
       $message .= '</body></html>';
 
-      echo smtp_mailer($emailaddr, 'subject', $message);
+      echo smtp_mailer($emailaddr, $subject, $message);
 
 
       header("location:otp.php?auth=$authToken");
