@@ -1,9 +1,8 @@
 <?php session_start();
 require_once("config.php");
- if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
+ if ($_SERVER["HTTP_X_FORWARDED_PROTO"]==="http"){
     $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    header('Location: ' . $location);
- 
+    header('location: ' . $location);
 }
 if($_SERVER["HTTP_X_FORWARDED_PROTO"]){ 
     $host=  $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" . $_SERVER["HTTP_HOST"];
