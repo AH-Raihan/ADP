@@ -40,7 +40,7 @@ $host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']; ?>
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;">
                    <?php 
-                    $sliderSelect="SELECT * FROM slider";
+                    $sliderSelect="SELECT * FROM slider WHERE status='1'";
                     $sliderQuery=mysqli_query($conn,$sliderSelect);
                          
                      if($sliderQuery==true){
