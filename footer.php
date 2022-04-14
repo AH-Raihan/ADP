@@ -156,7 +156,7 @@ window.addEventListener('load', () => {
 
     
 if (!navigator.onLine) {
-  console.log("offline");
+  window.location.pathname="./offline.html";
 }
 
 	
