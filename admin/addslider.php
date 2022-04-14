@@ -21,7 +21,8 @@
                     </td>
                     <td>
                     <input type="file" class="custom-file-input" name="sliderImage"/>
-                    <input type="text" class="medium" name="sliderImageUrl"/>
+			    <br>
+                    <input type="text" class="medium" name="sliderImageUrl" placeholder="Enter Slider image URL"/>
                     </td>
                 </tr>
 
