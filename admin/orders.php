@@ -9,7 +9,7 @@
       echo "<p id='msg' style='background:red;'>Update Faild!</p>";
     } ?>
     <div class="block overflow-auto">
-      <table id="orderDatatable" class="data display datatable w-100" style="overflow-x: auto;">
+      <table id="orderDatatable" class="data display datatable w-100" style="overflow-x: auto;" border="1">
         <thead>
           <tr>
             <td>SL</td>
