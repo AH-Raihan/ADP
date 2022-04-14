@@ -1,6 +1,6 @@
 <?php
 require_once("../config.php");
-
+$host = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'];
 // $ =$_REQUEST[""]; insertNews="INSERT INTO news () VALUES()"; 
 /*  $Query=mysqli_query($conn, );
     if(==true){
@@ -42,6 +42,33 @@ elseif (isset($_REQUEST['bookName'])) {
         header("location: productlist.php");
     } else {
         echo "<br>gg";
+    }
+}
+
+*/ // Slider Add ////////////////////////
+
+if (isset($_REQUEST['sliderTitle'])) {
+    $sliderTitle = $_REQUEST["sliderTitle"];
+   
+    
+    $sliderImage = $_REQUEST["sliderImage"];
+    $sliderImageUrl = $_REQUEST["sliderImageUrl"];
+    $sliderImageName = "slider" . $_FILES["sliderImage"]['name'];
+    $sliderImageTmpName = $_FILES["sliderImage"]['tmp_name'];
+
+    move_uploaded_file($newsImageTmpName, "../images/" . $sliderImageName);
+ 
+    if (isset($_REQUEST['sliderImageUrl'])) {
+         $sliderImageText=$sliderImageUrl;
+    }else{
+        $sliderImageText= $host.$sliderImageName;
+    }
+    
+    
+    $insertSlider = "INSERT INTO slider (title,image) VALUES('$sliderTitle','$sliderImageText')";
+    $insertSliderQuery = mysqli_query($conn, $insertSlider);
+    if ($insertSliderQuery == true) {
+        header("location:sliderlist.php");
     }
 }
 
@@ -117,6 +144,9 @@ elseif (isset($_REQUEST['bookDeleteId'])) {
     if ($bookDeleteQuery == true) {
         header("location:productlist.php");
     }
-} else {
+}
+
+
+else {
     header("location:index.php");
 }
