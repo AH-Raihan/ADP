@@ -1,91 +1,54 @@
-var myCache = 'cacheName';
-var cacheAssets =[
-    '.',
-    'offline.html',
-    'css/index.min.css',
-    'css/bootstrap.min.css',
-    'css/responsive.min.css',
-    'css/products-details.css',
-    'css/aos.css',
-    'css/other.css',
-    'images/disharilogo.png',
-    'images/banner@2x-1-scaled.png',
-    'images/banner3.jpg',
-    'images/banner2.jpg',
-    'images/banner1.jpg',
-    'images/banner-1500x850-1.png',
-    'images/banner-1500x850-3.png',
-    'images/logo.png',
-    'images/payment.png',
-    'images/bkash.jpg',
-    'images/rocket.jpg'
-];
 
 
 
 
-// Call install Event
+const cacheName = 'ADP-cache';
+
+// Cache all the files to make a PWA
 self.addEventListener('install', e => {
-    // Wait until promise is finished 
-    e.waitUntil(
-        caches.open(cacheName)
-        .then(cache => {
-            console.log(`Service Worker: Caching Files: ${cache}`);
-            cache.addAll(cacheAssets)
-                // When everything is set
-                .then(() => self.skipWaiting())
-        })
-    );
-})
-
-
-// Call Activate Event
-self.addEventListener('activate', e => {
-	console.log('Service Worker: Activated');
-	// Clean up old caches by looping through all of the
-	// caches and deleting any old caches or caches that
-	// are not defined in the list
-	e.waitUntil(
-		caches.keys().then(cacheNames => {
-			return Promise.all(
-				cacheNames.map(
-					cache => {
-						if (cache !== cacheName) {
-							console.log('Service Worker: Clearing Old Cache');
-							return caches.delete(cache);
-						}
-					}
-				)
-			)
-		})
-	);
-})
-
-
-// Call Fetch Event
-self.addEventListener('fetch', e => {
-	console.log('Service Worker: Fetching');
-	e.respondWith(
-		fetch(e.request)
-		.then(res => {
-			// The response is a stream and in order the browser
-			// to consume the response and in the same time the
-			// cache consuming the response it needs to be
-			// cloned in order to have two streams.
-			const resClone = res.clone();
-			// Open cache
-			caches.open(cacheName)
-				.then(cache => {
-					// Add response to cache
-					cache.put(e.request, resClone);
-				});
-			return res;
-		}).catch(
-			err => caches.match(e.request)
-			.then(res => res)
-		)
-	);
+  e.waitUntil(
+    caches.open(cacheName).then(cache => {
+      // Our application only has two files here index.html and manifest.json
+      // but you can add more such as style.css as your app grows
+      return cache.addAll([
+ 	    './',
+	    'offline.html',
+	    'css/index.min.css',
+	    'css/bootstrap.min.css',
+	    'css/responsive.min.css',
+	    'css/products-details.css',
+	    'css/aos.css',
+	    'css/other.css',
+	    'images/disharilogo.png',
+	    'images/banner@2x-1-scaled.png',
+	    'images/banner3.jpg',
+	    'images/banner2.jpg',
+	    'images/banner1.jpg',
+	    'images/banner-1500x850-1.png',
+	    'images/banner-1500x850-3.png',
+	    'images/logo.png',
+	    'images/payment.png',
+	    'images/bkash.jpg',
+	    'images/rocket.jpg'
+      ]);
+    })
+  );
 });
+
+// Our service worker will intercept all fetch requests
+// and check if we have cached the file
+// if so it will serve the cached file
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.open(cacheName)
+      .then(cache => cache.match(event.request, { ignoreSearch: true }))
+      .then(response => {
+        return response || fetch(event.request);
+      })
+  );
+});
+
+
 
 
 self.addEventListener('push', function (event) {
