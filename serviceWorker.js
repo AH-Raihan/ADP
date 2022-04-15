@@ -34,11 +34,11 @@ self.addEventListener('install', e => {
 
 
 self.addEventListener("fetch", event => {
-    if (event.request.url === "https://alordishari.herokuapp.com") {
+    if (event.request.url === "https://alordishari.herokuapp.com/") {
         // or whatever your app's URL is
         event.respondWith(
             fetch(event.request).catch(err =>
-                self.cache.open(cacheName).then(cache => cache.match("./index.html"))
+                self.cache.open(cacheName).then(cache => cache.match("/index.html"))
             )
         );
     } else {
