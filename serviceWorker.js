@@ -33,17 +33,21 @@ self.addEventListener('install', e => {
 
 
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.open(cacheName).then(function(cache) {
-      return cache.match(event.request).then(function (response) {
-        return response || fetch(event.request).then(function(response) {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
+self.addEventListener("fetch", event => {
+    if (event.request.url === "https://alordishari.herokuapp.com") {
+        // or whatever your app's URL is
+        event.respondWith(
+            fetch(event.request).catch(err =>
+                self.cache.open(cacheName).then(cache => cache.match("/index.html"))
+            )
+        );
+    } else {
+        event.respondWith(
+            fetch(event.request).catch(err =>
+                caches.match(event.request).then(response => response)
+            )
+        );
+    }
 });
 
 self.addEventListener('activate', function(event) {
