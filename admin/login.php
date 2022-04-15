@@ -5,13 +5,13 @@
 <head>
 <meta charset="utf-8">
 <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/stylelogin.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" media="screen" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
-	<section id="content">
-		<form action="login_core.php" method="post">
+	<section id="row">
+		<form action="login_core.php" class="col-sm-6 mx-auto card bg-seconday" method="post">
 			<h1>Admin Login</h1>
 			<div>
 				<input type="text" placeholder="User Name" required="" name="emailaddr"/>
