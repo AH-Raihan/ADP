@@ -6,10 +6,6 @@
   if (!isset($_COOKIE["PHPADLGADP"])) {
     header("location:login.php");
 }
- if ($_SERVER["HTTP_X_FORWARDED_PROTO"]==="http"){
-    $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    header('location: ' . $location);
-}
 
 
 ?>
@@ -19,8 +15,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="icon" href="../images/logo.png">
     <title>Alor Dishari Admin</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="manifest" href="<?php echo $host ?>/manifest.json">
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
