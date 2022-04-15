@@ -38,7 +38,7 @@ self.addEventListener("fetch", event => {
         // or whatever your app's URL is
         event.respondWith(
             fetch(event.request).catch(err =>
-                self.cache.open(cacheName).then(cache => cache.match("/index.html"))
+                self.cache.open(cacheName).then(cache => cache.match("./index.html"))
             )
         );
     } else {
