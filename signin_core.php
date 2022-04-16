@@ -10,9 +10,10 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"])){
     $checkCount=mysqli_num_rows($runQuery);
     if ($runQuery==true) {
     while($data=mysqli_fetch_array($runQuery)){
-        $fullname= $data["full_name"];
+        $platform=$data["platform"];
+        $authToken=$data["usrauthToken"];
     }
-        $authToken=md5(sha1($emailaddr.$fullname));
+        
         if ($checkCount===1) {
             setcookie("PHPLGADP",$authToken,time()+86400*360);
             header("location:/");
