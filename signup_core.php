@@ -65,7 +65,7 @@ function smtp_mailer($to, $subject, $msg)
   $mail->CharSet = 'UTF-8';
   $mail->Username = "web.ahraihan@gmail.com";
   $mail->Password = '*raihan123#@2022';
-  $mail->SetFrom("web.ahraihan@gmail.com");
+  $mail->SetFrom("web.ahraihan@gmail.com","Alor Dishari Publications");
   $mail->Subject = $subject;
   $mail->Body = $msg;
   $mail->AddAddress($to);
