@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://alordishari.herokuapp.com/sitemap.xml
+Sitemap: https://alordishari.herokuapp.com/sitemap.xml
