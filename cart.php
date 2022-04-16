@@ -24,10 +24,10 @@ require_once("config.php");  ?>
 } ?>
 <input type="hidden" id="userIDCart" value="<?php echo $user_id; ?>">
 <form action="check-out.php" method="post">
-    <div class="cartcontainer container-fluid">
+    <div class="cartcontainer">
         <div class="safeArea row">
 
-            <div class="col-sm-8" style="overflow-x: auto;">
+            <div class="col-sm-8" style="overflow-x: auto;paddinng:8px 0 !important;">
                 <div class="totalhishab" style="width: 100%;height: 49px;margin: 10px auto;">
                     <table class="cartTable" style="background: white !important;">
                         <tr>
@@ -60,7 +60,7 @@ require_once("config.php");  ?>
                         </tr>
                     </table>
                 </div>
-                <table class="cartTable" id="cartTableItems">
+                <table class="cartTable bg-white" id="cartTableItems" >
                     <?php
                     $authToken = $_COOKIE["PHPLGADP"];
                     $selectUsr = "SELECT * FROM users WHERE usrauthToken='$authToken'";
