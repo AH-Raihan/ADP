@@ -39,9 +39,7 @@ if (!isset($_COOKIE["PHPADLGADP"])) {
                         <li class="nav-item mt-3">ADMIN</li>
                     </ul>
                     <ul class="navbar-nav my-lg-0">
-                        <li class="nav-item"><a href="/" class="btn btn-sm btn-success mx-2">Visit Site</a></li>
-                        <li class="nav-item"><a href="inbox.php" class="btn btn-sm btn-info mx-2">Inbox</a></li>
-                        <li class="nav-item"><a href="changepassword.php" class="btn btn-sm btn-warning mx-2">change Password</a></li>
+                        <li class="nav-item"><a href="/" class="btn btn-sm btn-success mx-2"> <i class="fas fa-external-link"></i> Site</a></li>
                         <li class="nav-item"><a href="logout.php" class="btn btn-sm btn-danger">Logout</a></li>
                     </ul>
                 </div>
