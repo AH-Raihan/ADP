@@ -30,7 +30,11 @@ if(isset($code)) {
         $mathQuery="SELECT * FROM users WHERE email_addr='$emailaddr'";
         $runSelectQuery=mysqli_query($conn,$mathQuery);
         $checkCount=mysqli_num_rows($runSelectQuery);
-    
+        while($datausr=mysqli_fetch_array($runQuery)){
+          $platform=$dataurs["platform"];
+          $authTokenusr=$datausr["usrauthToken"];
+        }
+
     if ($checkCount===0) {
         $insert="INSERT INTO users(usrauthToken,email_addr,full_name, platform) VALUES('$authToken','$emailaddr','$fullname','google')";
         $insertQuery=mysqli_query($conn,$insert);
@@ -42,7 +46,7 @@ if(isset($code)) {
             header("location:signin");
         }
     }else{
-        setcookie("PHPLGADP",$authToken,time()+86400*360);
+        setcookie("PHPLGADP",$authTokenusr,time()+86400*360);
         header("location:/");
     }
 
