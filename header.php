@@ -4,10 +4,11 @@ require_once("config.php");
     $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     header('location: ' . $location);
 }
-if(!$_SERVER["HTTP_X_FORWARDED_PROTO"]){ 
-    $host=  $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" . $_SERVER["HTTP_HOST"];
+if($_SERVER["HTTP_X_FORWARDED_PROTO"]){ 
+     $host=  $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"];
 }else{
-    $host=  $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"];
+   
+    $host=  $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" . $_SERVER["HTTP_HOST"];
 }
 $totalpriceslide = 0;
 if (isset($_COOKIE["PHPLGADP"])) {
