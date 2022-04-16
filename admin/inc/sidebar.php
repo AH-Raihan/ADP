@@ -8,7 +8,7 @@
 						<li> <a href="productlist.php" ><span> <i class="fa fa-book"></i> </span><span class="hide-menu">Products List</span></a></li>
 						<li> <a href="newslist.php" ><span> <i class="fas fa-newspaper"></i> </span><span class="hide-menu">News List</span></a></li>
 						<li> <a href="sliderlist.php" ><span> <i class="fas fa-images"></i> </span><span class="hide-menu">Slider List</span></a></li>
-						<!-- <li> <a href="service.php" ><span> <i class="fas fa-globe"></i> </span><span class="hide-menu">Services</span></a></li> -->
+					 <li> <a href="inbox.php" ><span> <i class="fas fa-envelope"></i> </span><span class="hide-menu">Inbox</span></a></li>
 				
                     </ul>
                 </nav>
