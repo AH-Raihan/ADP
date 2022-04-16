@@ -158,14 +158,14 @@ if (!navigator.onLine) {
     <div class="sitebranding sticky">
         <div class="safeArea" style="overflow: inherit;">
             <div class="logo-area">
-                <h1 style="font-size: 0.1px;">Alor Dishari Publications</h1>
+                <h1 style="font-size: 0.1px; visibility: hidden;">Alor Dishari Publications</h1>
                 <p style="display:none;">আলোর দিশারী পাবলিকেশন্স</p>
                 <a href="<?php echo $host ?>/"><img loading="lazy" src="<?php echo $host ?>/images/disharilogo.png" alt="logo" title="Alor Dishari Publications"></a>
             </div>
 
 
             <div class="header-right mainNav">
-                <span class="navIcon" onclick="toggleNave()">|||</span>
+                <span class="navIcon" onclick="toggleNave()"><i class="fa fa-navicon" ></i></span>
                 <ul id="navId">
                     <li><a href="<?php echo $host ?>/"><i class="fa fa-home"></i> Home</a></li>
                     <li class="list-item"><a href="<?php echo $host ?>/books"><i class="fa fa-book"></i> Books</a></li>
