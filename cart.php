@@ -24,12 +24,12 @@ require_once("config.php");  ?>
 } ?>
 <input type="hidden" id="userIDCart" value="<?php echo $user_id; ?>">
 <form action="check-out.php" method="post">
-    <div class="cartcontainer">
+    <div class="cartcontainer container-fluid">
         <div class="safeArea row">
 
             <div class="col-sm-8" style="overflow-x: auto;">
-                <div class="totalhishab" style="background: white;width: 100%;height: 49px;margin: 10px auto;">
-                    <table class="cartTable" style="background: white;">
+                <div class="totalhishab" style="width: 100%;height: 49px;margin: 10px auto;">
+                    <table class="cartTable" style="background: white !important;">
                         <tr>
                             <th>My Cart (<span id="totalCart">0</span> Item)</th>
                             <th style="text-align: right;">Total: <span id="totaltop">
