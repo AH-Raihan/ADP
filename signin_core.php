@@ -5,7 +5,7 @@ if (isset($_REQUEST["emailaddr"]) && isset($_REQUEST["pwd"])){
     $pwd=md5(sha1($_REQUEST["pwd"]));
 
     
-    $mathQuery="SELECT * FROM users WHERE email_addr='$emailaddr' AND usr_pwd='$pwd'";
+    $mathQuery="SELECT * FROM users WHERE email_addr='$emailaddr' AND usr_pwd='$pwd' AND platform='email'";
     $runQuery=mysqli_query($conn,$mathQuery);
     $checkCount=mysqli_num_rows($runQuery);
     if ($runQuery==true) {
