@@ -10,8 +10,8 @@ if(isset($code)) {
 
     try {
 
-        echo $token = $gClient->fetchAccessTokenWithAuthCode($code);
-        echo $gClient->setAccessToken($token);
+         $token = $gClient->fetchAccessTokenWithAuthCode($code);
+         $gClient->setAccessToken($token);
 
     }catch (Exception $e){
         echo $e->getMessage();
@@ -21,7 +21,7 @@ if(isset($code)) {
 
 
     try {
-        echo $pay_load = $gClient->verifyIdToken();
+         $pay_load = $gClient->verifyIdToken();
         
         $emailaddr=$pay_load["email"];
         $fullname=$pay_load["name"];
