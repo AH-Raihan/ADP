@@ -24,8 +24,8 @@ require_once("config.php");  ?>
 } ?>
 <input type="hidden" id="userIDCart" value="<?php echo $user_id; ?>">
 <form action="check-out.php" method="post">
-    <div class="cartcontainer bangla-font">
-        <div class="safeArea row" style="background: #fff;">
+    <div class="cartcontainer">
+        <div class="safeArea row">
 
             <div class="col-sm-8" style="overflow-x: auto;">
                 <div class="totalhishab" style="background: white;width: 100%;height: 49px;margin: 10px auto;">
