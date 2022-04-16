@@ -50,7 +50,7 @@
         right: 15px;
         cursor: pointer;
         transition: .4s;
-        transform: translateY(-50%) rotateZ(90deg);
+        transform: translateY(-50%) ;
     }
 
     .bottom-header {
@@ -244,10 +244,8 @@
     }
 
     .logo-area {
-        /* padding: 10px 0; */
         margin: 5px auto;
         display: inline-block;
-        /* width: 383px; */
         float: none;
         height: 54px;
     }
@@ -295,7 +293,7 @@
     .logo-area.dnone {}
 
     .products {
-        width: 90%;
+        width: 45%;
     }
 
 }
@@ -352,7 +350,7 @@
     }
 
     .navIcon {
-        top: -22px;
+        top: 8px;
     }
 
     .header-right {
