@@ -97,7 +97,7 @@
                     while ($books = mysqli_fetch_array($bookQuery)) { ?>
 
                         <div class="products w-90 item">
-                            <button data-bookId="<?php echo $books['book_id']; ?>" class="add-to-cart addToCartBtn"><i class="fa fa-cart-plus"></i> Add To Cart</button>
+                            <button data-bookId="<?php echo $books['book_id']; ?>" class="add-to-cart addToCartBtn">Add To Cart</button>
                             <div class="product-thumbnail-img "><img loading="lazy" class="productImage" src="<?php echo $host?>/images/<?php echo $books["book_img"]; ?>" alt="<?php echo $books['book_name']; ?>"></div>
                             <?php $salePrice = $books["book_sale_price"];
                             if ($salePrice > 0) {
