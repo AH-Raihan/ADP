@@ -61,6 +61,9 @@ ul {
 .shusree-font {
     font-family: shusree, Arial, sans-serif !important
 }
+.w-90{
+ width:90% !important;
+}
 
 .safeArea {
     max-width: 80% !important;
@@ -175,8 +178,13 @@ input[type="submit"]{
     padding: 23px 0 !important;
     border-radius: 5px;
     margin: 5px auto;
+    margin-top:0 !important;
 }
-
+.sitebranding .safeArea {
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
 .sitebranding.sticky {
     padding: 7px 0 !important;
     height: 81px !important;
@@ -324,9 +332,7 @@ td input#check {
 }
 
 .navIcon {
-    transform: rotate(90deg);
     font-size: 30px;
-    font-weight: 700;
     display: none;
     position: relative;
 }
@@ -439,6 +445,9 @@ td input#check {
     display: block;
     text-align: center;
 }
+.products-container .row{
+padding:5px 10px;
+}
 
 .products {
     margin: 5px auto;
@@ -495,6 +504,7 @@ animation-fill-mode: forwards;}
     box-sizing: border-box;
     border: 1px solid #dfdfdf;
     width: 100%;
+    border-radius:5px;
 
 }
 
