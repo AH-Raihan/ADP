@@ -1,11 +1,10 @@
 ﻿<?php include 'inc/header.php'; ?>
-<?php include 'inc/sidebar.php'; ?>
-<div class="grid_10">
   <div class="box round first grid">
+  <a href="addnews.php" class="btn btn-info my-3"><i class="fa fa-plus-circle"></i>  Add News</a>
     <h2>News List</h2>
     <div class="block">
       <div class="bg-white text-dark content w-100 " style="overflow-x: auto;">
-        <table class="data display datatable " style="overflow-x: auto;">
+        <table class="data display datatable table table-striped table-bordered" style="overflow-x: auto;">
           <thead>
             <tr>
               <td>Image</td>
@@ -26,7 +25,7 @@
               <tr>
               <td><img loading="lazy" width="80px" src="../images/<?php echo $orders["news_img"]; ?>" alt=""> </td>
                 <td><?php echo $orders["news_title"]; ?> </td>
-                <td><?php echo $orders["news_discription"]; ?> </td>
+                <td><?php echo substr($orders["news_discription"],0,450)."...."; ?> </td>
                 <td><?php echo $orders["news_date"]; ?> </td>
                 <td><a onclick="return confirm('Are You Sure?')" href="newsEdit.php?newsEditId=<?php echo $orders['id']; ?>">Edit</a></td>
                 <td><a onclick="return confirm('Are You Sure?')" href="addNewCore.php?newsDeleteId=<?php echo $orders['id']; ?>">Delete</a></td>
@@ -38,15 +37,7 @@
 
         </table>
       </div>
-    </div>
   </div>
 </div>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    setupLeftMenu();
-    $('.datatable').dataTable();
-    setSidebarHeight();
-  });
-</script>
 <?php include 'inc/footer.php'; ?>

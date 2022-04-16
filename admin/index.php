@@ -1,11 +1,9 @@
 <?php include 'inc/header.php'; ?>
 
-<?php include 'inc/sidebar.php'; ?>
-<div class="grid_10">
-  <div class="box round first grid">
+  <div class="container-fluid">
     <h2> Dashbord</h2>
-    <div class="block">
-      <div class="totalOrderDashboard" style="background: #4c4c4c;">
+    <div class="row">
+      <div class="totalOrderDashboard col-sm-4" style="background: #4c4c4c;">
         Total Orders <br>
         <?php
         require_once("../config.php");
@@ -17,7 +15,7 @@
       </div>
 
 
-      <div class="totalOrderDashboard" style="background: #00a712;">
+      <div class="totalOrderDashboard col-sm-4" style="background: #00a712;">
         Completed Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Completed'";
@@ -26,7 +24,7 @@
         ?>
       </div>
 
-      <div class="totalOrderDashboard" style="background: #056a9f;">
+      <div class="totalOrderDashboard col-sm-4" style="background: #056a9f;">
         Pending Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Pending'";
@@ -35,7 +33,7 @@
         ?>
       </div>
 
-      <div class="totalOrderDashboard" style="background: #e9c106;">
+      <div class="totalOrderDashboard col-sm-4" style="background: #e9c106;">
         Waiting Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Waiting'";
@@ -44,7 +42,7 @@
         ?>
       </div>
 
-      <div class="totalOrderDashboard" style="background: #f95d5d;">
+      <div class="totalOrderDashboard col-sm-4" style="background: #f95d5d;">
         Cancel Orders <br>
         <?php
         $selectOrdersQuery = "SELECT * FROM orders WHERE order_status='Cenceled'";
@@ -55,5 +53,4 @@
 
     </div>
   </div>
-</div>
 <?php include 'inc/footer.php'; ?>

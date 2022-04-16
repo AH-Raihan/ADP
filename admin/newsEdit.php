@@ -1,8 +1,9 @@
 <?php include 'inc/header.php';?>
-<?php include 'inc/sidebar.php';?>
+ 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Add New News</h2>
+        <h2>Update News</h2>
+        <hr>
         <div class="block">    
         <?php require_once("../config.php");
 
@@ -20,7 +21,7 @@ $newsId=$_REQUEST["newsEditId"];
                         <label>News Title</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter News Title..." name="newsEditTitle" class="medium"  value="<?php echo $orders['news_title']; ?>"/>
+                        <input type="text" placeholder="Enter News Title..." name="newsEditTitle" class="medium form-control"  value="<?php echo $orders['news_title']; ?>"/>
                     </td>
                 </tr>
                 <tr>
@@ -28,7 +29,7 @@ $newsId=$_REQUEST["newsEditId"];
                         <label>Date & Time</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Example : January 8, 2021" name="newsDate" class="medium" value="<?php echo $orders['news_date']; ?>" />
+                        <input type="text" placeholder="Example : January 8, 2021" name="newsDate" class="medium  form-control" value="<?php echo $orders['news_date']; ?>" />
                     </td>
                 </tr>
 				<!-- <tr>
@@ -63,7 +64,7 @@ $newsId=$_REQUEST["newsEditId"];
                         <label>News Description</label>
                     </td>
                     <td>
-                        <textarea class="medium" name="newsDescription" style="width: 55%;" cols="4" rows="15" ><?php echo $orders['news_discription']; ?></textarea>
+                        <textarea class="medium" id="editor" name="newsDescription" style="width: 55%;" cols="4" rows="15" ><?php echo $orders['news_discription']; ?></textarea>
                     </td>
                 </tr>
             
@@ -72,14 +73,14 @@ $newsId=$_REQUEST["newsEditId"];
                         <label>Upload Image (372x205 px)</label>
                     </td>
                     <td>
-                        <input type="file" name="newsImage"/>
+                        <input type="file" class="form-control" name="newsImage"/>
                     </td>
                 </tr>
 
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input type="submit" name="submit" class="btn btn-success" Value="Save" />
                     </td>
                 </tr>
             </table>
@@ -88,15 +89,12 @@ $newsId=$_REQUEST["newsEditId"];
         </div>
     </div>
 </div>
-<!-- Load TinyMCE -->
-<script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        setupTinyMCE();
-        setDatePicker('date-picker');
-        $('input[type="checkbox"]').fancybutton();
-        $('input[type="radio"]').fancybutton();
-    });
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
 </script>
-<!-- Load TinyMCE -->
 <?php include 'inc/footer.php';?>

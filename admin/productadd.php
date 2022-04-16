@@ -1,8 +1,9 @@
 ﻿<?php include 'inc/header.php';?>
-<?php include 'inc/sidebar.php';?>
+ 
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Add New Product</h2>
+        <hr>
         <div class="block">               
          <form action="addNewCore.php" method="post" enctype="multipart/form-data">
             <table class="form">
@@ -12,7 +13,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter Product Name..." name="bookName" class="medium" />
+                        <input type="text" placeholder="Enter Product Name..." name="bookName"  class="form-control" />
                     </td>
                 </tr>
                 <tr>
@@ -20,7 +21,7 @@
                         <label>Writer Name</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter Writer Name..." name="bookWriter" class="medium" />
+                        <input type="text" placeholder="Enter Writer Name..." name="bookWriter"  class="form-control" />
                     </td>
                 </tr>
 				<!-- <tr>
@@ -66,7 +67,7 @@
                         <label>Price</label>
                     </td>
                     <td>
-                        <input type="number" placeholder="Enter Price..." name="bookPrice" class="medium" />
+                        <input type="number" placeholder="Enter Price..." name="bookPrice" class="form-control" />
                     </td>
                 </tr>
                 <tr>
@@ -74,7 +75,7 @@
                         <label>Sale Price</label>
                     </td>
                     <td>
-                        <input type="number" placeholder="Enter Sale Price..." name="bookSalePrice" class="medium" />
+                        <input type="number" placeholder="Enter Sale Price..." name="bookSalePrice" class="form-control"/>
                     </td>
                 </tr>
             
@@ -83,7 +84,7 @@
                         <label>Upload Image</label>
                     </td>
                     <td>
-                        <input type="file"  name="bookImg"/>
+                        <input type="file"  class="form-control" name="bookImg"/>
                     </td>
                 </tr>
 				
@@ -92,7 +93,7 @@
                         <label>Product Type</label>
                     </td>
                     <td>
-                        <select id="select"  name="bookType">
+                        <select  class="form-control" id="select"  name="bookType">
                             <option>Select Type</option>
                             <option value="subject">Subject</option>
                             <option value="suggetion">Suggetion</option>
@@ -103,7 +104,7 @@
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input class="btn btn-success" type="submit" name="submit" Value="Save" />
                     </td>
                 </tr>
             </table>

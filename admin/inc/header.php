@@ -1,93 +1,52 @@
 <?php
-  header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache"); 
-  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
-  header("Cache-Control: max-age=2592000");
-  if (!isset($_COOKIE["PHPADLGADP"])) {
+header("Cache-Control: no-cache, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+header("Cache-Control: max-age=2592000");
+if (!isset($_COOKIE["PHPADLGADP"])) {
     header("location:login.php");
 }
 
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="icon" href="../images/logo.png">
-    <title>Alor Dishari Admin</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="manifest" href="/admin/manifest.json">
-    <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen" />
-    <link href="css/table/demo_page.css" rel="stylesheet" type="text/css" />
-    <link href="css/table/demo_page.css" rel="stylesheet" type="text/css" />
-    <!-- BEGIN: load jquery -->
-    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/jquery-ui/jquery.ui.core.min.js"></script>
-    <script src="js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.sortable.min.js" type="text/javascript"></script>
-    <script src="js/table/jquery.dataTables.min.js" type="text/javascript"></script>
-
-    <script src="js/axios.min.js" type="text/javascript"></script>
-
-    <!-- END: load jquery -->
-    <script src="js/setup.js" type="text/javascript"></script>
-	 <script type="text/javascript">
-        $(document).ready(function () {
-            setupLeftMenu();
-		    setSidebarHeight();
-        });
-    </script>
-<style type="text/css">
-    .waffle, .grid-fixed-table {
-        width: 100% !important;
-    }
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/sidenav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/datatables-select.min.css">
 </head>
-<body>
-    <div class="container_12">
-        <div class="grid_12 header-repeat">
-            <div id="branding">
-                <div class="floatleft logo">
-                    <img loading="lazy" src="../../../images/logo.png" alt="Logo" />
-				</div>
-				<div class="floatleft middle">
-					<!-- <h1>Alor Dishari Publications</h1> -->
-					<!-- <p>www.alordisharipublications.com</p> -->
-				</div>
-                <div class="floatright">
-                    <div class="floatleft">
-                        <img loading="lazy" src="img/img-profile.jpg" alt="Profile Pic" /></div>
-                    <div class="floatleft marginleft10">
-                        <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
-                            <li><a href="logout.php">Logout</a></li>
-                        </ul>
-                    </div>
+
+<body class="fix-header fix-sidebar">
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <li class="nav-item "> <a class="nav-link nav-toggler  hidden-md-up  waves-effect waves-dark" href="javascript:void(0)"><i class="fas  fa-bars"></i></a></li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="fas fa-bars"></i></a> </li>
+                        <li class="nav-item mt-3">ADMIN</li>
+                    </ul>
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item"><a href="/" class="btn btn-sm btn-success mx-2">Visit Site</a></li>
+                        <li class="nav-item"><a href="inbox.php" class="btn btn-sm btn-info mx-2">Inbox</a></li>
+                        <li class="nav-item"><a href="changepassword.php" class="btn btn-sm btn-warning mx-2">change Password</a></li>
+                        <li class="nav-item"><a href="logout.php" class="btn btn-sm btn-danger">Logout</a></li>
+                    </ul>
                 </div>
-                <div class="clear">
-                </div>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-        <div class="grid_12">
-            <ul class="nav main">
-                <li class="ic-dashboard"><a href="index.php"><span>Dashboard</span></a> </li>
-                <li class="ic-form-style"><!-- <a href=""><span>User Profile</span></a>--></li>
-				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
-				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
-                <li class="ic-charts"><a href="/"><span>Visit Website</span></a></li>
-            </ul>
-        </div>
-        <div class="clear">
-        </div>
-    
+            </nav>
+        </header>
+        <?php include("sidebar.php"); ?>
+        <div class="page-wrapper">
+            <div class="container-fluid">

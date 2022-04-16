@@ -1,8 +1,9 @@
 <?php include 'inc/header.php';?>
-<?php include 'inc/sidebar.php';?>
+ 
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Edit Product</h2>
+        <hr>
         <div class="block">
         <?php require_once("../config.php");
 
@@ -19,7 +20,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter Product Name..." value="<?php echo $orders['book_name']; ?>" name="bookEditTitle" class="medium" />
+                        <input type="text" placeholder="Enter Product Name..." value="<?php echo $orders['book_name']; ?>" name="bookEditTitle" class="form-control"/>
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +28,7 @@
                         <label>Writer Name</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter Writer Name..." value="<?php echo $orders['book_writer']; ?>" name="bookWriter" class="medium" />
+                        <input type="text" placeholder="Enter Writer Name..." value="<?php echo $orders['book_writer']; ?>" name="bookWriter" class="form-control"/>
                     </td>
                 </tr>
 				<!-- <tr>
@@ -70,7 +71,7 @@
                         <label>Price</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter Price..." name="bookPrice" value="<?php echo $orders['book_price']; ?>" class="medium" />
+                        <input type="text" placeholder="Enter Price..." name="bookPrice" value="<?php echo $orders['book_price']; ?>" class="form-control"/>
                     </td>
                 </tr>
                 <tr>
@@ -78,7 +79,7 @@
                         <label>Sale Price</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Enter Sale Price..." value="<?php echo $orders['book_sale_price']; ?>" name="bookSalePrice" class="medium" />
+                        <input type="text" placeholder="Enter Sale Price..." value="<?php echo $orders['book_sale_price']; ?>" name="bookSalePrice" class="form-control"/>
                     </td>
                 </tr>
             
@@ -87,7 +88,7 @@
                         <label>Upload Image</label>
                     </td>
                     <td>
-                        <input type="file" name="bookImg"/>
+                        <input type="file" class="form-control" name="bookImg"/>
                     </td>
                 </tr>
 				
@@ -96,7 +97,7 @@
                         <label>Product Type</label>
                     </td>
                     <td>
-                        <select id="select"  name="bookType">
+                        <select id="select" class="form-control" name="bookType">
                             <option value="<?php echo $orders['book_type']; ?>"><?php echo $orders['book_type']; ?></option>
                             <option value="subject">Subject</option>
                             <option value="suggetion">Suggetion</option>
@@ -107,7 +108,7 @@
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input type="submit" class="btn btn-success" name="submit" Value="Save" />
                     </td>
                 </tr>
             </table>

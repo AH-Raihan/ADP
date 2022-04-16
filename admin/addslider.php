@@ -1,8 +1,9 @@
 ﻿<?php include 'inc/header.php';?>
-<?php include 'inc/sidebar.php';?>
+ 
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Add New Slider</h2>
+        <hr>
         <div class="block">               
          <form action="addNewCore.php" method="post" enctype="multipart/form-data">
             <table class="form">	
@@ -11,7 +12,7 @@
                         <label>Slider Title</label>
                     </td>
                     <td>
-                    <input type="text" class="medium" name="sliderTitle"/>
+                    <input type="text" class="form-control" name="sliderTitle"/>
                     </td>
                 </tr>
             
@@ -20,16 +21,16 @@
                         <label>Upload Image (1600x550 px) or URL</label>
                     </td>
                     <td>
-                    <input type="file" class="custom-file-input" name="sliderImage"/>
+                    <input type="file" class="form-control" name="sliderImage"/>
 			    <br>
-                    <input type="text" class="medium" name="sliderImageUrl" placeholder="Enter Slider image URL"/>
+                    <input type="text" class="form-control" name="sliderImageUrl" placeholder="Enter Slider image URL"/>
                     </td>
                 </tr>
 
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Publish" />
+                        <input type="submit" class="btn btn-success" name="submit" Value="Publish" />
                     </td>
                 </tr>
             </table>

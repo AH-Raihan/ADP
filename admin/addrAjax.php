@@ -5,8 +5,6 @@
     $userDQuery = mysqli_query($conn, $userDQ);
 
     while ($userD = mysqli_fetch_array($userDQuery)) { ?>
-
-            <tr> <td>Id</td> <td><?php echo $userD["user_id"]; ?> </td></tr>
             <tr> <td>Name</td> <td><?php echo $userD["full_name"]; ?> </td> </tr>
             <tr><td>Email Address</td>  <td><?php echo $userD["email_addr"]; ?> </td></tr>
             <tr><td>Address</td> <td><?php echo $userD["addr1"]; ?> </td></tr>

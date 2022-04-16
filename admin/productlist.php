@@ -1,10 +1,9 @@
 ﻿<?php include 'inc/header.php'; ?>
-<?php include 'inc/sidebar.php'; ?>
-<div class="grid_10">
-  <div class="box round first grid">
-    <h2>Post List</h2>
+  <div class="container">
+    <a href="productadd.php" class="btn btn-info my-3"><i class="fa fa-plus-circle"></i> Add Product</a>
+    <h2>Products List</h2>
     <div class="block">
-      <table class="data display datatable table-striped w-100" style="overflow-x: auto;">
+      <table class="data display datatable table table-striped table-bordered" style="overflow-x: auto;">
         <thead>
           <tr>
             <td>Id</td>

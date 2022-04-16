@@ -12,6 +12,10 @@ if(isset($code)) {
 
          $token = $gClient->fetchAccessTokenWithAuthCode($code);
          $gClient->setAccessToken($token);
+         $google_oauth = new Google_Service_Oauth2($gClient);
+        $google_account_info = $google_oauth->userinfo->get();
+        $emailaddr =  $google_account_info->email;
+        $fullname =  $google_account_info->name;
 
     }catch (Exception $e){
         echo $e->getMessage();
@@ -21,16 +25,16 @@ if(isset($code)) {
 
 
     try {
-         $pay_load = $gClient->verifyIdToken();
+        $pay_load = $gClient->verifyIdToken();
         
-        $emailaddr=$pay_load["email"];
-        $fullname=$pay_load["name"];
+        // $emailaddr=$pay_load["email"];
+        // $fullname=$pay_load["name"];
         $authToken=md5(sha1($emailaddr.'raihan123'));
         
         $mathQuery="SELECT * FROM users WHERE email_addr='$emailaddr'";
         $runSelectQuery=mysqli_query($conn,$mathQuery);
         $checkCount=mysqli_num_rows($runSelectQuery);
-        while($datausr=mysqli_fetch_array($runQuery)){
+        while($datausr= mysqli_fetch_array($runSelectQuery)){
           $platform=$dataurs["platform"];
           $authTokenusr=$datausr["usrauthToken"];
         }

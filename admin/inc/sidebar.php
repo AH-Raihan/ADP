@@ -1,61 +1,16 @@
-<div class="grid_2">
-    <div class="box sidemenu">
-        <div class="block" id="section-menu">
-            <ul class="section menu">
-                <li><a class="menuitem">Orders</a>
-                    <ul class="submenu">
-                        <li><a href="orders.php">Orders</a> </li>
+<aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-devider mt-0" style="margin-bottom: 5px"></li>
+                        <li> <a href="index.php" ><span> <i class="fas fa-home"></i> </span><span class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="orders.php" ><span> <i class="fa fa-cubes"></i> </span><span class="hide-menu">Orders</span></a></li>
+						<li> <a href="productlist.php" ><span> <i class="fa fa-book"></i> </span><span class="hide-menu">Products List</span></a></li>
+						<li> <a href="newslist.php" ><span> <i class="fas fa-newspaper"></i> </span><span class="hide-menu">News List</span></a></li>
+						<li> <a href="sliderlist.php" ><span> <i class="fas fa-images"></i> </span><span class="hide-menu">Slider List</span></a></li>
+						<!-- <li> <a href="service.php" ><span> <i class="fas fa-globe"></i> </span><span class="hide-menu">Services</span></a></li> -->
+				
                     </ul>
-                </li>
-
-                <li><a class="menuitem">Product Option</a>
-                    <ul class="submenu">
-                        <li><a href="productadd.php">Add Product</a> </li>
-                        <li><a href="productlist.php">Product List</a> </li>
-                    </ul>
-                </li>
-                <li><a class="menuitem">News Option</a>
-                    <ul class="submenu">
-                        <li><a href="addnews.php">Add News</a> </li>
-                        <li><a href="newslist.php">News List</a> </li>
-                    </ul>
-                </li>
-                <!-- <li><a class="menuitem">Site Option</a>
-                    <ul class="submenu">
-                        <li><a href="titleslogan.php">Title & Slogan</a></li>
-                        <li><a href="social.php">Social Media</a></li>
-                        <li><a href="copyright.php">Copyright</a></li>
-                        
-                    </ul>
-                </li>  -->
-                <!-- <li><a class="menuitem">Update Pages</a>
-                    <ul class="submenu">
-                        <li><a>About Us</a></li>
-                        <li><a>Contact Us</a></li>
-                    </ul>
-                </li> -->
-                <li><a class="menuitem">Slider Option</a>
-                    <ul class="submenu">
-                        <li><a href="addslider.php">Add Slider</a> </li>
-                        <li><a href="sliderlist.php">Slider List</a> </li>
-                    </ul>
-                </li>
-                <!-- <li><a class="menuitem">Category Option</a>
-                    <ul class="submenu">
-                        <li><a href="addcat.php">Add Category</a> </li>
-                        <li><a href="catlist.php">Category List</a> </li>
-                    </ul>
-                </li>  -->
-                <li><a class="menuitem">Advertise Banner</a>
-                    <ul class="submenu">
-                        <li><a href="addcat.php">Add Advertise </a> </li>
-                        <li><a href="catlist.php">Advertise List</a> </li>
-                    </ul>
-                </li>
-
-
-
-            </ul>
-        </div>
-    </div>
-</div>
+                </nav>
+            </div>
+        </aside>
