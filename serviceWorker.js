@@ -7,6 +7,8 @@ self.addEventListener('install', e => {
       // Our application only has two files here index.html and manifest.json
       // but you can add more such as style.css as your app grows
       return cache.addAll([
+	     'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
+	      'https://kit.fontawesome.com/743da73c93.js',
 	    '/index.html',
 	    'css/index.min.css',
 	    'css/bootstrap.min.css',
@@ -14,6 +16,14 @@ self.addEventListener('install', e => {
 	    'css/products-details.css',
 	    'css/aos.css',
 	    'css/other.css',
+	      
+	      '/js/jssor.slider-28.0.0.min.js',
+	      'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css',
+	      'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css',
+	      'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+	      'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
+	      'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
+	      'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js',
 	    'js/fontawesome.js',
 	    'images/disharilogo.png',
 	    'images/banner@2x-1-scaled.png',
