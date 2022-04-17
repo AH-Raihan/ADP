@@ -159,7 +159,15 @@ window.addEventListener('load', () => {
 
 	
 </script>
-
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "3603cb71-347d-41f2-9e27-f2378e1fce39",
+    });
+  });
+</script>
 </body>
 
 </html>
