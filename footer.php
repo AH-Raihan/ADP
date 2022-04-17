@@ -43,6 +43,17 @@
         mirror: false, // whether elements should animate out while scrolling past them
     });
 </script>
+	
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "3603cb71-347d-41f2-9e27-f2378e1fce39",
+    });
+  });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     var mySidenav = document.getElementById("mySidenav");
@@ -137,7 +148,6 @@
 // service worker
 
 
-
     
     // Ensure that the browser supports the service worker API
 if (navigator.serviceWorker) {
@@ -157,17 +167,7 @@ window.addEventListener('load', () => {
     
 
 
-	
-</script>
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "3603cb71-347d-41f2-9e27-f2378e1fce39",
-    });
-  });
-</script>
+
 </body>
 
 </html>
